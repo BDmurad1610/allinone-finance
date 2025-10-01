@@ -30,22 +30,25 @@ export default function Index() {
             </p>
             
             {/* Reviews Section */}
-            <Card className="max-w-md mx-auto bg-card/80 backdrop-blur shadow-elegant border-border/50 rounded-2xl animate-slide-up">
-              <CardContent className="py-4">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="flex">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star
-                        key={star}
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
+            <Card className="max-w-lg mx-auto bg-card/95 backdrop-blur-sm shadow-card hover:shadow-card-hover transition-all duration-300 border-border rounded-2xl animate-slide-up">
+              <CardContent className="py-6 px-8">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="flex gap-1">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star
+                          key={star}
+                          className="w-6 h-6 fill-yellow-500 text-yellow-500 drop-shadow-sm"
+                        />
+                      ))}
+                    </div>
+                    <div className="h-8 w-px bg-border"></div>
+                    <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.8</span>
                   </div>
-                  <span className="text-2xl font-bold text-foreground">4.8</span>
+                  <p className="text-base text-muted-foreground text-center">
+                    Rated by <span className="font-semibold text-foreground">9,875</span> happy users
+                  </p>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Average from <span className="font-semibold text-foreground">9,875 reviews</span>
-                </p>
               </CardContent>
             </Card>
           </div>
