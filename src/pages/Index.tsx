@@ -42,8 +42,8 @@ export default function Index() {
                         />
                       ))}
                       <div className="relative w-6 h-6">
-                        <Star className="w-6 h-6 text-yellow-500 drop-shadow-sm" />
-                        <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
+                        <Star className="w-6 h-6 text-yellow-500/30 drop-shadow-sm" />
+                        <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
                           <Star className="w-6 h-6 fill-yellow-500 text-yellow-500 drop-shadow-sm" />
                         </div>
                       </div>
