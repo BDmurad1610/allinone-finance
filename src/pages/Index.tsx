@@ -38,13 +38,13 @@ export default function Index() {
                       {[1, 2, 3, 4].map((star) => (
                         <Star
                           key={star}
-                          className="w-6 h-6 fill-yellow-500 text-yellow-500 drop-shadow-sm"
+                          className="w-7 h-7 fill-yellow-400 text-yellow-400"
                         />
                       ))}
-                      <div className="relative w-6 h-6">
-                        <Star className="w-6 h-6 text-yellow-500/30 drop-shadow-sm" />
+                      <div className="relative w-7 h-7">
+                        <Star className="w-7 h-7 fill-gray-300 text-gray-300" />
                         <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
-                          <Star className="w-6 h-6 fill-yellow-500 text-yellow-500 drop-shadow-sm" />
+                          <Star className="w-7 h-7 fill-yellow-400 text-yellow-400" />
                         </div>
                       </div>
                     </div>
