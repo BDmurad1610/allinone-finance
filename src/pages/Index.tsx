@@ -35,12 +35,18 @@ export default function Index() {
                 <div className="flex flex-col items-center gap-3">
                   <div className="flex items-center gap-3">
                     <div className="flex gap-1">
-                      {[1, 2, 3, 4, 5].map((star) => (
+                      {[1, 2, 3, 4].map((star) => (
                         <Star
                           key={star}
                           className="w-6 h-6 fill-yellow-500 text-yellow-500 drop-shadow-sm"
                         />
                       ))}
+                      <div className="relative w-6 h-6">
+                        <Star className="w-6 h-6 text-yellow-500 drop-shadow-sm" />
+                        <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
+                          <Star className="w-6 h-6 fill-yellow-500 text-yellow-500 drop-shadow-sm" />
+                        </div>
+                      </div>
                     </div>
                     <div className="h-8 w-px bg-border"></div>
                     <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.8</span>
