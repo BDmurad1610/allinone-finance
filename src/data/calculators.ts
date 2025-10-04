@@ -5,6 +5,7 @@ import {
   Calculator, 
   Calendar,
   CircleDollarSign,
+  DollarSign,
   Flame,
   Heart,
   Percent,
@@ -144,6 +145,15 @@ export const calculators: CalculatorItem[] = [
     icon: CircleDollarSign,
     category: "finance",
     isActive: false,
+  },
+  {
+    id: "tip",
+    title: "Tip Calculator",
+    description: "Calculate tips and split bills",
+    path: "/tip",
+    icon: DollarSign,
+    category: "finance",
+    isActive: true,
   },
   
   // Math & Science
