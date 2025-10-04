@@ -70,7 +70,7 @@ export const calculators: CalculatorItem[] = [
     path: "/bmr",
     icon: Flame,
     category: "health",
-    isActive: false,
+    isActive: true,
   },
   {
     id: "ideal-weight",
@@ -144,7 +144,7 @@ export const calculators: CalculatorItem[] = [
     path: "/salary",
     icon: CircleDollarSign,
     category: "finance",
-    isActive: false,
+    isActive: true,
   },
   {
     id: "tip",
@@ -182,7 +182,7 @@ export const calculators: CalculatorItem[] = [
     path: "/fraction",
     icon: Calculator,
     category: "math",
-    isActive: false,
+    isActive: true,
   },
   {
     id: "statistics",
