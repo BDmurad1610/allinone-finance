@@ -22,6 +22,7 @@ import RetirementCalculator from "./pages/calculators/RetirementCalculator";
 import ROICalculator from "./pages/calculators/ROICalculator";
 import SalaryCalculator from "./pages/calculators/SalaryCalculator";
 import TipCalculator from "./pages/calculators/TipCalculator";
+import CurrencyConverter from "./pages/calculators/CurrencyConverter";
 
 // Math & Science Calculators
 import PercentageCalculator from "./pages/calculators/PercentageCalculator";
@@ -61,6 +62,7 @@ const App = () => (
           <Route path="/roi" element={<ROICalculator />} />
           <Route path="/salary" element={<SalaryCalculator />} />
           <Route path="/tip" element={<TipCalculator />} />
+          <Route path="/currency" element={<CurrencyConverter />} />
           
           {/* Math & Science */}
           <Route path="/percentage" element={<PercentageCalculator />} />

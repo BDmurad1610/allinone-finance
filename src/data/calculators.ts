@@ -61,7 +61,7 @@ export const calculators: CalculatorItem[] = [
     path: "/body-fat",
     icon: Activity,
     category: "health",
-    isActive: false,
+    isActive: true,
   },
   {
     id: "bmr",
@@ -79,7 +79,7 @@ export const calculators: CalculatorItem[] = [
     path: "/ideal-weight",
     icon: Heart,
     category: "health",
-    isActive: false,
+    isActive: true,
   },
   
   // Finance
@@ -135,7 +135,16 @@ export const calculators: CalculatorItem[] = [
     path: "/roi",
     icon: TrendingUp,
     category: "finance",
-    isActive: false,
+    isActive: true,
+  },
+  {
+    id: "currency",
+    title: "Currency Converter",
+    description: "Convert between currencies",
+    path: "/currency",
+    icon: DollarSign,
+    category: "finance",
+    isActive: true,
   },
   {
     id: "salary",
@@ -191,7 +200,7 @@ export const calculators: CalculatorItem[] = [
     path: "/statistics",
     icon: TrendingUp,
     category: "math",
-    isActive: false,
+    isActive: true,
   },
   
   // Date & Time
@@ -211,7 +220,7 @@ export const calculators: CalculatorItem[] = [
     path: "/date-difference",
     icon: Calendar,
     category: "date",
-    isActive: false,
+    isActive: true,
   },
   {
     id: "time-calculator",
@@ -220,6 +229,6 @@ export const calculators: CalculatorItem[] = [
     path: "/time-calculator",
     icon: Calendar,
     category: "date",
-    isActive: false,
+    isActive: true,
   },
 ];
