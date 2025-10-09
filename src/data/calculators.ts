@@ -167,6 +167,15 @@ export const calculators: CalculatorItem[] = [
   
   // Math & Science
   {
+    id: "calculator",
+    title: "Calculator",
+    description: "Basic calculator for everyday math",
+    path: "/calculator",
+    icon: Calculator,
+    category: "math",
+    isActive: true,
+  },
+  {
     id: "percentage",
     title: "Percentage Calculator",
     description: "Calculate percentages easily",
@@ -180,7 +189,7 @@ export const calculators: CalculatorItem[] = [
     title: "Scientific Calculator",
     description: "Advanced scientific calculations",
     path: "/scientific",
-    icon: Calculator,
+    icon: Zap,
     category: "math",
     isActive: true,
   },

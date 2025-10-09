@@ -5,26 +5,80 @@ import { Button } from "@/components/ui/button";
 
 export default function ScientificCalculator() {
   const [display, setDisplay] = useState("0");
-  const [memory, setMemory] = useState(0);
+  const [previousValue, setPreviousValue] = useState<number | null>(null);
+  const [operation, setOperation] = useState<string | null>(null);
+  const [waitingForOperand, setWaitingForOperand] = useState(false);
 
   const handleNumber = (num: string) => {
-    setDisplay(prev => prev === "0" ? num : prev + num);
+    if (waitingForOperand) {
+      setDisplay(num);
+      setWaitingForOperand(false);
+    } else {
+      setDisplay(display === "0" ? num : display + num);
+    }
   };
 
-  const handleOperator = (op: string) => {
-    setDisplay(prev => prev + " " + op + " ");
+  const handleDecimal = () => {
+    if (waitingForOperand) {
+      setDisplay("0.");
+      setWaitingForOperand(false);
+    } else if (!display.includes(".")) {
+      setDisplay(display + ".");
+    }
+  };
+
+  const handleOperator = (nextOp: string) => {
+    const inputValue = parseFloat(display);
+
+    if (previousValue === null) {
+      setPreviousValue(inputValue);
+    } else if (operation) {
+      const result = performOperation(previousValue, inputValue, operation);
+      setDisplay(String(result));
+      setPreviousValue(result);
+    }
+
+    setWaitingForOperand(true);
+    setOperation(nextOp);
+  };
+
+  const performOperation = (prev: number, current: number, op: string): number => {
+    switch (op) {
+      case "+":
+        return prev + current;
+      case "-":
+        return prev - current;
+      case "×":
+        return prev * current;
+      case "÷":
+        return current !== 0 ? prev / current : 0;
+      default:
+        return current;
+    }
+  };
+
+  const handleEquals = () => {
+    const inputValue = parseFloat(display);
+
+    if (previousValue !== null && operation) {
+      const result = performOperation(previousValue, inputValue, operation);
+      setDisplay(String(result));
+      setPreviousValue(null);
+      setOperation(null);
+      setWaitingForOperand(true);
+    }
   };
 
   const handleClear = () => {
     setDisplay("0");
+    setPreviousValue(null);
+    setOperation(null);
+    setWaitingForOperand(false);
   };
 
-  const handleEquals = () => {
-    try {
-      const result = eval(display.replace('×', '*').replace('÷', '/'));
-      setDisplay(String(result));
-    } catch {
-      setDisplay("Error");
+  const handleBackspace = () => {
+    if (!waitingForOperand) {
+      setDisplay(display.length > 1 ? display.slice(0, -1) : "0");
     }
   };
 
@@ -58,19 +112,26 @@ export default function ScientificCalculator() {
         case 'inv':
           result = 1 / value;
           break;
+        case 'pi':
+          result = Math.PI;
+          break;
+        case 'e':
+          result = Math.E;
+          break;
         default:
           return;
       }
       
       setDisplay(String(result));
+      setWaitingForOperand(true);
     } catch {
       setDisplay("Error");
     }
   };
 
-  const btnClass = "h-14 text-lg font-medium";
-  const operatorClass = "h-14 text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90";
-  const functionClass = "h-14 text-sm font-medium bg-secondary hover:bg-secondary/80";
+  const btnClass = "h-14 text-lg font-medium transition-all hover:scale-105";
+  const operatorClass = "h-14 text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105";
+  const functionClass = "h-14 text-sm font-medium bg-secondary hover:bg-secondary/80 transition-all hover:scale-105";
 
   return (
     <CalculatorLayout 
@@ -81,8 +142,13 @@ export default function ScientificCalculator() {
         <CardContent className="pt-6">
           <div className="space-y-4">
             {/* Display */}
-            <div className="bg-muted p-4 rounded-lg text-right">
+            <div className="bg-muted p-6 rounded-lg text-right">
               <p className="text-3xl font-mono break-all">{display}</p>
+              {operation && previousValue !== null && (
+                <p className="text-sm text-muted-foreground mt-2">
+                  {previousValue} {operation}
+                </p>
+              )}
             </div>
 
             {/* Scientific Functions */}
@@ -95,13 +161,17 @@ export default function ScientificCalculator() {
               <Button variant="secondary" className={functionClass} onClick={() => handleFunction('ln')}>ln</Button>
               <Button variant="secondary" className={functionClass} onClick={() => handleFunction('square')}>x²</Button>
               <Button variant="secondary" className={functionClass} onClick={() => handleFunction('inv')}>1/x</Button>
+              <Button variant="secondary" className={functionClass} onClick={() => handleFunction('pi')}>π</Button>
+              <Button variant="secondary" className={functionClass} onClick={() => handleFunction('e')}>e</Button>
+              <Button variant="outline" className={btnClass} onClick={handleBackspace}>⌫</Button>
+              <Button variant="outline" className={btnClass} onClick={() => handleDecimal()}>.</Button>
             </div>
 
             {/* Main Buttons */}
             <div className="grid grid-cols-4 gap-2">
               <Button variant="outline" className={btnClass} onClick={handleClear}>C</Button>
-              <Button variant="outline" className={btnClass} onClick={() => handleOperator('(')}>(</Button>
-              <Button variant="outline" className={btnClass} onClick={() => handleOperator(')')}>)</Button>
+              <Button variant="outline" className={btnClass} onClick={() => handleNumber('(')}>(</Button>
+              <Button variant="outline" className={btnClass} onClick={() => handleNumber(')')}>)</Button>
               <Button className={operatorClass} onClick={() => handleOperator('÷')}>÷</Button>
 
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('7')}>7</Button>
@@ -119,9 +189,8 @@ export default function ScientificCalculator() {
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('3')}>3</Button>
               <Button className={operatorClass} onClick={() => handleOperator('+')}>+</Button>
 
-              <Button variant="outline" className={`${btnClass} col-span-2`} onClick={() => handleNumber('0')}>0</Button>
-              <Button variant="outline" className={btnClass} onClick={() => handleNumber('.')}>.</Button>
-              <Button className={`${operatorClass} bg-accent hover:bg-accent/90`} onClick={handleEquals}>=</Button>
+              <Button variant="outline" className={`${btnClass} col-span-3`} onClick={() => handleNumber('0')}>0</Button>
+              <Button className={operatorClass} onClick={handleEquals}>=</Button>
             </div>
           </div>
         </CardContent>

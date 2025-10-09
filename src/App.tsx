@@ -25,6 +25,7 @@ import TipCalculator from "./pages/calculators/TipCalculator";
 import CurrencyConverter from "./pages/calculators/CurrencyConverter";
 
 // Math & Science Calculators
+import BasicCalculator from "./pages/calculators/BasicCalculator";
 import PercentageCalculator from "./pages/calculators/PercentageCalculator";
 import ScientificCalculator from "./pages/calculators/ScientificCalculator";
 import FractionCalculator from "./pages/calculators/FractionCalculator";
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/currency" element={<CurrencyConverter />} />
           
           {/* Math & Science */}
+          <Route path="/calculator" element={<BasicCalculator />} />
           <Route path="/percentage" element={<PercentageCalculator />} />
           <Route path="/scientific" element={<ScientificCalculator />} />
           <Route path="/fraction" element={<FractionCalculator />} />
