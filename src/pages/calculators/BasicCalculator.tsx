@@ -82,6 +82,19 @@ export default function BasicCalculator() {
     }
   };
 
+  const handlePercentage = () => {
+    const currentValue = parseFloat(display);
+    
+    if (previousValue !== null && operation) {
+      // Calculate percentage of previous value
+      const percentValue = (previousValue * currentValue) / 100;
+      setDisplay(String(percentValue));
+    } else {
+      // Convert current value to percentage (divide by 100)
+      setDisplay(String(currentValue / 100));
+    }
+  };
+
   const btnClass = "h-16 text-lg font-semibold transition-all hover:scale-105";
   const operatorClass = "h-16 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105";
 
@@ -107,8 +120,8 @@ export default function BasicCalculator() {
             <div className="grid grid-cols-4 gap-3">
               <Button variant="outline" className={btnClass} onClick={handleClear}>C</Button>
               <Button variant="outline" className={btnClass} onClick={handleBackspace}>⌫</Button>
-              <Button variant="outline" className={btnClass} onClick={() => handleOperator("÷")}>÷</Button>
-              <Button className={operatorClass} onClick={() => handleOperator("×")}>×</Button>
+              <Button variant="outline" className={btnClass} onClick={handlePercentage}>%</Button>
+              <Button className={operatorClass} onClick={() => handleOperator("÷")}>÷</Button>
 
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('7')}>7</Button>
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('8')}>8</Button>
