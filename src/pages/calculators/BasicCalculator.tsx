@@ -126,20 +126,21 @@ export default function BasicCalculator() {
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('7')}>7</Button>
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('8')}>8</Button>
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('9')}>9</Button>
-              <Button className={operatorClass} onClick={() => handleOperator('-')}>-</Button>
+              <Button className={operatorClass} onClick={() => handleOperator('×')}>×</Button>
 
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('4')}>4</Button>
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('5')}>5</Button>
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('6')}>6</Button>
-              <Button className={operatorClass} onClick={() => handleOperator('+')}>+</Button>
+              <Button className={operatorClass} onClick={() => handleOperator('-')}>-</Button>
 
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('1')}>1</Button>
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('2')}>2</Button>
               <Button variant="outline" className={btnClass} onClick={() => handleNumber('3')}>3</Button>
-              <Button className={`${operatorClass} row-span-2`} onClick={handleEquals}>=</Button>
+              <Button className={operatorClass} onClick={() => handleOperator('+')}>+</Button>
 
               <Button variant="outline" className={`${btnClass} col-span-2`} onClick={() => handleNumber('0')}>0</Button>
               <Button variant="outline" className={btnClass} onClick={handleDecimal}>.</Button>
+              <Button className={operatorClass} onClick={handleEquals}>=</Button>
             </div>
           </div>
         </CardContent>
