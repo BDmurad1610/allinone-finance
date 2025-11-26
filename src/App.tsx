@@ -5,6 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import Disclaimer from "./pages/Disclaimer";
 
 // Health & Fitness Calculators
 import BMICalculator from "./pages/calculators/BMICalculator";
@@ -76,6 +81,13 @@ const App = () => (
           <Route path="/age" element={<AgeCalculator />} />
           <Route path="/date-difference" element={<DateDifferenceCalculator />} />
           <Route path="/time-calculator" element={<TimeCalculator />} />
+          
+          {/* Legal & Info Pages */}
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>

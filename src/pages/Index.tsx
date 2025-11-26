@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import CalculatorCard from "@/components/CalculatorCard";
 import { calculators, categories } from "@/data/calculators";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -88,6 +89,8 @@ export default function Index() {
           </TabsContent>
         </Tabs>
       </section>
+
+      <Footer />
     </div>
   );
 }
