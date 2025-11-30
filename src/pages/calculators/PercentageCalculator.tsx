@@ -4,8 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function PercentageCalculator() {
+  const seo = seoData.percentage;
   const [value1, setValue1] = useState("");
   const [value2, setValue2] = useState("");
   const [percent, setPercent] = useState("");
@@ -37,6 +40,13 @@ export default function PercentageCalculator() {
       title="Percentage Calculator" 
       description="Calculate percentages, percentage changes, and more"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <div className="space-y-6">
         {/* What is X% of Y */}
         <Card>

@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { ArrowLeftRight } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 const currencies = [
   { code: "USD", name: "US Dollar", symbol: "$" },
@@ -35,6 +37,7 @@ const exchangeRates: Record<string, number> = {
 };
 
 export default function CurrencyConverter() {
+  const seo = seoData.currency;
   const [amount, setAmount] = useState<string>("100");
   const [fromCurrency, setFromCurrency] = useState<string>("USD");
   const [toCurrency, setToCurrency] = useState<string>("EUR");
@@ -66,6 +69,13 @@ export default function CurrencyConverter() {
       title="Currency Converter"
       description="Convert between different currencies"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardHeader>
           <CardTitle>Convert Currency</CardTitle>

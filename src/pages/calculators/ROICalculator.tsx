@@ -4,8 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function ROICalculator() {
+  const seo = seoData.roi;
   const [investmentCost, setInvestmentCost] = useState<string>("");
   const [returnAmount, setReturnAmount] = useState<string>("");
   const [investmentGain, setInvestmentGain] = useState<string>("");
@@ -57,6 +60,13 @@ export default function ROICalculator() {
       title="ROI Calculator"
       description="Calculate return on investment percentage and profit"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
         <div className="space-y-6">

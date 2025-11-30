@@ -4,8 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function AgeCalculator() {
+  const seo = seoData.age;
   const [birthDate, setBirthDate] = useState("");
   const [result, setResult] = useState<{
     years: number;
@@ -49,6 +52,13 @@ export default function AgeCalculator() {
       title="Age Calculator" 
       description="Calculate your exact age in years, months, and days"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">

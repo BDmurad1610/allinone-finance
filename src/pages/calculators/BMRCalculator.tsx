@@ -6,8 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function BMRCalculator() {
+  const seo = seoData.bmr;
   const [system, setSystem] = useState<"metric" | "imperial">("metric");
   const [gender, setGender] = useState<"male" | "female">("male");
   const [age, setAge] = useState("");
@@ -61,6 +64,13 @@ export default function BMRCalculator() {
       title="BMR Calculator" 
       description="Calculate your Basal Metabolic Rate and daily calorie needs"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardHeader>
           <CardTitle>Calculate Your BMR</CardTitle>

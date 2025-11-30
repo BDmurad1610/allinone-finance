@@ -4,8 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function RetirementCalculator() {
+  const seo = seoData.retirement;
   const [currentAge, setCurrentAge] = useState("");
   const [retirementAge, setRetirementAge] = useState("");
   const [currentSavings, setCurrentSavings] = useState("");
@@ -57,6 +60,13 @@ export default function RetirementCalculator() {
       title="Retirement Calculator" 
       description="Plan your retirement savings and see your projected nest egg"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">

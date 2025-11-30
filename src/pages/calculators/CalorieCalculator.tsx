@@ -6,8 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function CalorieCalculator() {
+  const seo = seoData.calorie;
   const [gender, setGender] = useState("male");
   const [age, setAge] = useState("");
   const [weight, setWeight] = useState("");
@@ -49,6 +52,13 @@ export default function CalorieCalculator() {
       title="Calorie Calculator" 
       description="Calculate your daily calorie needs based on your goals"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">

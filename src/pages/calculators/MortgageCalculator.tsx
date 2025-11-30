@@ -4,8 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function MortgageCalculator() {
+  const seo = seoData.mortgage;
   const [homePrice, setHomePrice] = useState("");
   const [downPayment, setDownPayment] = useState("");
   const [loanTerm, setLoanTerm] = useState("30");
@@ -49,6 +52,13 @@ export default function MortgageCalculator() {
       title="Mortgage Calculator" 
       description="Calculate your monthly mortgage payments and total interest"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">
