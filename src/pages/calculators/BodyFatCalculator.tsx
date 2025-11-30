@@ -6,8 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function BodyFatCalculator() {
+  const seo = seoData.bodyFat;
   const [gender, setGender] = useState<"male" | "female">("male");
   const [age, setAge] = useState<string>("");
   const [weight, setWeight] = useState<string>("");
@@ -65,6 +68,13 @@ export default function BodyFatCalculator() {
       title="Body Fat Calculator"
       description="Estimate your body fat percentage using US Navy method"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
         <div className="space-y-6">

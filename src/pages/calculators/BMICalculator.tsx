@@ -5,8 +5,11 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function BMICalculator() {
+  const seo = seoData.bmi;
   const [system, setSystem] = useState<"metric" | "imperial">("metric");
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
@@ -50,6 +53,13 @@ export default function BMICalculator() {
       title="BMI Calculator" 
       description="Calculate your Body Mass Index to assess if your weight is healthy"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">

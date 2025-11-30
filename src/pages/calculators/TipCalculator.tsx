@@ -4,8 +4,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function TipCalculator() {
+  const seo = seoData.tip;
   const [billAmount, setBillAmount] = useState("");
   const [tipPercentage, setTipPercentage] = useState("15");
   const [customTip, setCustomTip] = useState("");
@@ -39,6 +42,13 @@ export default function TipCalculator() {
       title="Tip Calculator" 
       description="Calculate tips and split bills easily"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardHeader>
           <CardTitle>Calculate Your Tip</CardTitle>

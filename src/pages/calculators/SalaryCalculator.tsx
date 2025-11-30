@@ -4,8 +4,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function SalaryCalculator() {
+  const seo = seoData.salary;
   const [amount, setAmount] = useState("");
   const [fromPeriod, setFromPeriod] = useState<"hourly" | "daily" | "weekly" | "monthly" | "yearly">("yearly");
   const [hoursPerWeek, setHoursPerWeek] = useState("40");
@@ -64,6 +67,13 @@ export default function SalaryCalculator() {
       title="Salary Calculator" 
       description="Convert between different salary periods"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardHeader>
           <CardTitle>Convert Your Salary</CardTitle>

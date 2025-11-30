@@ -6,8 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function IdealWeightCalculator() {
+  const seo = seoData.idealWeight;
   const [gender, setGender] = useState<"male" | "female">("male");
   const [height, setHeight] = useState<string>("");
   const [unit, setUnit] = useState<"metric" | "imperial">("imperial");
@@ -56,6 +59,13 @@ export default function IdealWeightCalculator() {
       title="Ideal Weight Calculator"
       description="Calculate your ideal body weight using multiple formulas"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
         <div className="space-y-6">

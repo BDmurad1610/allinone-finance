@@ -2,8 +2,11 @@ import { useState } from "react";
 import CalculatorLayout from "@/components/CalculatorLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function ScientificCalculator() {
+  const seo = seoData.scientific;
   const [display, setDisplay] = useState("0");
   const [previousValue, setPreviousValue] = useState<number | null>(null);
   const [operation, setOperation] = useState<string | null>(null);
@@ -138,6 +141,13 @@ export default function ScientificCalculator() {
       title="Scientific Calculator" 
       description="Advanced calculator with scientific functions"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-4">

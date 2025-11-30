@@ -5,8 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Plus, Minus, X, Divide } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function FractionCalculator() {
+  const seo = seoData.fraction;
   const [num1, setNum1] = useState("");
   const [den1, setDen1] = useState("");
   const [num2, setNum2] = useState("");
@@ -99,6 +102,13 @@ export default function FractionCalculator() {
       title="Fraction Calculator" 
       description="Perform operations with fractions"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardHeader>
           <CardTitle>Calculate with Fractions</CardTitle>

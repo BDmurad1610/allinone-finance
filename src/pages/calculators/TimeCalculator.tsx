@@ -6,8 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Plus, Minus } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function TimeCalculator() {
+  const seo = seoData.timeCalculator;
   const [operation, setOperation] = useState<"add" | "subtract">("add");
   
   // First time
@@ -67,6 +70,13 @@ export default function TimeCalculator() {
       title="Time Calculator"
       description="Add and subtract time durations"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
         <div className="space-y-6">

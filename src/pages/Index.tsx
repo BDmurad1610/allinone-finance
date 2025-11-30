@@ -6,9 +6,12 @@ import { calculators, categories } from "@/data/calculators";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function Index() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const seo = seoData.home;
   
   const filteredCalculators = activeCategory === "all" 
     ? calculators 
@@ -16,6 +19,12 @@ export default function Index() {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+      />
       <Header />
       
       {/* Hero Section */}

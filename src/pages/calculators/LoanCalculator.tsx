@@ -4,8 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function LoanCalculator() {
+  const seo = seoData.loan;
   const [loanAmount, setLoanAmount] = useState("");
   const [loanTerm, setLoanTerm] = useState("");
   const [interestRate, setInterestRate] = useState("");
@@ -44,6 +47,13 @@ export default function LoanCalculator() {
       title="Loan Calculator" 
       description="Calculate loan payments and total interest over time"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">

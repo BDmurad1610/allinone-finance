@@ -1,10 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import { Info, CheckCircle2, Sparkles } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function AboutUs() {
+  const seo = seoData.about;
+  
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+      />
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">

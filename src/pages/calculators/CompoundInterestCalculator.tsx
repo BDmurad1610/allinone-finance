@@ -5,8 +5,11 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SEOHead from "@/components/SEOHead";
+import { seoData } from "@/lib/seoData";
 
 export default function CompoundInterestCalculator() {
+  const seo = seoData.compoundInterest;
   const [principal, setPrincipal] = useState("");
   const [rate, setRate] = useState("");
   const [time, setTime] = useState("");
@@ -39,6 +42,13 @@ export default function CompoundInterestCalculator() {
       title="Compound Interest Calculator" 
       description="Calculate the power of compound interest over time"
     >
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalUrl={seo.canonicalUrl}
+        structuredData={seo.structuredData}
+      />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">
