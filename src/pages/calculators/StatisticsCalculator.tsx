@@ -89,6 +89,12 @@ export default function StatisticsCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Math Calculators", url: "/#math" },
+          { name: "Statistics Calculator", url: "/statistics-calculator" }
+        ]}
+        faqItems={calculatorContent.statistics.faq}
       />
       <Card>
         <CardContent className="pt-6">

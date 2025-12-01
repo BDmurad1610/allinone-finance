@@ -72,6 +72,12 @@ export default function BMRCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Health Calculators", url: "/#health" },
+          { name: "BMR Calculator", url: "/bmr-calculator" }
+        ]}
+        faqItems={calculatorContent.bmr.faq}
       />
       <Card>
         <CardHeader>

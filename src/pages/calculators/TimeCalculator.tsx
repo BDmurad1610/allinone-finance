@@ -78,6 +78,12 @@ export default function TimeCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Date & Time Calculators", url: "/#datetime" },
+          { name: "Time Calculator", url: "/time-calculator" }
+        ]}
+        faqItems={calculatorContent.timeCalculator.faq}
       />
       <Card>
         <CardContent className="pt-6">

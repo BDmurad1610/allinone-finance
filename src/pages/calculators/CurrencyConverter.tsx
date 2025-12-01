@@ -77,6 +77,12 @@ export default function CurrencyConverter() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Currency Converter", url: "/currency-converter" }
+        ]}
+        faqItems={calculatorContent.currency.faq}
       />
       <Card>
         <CardHeader>

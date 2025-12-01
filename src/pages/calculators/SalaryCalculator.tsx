@@ -75,6 +75,12 @@ export default function SalaryCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Salary Calculator", url: "/salary-calculator" }
+        ]}
+        faqItems={calculatorContent.salary.faq}
       />
       <Card>
         <CardHeader>

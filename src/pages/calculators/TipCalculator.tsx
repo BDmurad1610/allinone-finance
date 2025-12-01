@@ -50,6 +50,12 @@ export default function TipCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Tip Calculator", url: "/tip-calculator" }
+        ]}
+        faqItems={calculatorContent.tip.faq}
       />
       <Card>
         <CardHeader>

@@ -55,6 +55,12 @@ export default function LoanCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Loan Calculator", url: "/loan-calculator" }
+        ]}
+        faqItems={calculatorContent.loan.faq}
       />
       <Card>
         <CardContent className="pt-6">

@@ -63,6 +63,12 @@ export default function InvestmentCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Investment Calculator", url: "/investment-calculator" }
+        ]}
+        faqItems={calculatorContent.investment.faq}
       />
       <Card>
         <CardContent className="pt-6">
