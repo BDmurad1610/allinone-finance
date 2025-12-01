@@ -1,5 +1,7 @@
 import { useState } from "react";
 import CalculatorLayout from "@/components/CalculatorLayout";
+import CalculatorContent from "@/components/CalculatorContent";
+import { calculatorContent } from "@/data/calculatorContent";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
@@ -205,6 +207,7 @@ export default function ScientificCalculator() {
           </div>
         </CardContent>
       </Card>
+      <CalculatorContent content={calculatorContent.scientific} />
     </CalculatorLayout>
   );
 }
