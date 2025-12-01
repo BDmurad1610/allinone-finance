@@ -12,9 +12,9 @@ export default function Header() {
             </div>
             <div>
               <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                CalcHub
+                Calculator
               </h1>
-              <p className="text-xs text-muted-foreground">All-in-One Calculators</p>
+              <p className="text-xs text-muted-foreground">Free Online Tools</p>
             </div>
           </Link>
           
