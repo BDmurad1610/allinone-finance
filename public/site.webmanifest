@@ -1,6 +1,6 @@
 {
-  "name": "MultiCalculator - Free Online Calculators",
-  "short_name": "MultiCalculator",
+  "name": "Calculator - Free Online Tools",
+  "short_name": "Calculator",
   "description": "Free online calculators for health, finance, math & more. Calculate BMI, mortgage, loans, retirement savings instantly.",
   "start_url": "/",
   "display": "standalone",

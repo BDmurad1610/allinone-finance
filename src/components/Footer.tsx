@@ -13,12 +13,12 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  CalcHub
+                  Calculator
                 </h3>
               </div>
             </Link>
             <p className="text-sm text-muted-foreground">
-              All-in-One Calculator Platform
+              Free Online Tools
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} MultiCalculator. All rights reserved.
+            © {new Date().getFullYear()} Calculator. All rights reserved.
           </p>
         </div>
       </div>
