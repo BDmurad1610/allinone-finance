@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import { seoData } from "@/lib/seoData";
+import CalculatorContent from "@/components/CalculatorContent";
+import { calculatorContent } from "@/data/calculatorContent";
 
 export default function MortgageCalculator() {
   const seo = seoData.mortgage;
@@ -138,6 +140,8 @@ export default function MortgageCalculator() {
           </div>
         </CardContent>
       </Card>
+      
+      <CalculatorContent content={calculatorContent.mortgage} />
     </CalculatorLayout>
   );
 }
