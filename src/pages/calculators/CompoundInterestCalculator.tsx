@@ -50,6 +50,12 @@ export default function CompoundInterestCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Compound Interest Calculator", url: "/compound-interest-calculator" }
+        ]}
+        faqItems={calculatorContent.compoundInterest.faq}
       />
       <Card>
         <CardContent className="pt-6">

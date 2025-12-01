@@ -1,5 +1,15 @@
 import { Helmet } from "react-helmet-async";
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -7,6 +17,8 @@ interface SEOHeadProps {
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: object;
+  breadcrumbs?: BreadcrumbItem[];
+  faqItems?: FAQItem[];
 }
 
 export default function SEOHead({
@@ -16,9 +28,37 @@ export default function SEOHead({
   canonicalUrl,
   ogImage = "https://multicalculator.online/og-image.png",
   structuredData,
+  breadcrumbs,
+  faqItems,
 }: SEOHeadProps) {
   const fullTitle = `${title} | MultiCalculator`;
   const baseUrl = "https://multicalculator.online";
+
+  // Generate Breadcrumb Schema
+  const breadcrumbSchema = breadcrumbs ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": `${baseUrl}${item.url}`
+    }))
+  } : null;
+
+  // Generate FAQ Schema
+  const faqSchema = faqItems && faqItems.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
 
   return (
     <Helmet>
@@ -44,10 +84,24 @@ export default function SEOHead({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* Structured Data */}
+      {/* Main Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+      )}
+
+      {/* Breadcrumb Schema */}
+      {breadcrumbSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      )}
+
+      {/* FAQ Schema */}
+      {faqSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       )}
     </Helmet>

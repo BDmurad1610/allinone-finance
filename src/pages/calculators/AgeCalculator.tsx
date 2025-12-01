@@ -60,6 +60,12 @@ export default function AgeCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Date & Time Calculators", url: "/#datetime" },
+          { name: "Age Calculator", url: "/age-calculator" }
+        ]}
+        faqItems={calculatorContent.age.faq}
       />
       <Card>
         <CardContent className="pt-6">

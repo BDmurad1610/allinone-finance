@@ -76,6 +76,12 @@ export default function BodyFatCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Health Calculators", url: "/#health" },
+          { name: "Body Fat Calculator", url: "/body-fat-calculator" }
+        ]}
+        faqItems={calculatorContent.bodyFat.faq}
       />
       <Card>
         <CardContent className="pt-6">

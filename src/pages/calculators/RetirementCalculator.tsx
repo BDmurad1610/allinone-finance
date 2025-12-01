@@ -68,6 +68,12 @@ export default function RetirementCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Retirement Calculator", url: "/retirement-calculator" }
+        ]}
+        faqItems={calculatorContent.retirement.faq}
       />
       <Card>
         <CardContent className="pt-6">

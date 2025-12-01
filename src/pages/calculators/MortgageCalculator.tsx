@@ -60,6 +60,12 @@ export default function MortgageCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Mortgage Calculator", url: "/mortgage-calculator" }
+        ]}
+        faqItems={calculatorContent.mortgage.faq}
       />
       <Card>
         <CardContent className="pt-6">

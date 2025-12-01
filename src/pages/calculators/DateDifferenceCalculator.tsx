@@ -80,6 +80,12 @@ export default function DateDifferenceCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Date & Time Calculators", url: "/#datetime" },
+          { name: "Date Difference Calculator", url: "/date-difference-calculator" }
+        ]}
+        faqItems={calculatorContent.dateDifference.faq}
       />
       <Card>
         <CardContent className="pt-6">

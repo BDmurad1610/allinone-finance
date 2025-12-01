@@ -60,6 +60,12 @@ export default function CalorieCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Health Calculators", url: "/#health" },
+          { name: "Calorie Calculator", url: "/calorie-calculator" }
+        ]}
+        faqItems={calculatorContent.calorie.faq}
       />
       <Card>
         <CardContent className="pt-6">

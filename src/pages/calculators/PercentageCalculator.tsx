@@ -48,6 +48,12 @@ export default function PercentageCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Math Calculators", url: "/#math" },
+          { name: "Percentage Calculator", url: "/percentage-calculator" }
+        ]}
+        faqItems={calculatorContent.percentage.faq}
       />
       <div className="space-y-6">
         {/* What is X% of Y */}

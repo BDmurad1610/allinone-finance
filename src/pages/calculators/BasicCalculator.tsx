@@ -114,6 +114,12 @@ export default function BasicCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Math Calculators", url: "/#math" },
+          { name: "Online Calculator", url: "/online-calculator" }
+        ]}
+        faqItems={calculatorContent.calculator.faq}
       />
       <Card>
         <CardContent className="pt-6">

@@ -61,6 +61,12 @@ export default function BMICalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Health Calculators", url: "/#health" },
+          { name: "BMI Calculator", url: "/bmi-calculator" }
+        ]}
+        faqItems={calculatorContent.bmi.faq}
       />
       <Card>
         <CardContent className="pt-6">

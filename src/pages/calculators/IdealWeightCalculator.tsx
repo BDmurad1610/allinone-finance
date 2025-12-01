@@ -67,6 +67,12 @@ export default function IdealWeightCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Health Calculators", url: "/#health" },
+          { name: "Ideal Weight Calculator", url: "/ideal-weight-calculator" }
+        ]}
+        faqItems={calculatorContent.idealWeight.faq}
       />
       <Card>
         <CardContent className="pt-6">

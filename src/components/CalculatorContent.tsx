@@ -52,8 +52,8 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
   return (
     <div className="mt-12 space-y-8">
       {/* Intro Section */}
-      <section className="prose prose-gray dark:prose-invert max-w-none">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+      <section aria-labelledby="intro-heading" className="prose prose-gray dark:prose-invert max-w-none">
+        <h2 id="intro-heading" className="text-2xl font-bold mb-4 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-primary" />
           {content.intro.title}
         </h2>
@@ -67,10 +67,10 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       {/* How to Use Section */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <h3 className="text-xl font-semibold flex items-center gap-2">
             <Calculator className="w-5 h-5 text-primary" />
             How to Use This Calculator
-          </CardTitle>
+          </h3>
         </CardHeader>
         <CardContent>
           <ol className="space-y-4">
@@ -105,10 +105,10 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       {content.formula && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+            <h3 className="text-xl font-semibold flex items-center gap-2">
               <HelpCircle className="w-5 h-5 text-primary" />
               {content.formula.title}
-            </CardTitle>
+            </h3>
           </CardHeader>
           <CardContent>
             <div className="p-4 bg-muted/30 rounded-lg font-mono text-sm mb-4">
@@ -131,10 +131,10 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       {/* Use Cases Section */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <h3 className="text-xl font-semibold flex items-center gap-2">
             <Target className="w-5 h-5 text-primary" />
             {content.useCases.title}
-          </CardTitle>
+          </h3>
         </CardHeader>
         <CardContent>
           <ul className="space-y-3">
@@ -152,10 +152,10 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       {content.tips && (
         <Card className="border-primary/20 bg-primary/5">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+            <h3 className="text-xl font-semibold flex items-center gap-2">
               <Lightbulb className="w-5 h-5 text-primary" />
               {content.tips.title}
-            </CardTitle>
+            </h3>
           </CardHeader>
           <CardContent>
             <ul className="space-y-3">
@@ -190,9 +190,9 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
         </Accordion>
       </section>
 
-      {/* Related Calculators */}
+      {/* Related Calculators - Internal Linking */}
       {content.relatedCalculators.length > 0 && (
-        <section>
+        <nav aria-label="Related calculators">
           <h2 className="text-xl font-bold mb-4">Related Calculators</h2>
           <div className="flex flex-wrap gap-3">
             {content.relatedCalculators.map((calc, idx) => (
@@ -200,12 +200,13 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
                 key={idx}
                 to={calc.path}
                 className="px-4 py-2 bg-muted hover:bg-muted/80 rounded-lg text-sm font-medium transition-colors"
+                title={`Try our ${calc.name}`}
               >
                 {calc.name}
               </Link>
             ))}
           </div>
-        </section>
+        </nav>
       )}
 
       {/* Disclaimer - Only show if provided */}

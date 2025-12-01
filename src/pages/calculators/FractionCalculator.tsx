@@ -110,6 +110,12 @@ export default function FractionCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Math Calculators", url: "/#math" },
+          { name: "Fraction Calculator", url: "/fraction-calculator" }
+        ]}
+        faqItems={calculatorContent.fraction.faq}
       />
       <Card>
         <CardHeader>

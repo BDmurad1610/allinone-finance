@@ -149,6 +149,12 @@ export default function ScientificCalculator() {
         keywords={seo.keywords}
         canonicalUrl={seo.canonicalUrl}
         structuredData={seo.structuredData}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Math Calculators", url: "/#math" },
+          { name: "Scientific Calculator", url: "/scientific-calculator" }
+        ]}
+        faqItems={calculatorContent.scientific.faq}
       />
       <Card>
         <CardContent className="pt-6">
