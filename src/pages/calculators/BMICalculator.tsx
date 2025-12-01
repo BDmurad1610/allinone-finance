@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SEOHead from "@/components/SEOHead";
 import { seoData } from "@/lib/seoData";
+import CalculatorContent from "@/components/CalculatorContent";
+import { calculatorContent } from "@/data/calculatorContent";
 
 export default function BMICalculator() {
   const seo = seoData.bmi;
@@ -121,6 +123,8 @@ export default function BMICalculator() {
           </div>
         </CardContent>
       </Card>
+      
+      <CalculatorContent content={calculatorContent.bmi} />
     </CalculatorLayout>
   );
 }
