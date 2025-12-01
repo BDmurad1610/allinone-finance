@@ -1,5 +1,7 @@
 import { useState } from "react";
 import CalculatorLayout from "@/components/CalculatorLayout";
+import CalculatorContent from "@/components/CalculatorContent";
+import { calculatorContent } from "@/data/calculatorContent";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -187,6 +189,7 @@ export default function BMRCalculator() {
           )}
         </CardContent>
       </Card>
+      <CalculatorContent content={calculatorContent.bmr} />
     </CalculatorLayout>
   );
 }

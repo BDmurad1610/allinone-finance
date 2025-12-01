@@ -1,5 +1,7 @@
 import { useState } from "react";
 import CalculatorLayout from "@/components/CalculatorLayout";
+import CalculatorContent from "@/components/CalculatorContent";
+import { calculatorContent } from "@/data/calculatorContent";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -158,6 +160,7 @@ export default function SalaryCalculator() {
           )}
         </CardContent>
       </Card>
+      <CalculatorContent content={calculatorContent.salary} />
     </CalculatorLayout>
   );
 }
