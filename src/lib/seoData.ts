@@ -22,7 +22,7 @@ export const seoData: Record<string, SEOData> = {
     title: "BMI Calculator - Free Body Mass Index Calculator",
     description: "Calculate your Body Mass Index (BMI) instantly with our free BMI calculator. Understand if you're underweight, normal, overweight, or obese. Used by healthcare professionals across America.",
     keywords: "BMI calculator, body mass index calculator, BMI chart, healthy weight calculator, weight calculator, BMI for adults, BMI USA",
-    canonicalUrl: "/bmi",
+    canonicalUrl: "/bmi-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -38,7 +38,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Calorie Calculator - Daily Calorie Needs Calculator",
     description: "Calculate your daily calorie needs with our free calorie calculator. Find out how many calories you need to lose, maintain, or gain weight. Based on scientifically proven formulas.",
     keywords: "calorie calculator, daily calorie calculator, calorie needs calculator, weight loss calculator, TDEE calculator, calorie counter USA",
-    canonicalUrl: "/calorie",
+    canonicalUrl: "/calorie-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -53,7 +53,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Body Fat Calculator - Free Body Fat Percentage Calculator",
     description: "Calculate your body fat percentage with our free body fat calculator. Uses US Navy and other proven methods. Track your fitness progress accurately.",
     keywords: "body fat calculator, body fat percentage calculator, body composition calculator, fat percentage calculator, fitness calculator USA",
-    canonicalUrl: "/body-fat",
+    canonicalUrl: "/body-fat-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -68,7 +68,7 @@ export const seoData: Record<string, SEOData> = {
     title: "BMR Calculator - Basal Metabolic Rate Calculator",
     description: "Calculate your Basal Metabolic Rate (BMR) with our free calculator. Find out how many calories your body burns at rest. Essential for weight management.",
     keywords: "BMR calculator, basal metabolic rate calculator, metabolism calculator, resting calories calculator, weight loss planning USA",
-    canonicalUrl: "/bmr",
+    canonicalUrl: "/bmr-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -83,7 +83,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Ideal Weight Calculator - Find Your Healthy Weight",
     description: "Calculate your ideal body weight with our free calculator. Uses multiple scientific formulas including Devine, Robinson, Miller, and Hamwi. Perfect for health goals.",
     keywords: "ideal weight calculator, healthy weight calculator, target weight calculator, ideal body weight, weight goal calculator USA",
-    canonicalUrl: "/ideal-weight",
+    canonicalUrl: "/ideal-weight-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -99,7 +99,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Mortgage Calculator - Free Home Loan Payment Calculator",
     description: "Calculate your monthly mortgage payments with our free mortgage calculator. Includes principal, interest, taxes, and insurance. Perfect for home buyers in America.",
     keywords: "mortgage calculator, home loan calculator, mortgage payment calculator, house payment calculator, home mortgage calculator USA, PITI calculator",
-    canonicalUrl: "/mortgage",
+    canonicalUrl: "/mortgage-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -114,7 +114,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Loan Calculator - Free Loan Payment Calculator",
     description: "Calculate loan payments, interest, and amortization with our free loan calculator. Works for personal loans, auto loans, and more. See your total cost breakdown.",
     keywords: "loan calculator, loan payment calculator, personal loan calculator, auto loan calculator, car loan calculator USA, loan interest calculator",
-    canonicalUrl: "/loan",
+    canonicalUrl: "/loan-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -129,7 +129,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Compound Interest Calculator - Free Investment Growth Calculator",
     description: "Calculate compound interest and investment growth with our free calculator. See how your money grows over time with daily, monthly, or annual compounding.",
     keywords: "compound interest calculator, investment calculator, interest calculator, savings calculator, compound growth calculator USA, money growth calculator",
-    canonicalUrl: "/compound-interest",
+    canonicalUrl: "/compound-interest-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -144,7 +144,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Investment Calculator - Free Investment Return Calculator",
     description: "Calculate investment returns and growth with our free investment calculator. Plan your financial future with accurate projections for stocks, bonds, and more.",
     keywords: "investment calculator, investment return calculator, stock calculator, portfolio calculator, investment growth calculator USA, ROI calculator",
-    canonicalUrl: "/investment",
+    canonicalUrl: "/investment-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -159,7 +159,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Retirement Calculator - Free Retirement Savings Calculator",
     description: "Plan your retirement with our free retirement calculator. Calculate how much you need to save for a comfortable retirement. Perfect for 401k and IRA planning.",
     keywords: "retirement calculator, retirement savings calculator, 401k calculator, IRA calculator, retirement planning calculator USA, pension calculator",
-    canonicalUrl: "/retirement",
+    canonicalUrl: "/retirement-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -174,7 +174,7 @@ export const seoData: Record<string, SEOData> = {
     title: "ROI Calculator - Free Return on Investment Calculator",
     description: "Calculate Return on Investment (ROI) with our free calculator. Measure the profitability of your investments and business decisions accurately.",
     keywords: "ROI calculator, return on investment calculator, investment ROI calculator, business ROI calculator, profit calculator USA",
-    canonicalUrl: "/roi",
+    canonicalUrl: "/roi-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -189,7 +189,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Salary Calculator - Hourly to Annual Salary Converter",
     description: "Convert between hourly, weekly, monthly, and annual salary with our free salary calculator. Perfect for job offers and paycheck calculations in the USA.",
     keywords: "salary calculator, hourly to salary calculator, annual salary calculator, paycheck calculator USA, wage calculator, income calculator",
-    canonicalUrl: "/salary",
+    canonicalUrl: "/salary-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -204,7 +204,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Tip Calculator - Free Tip & Bill Split Calculator",
     description: "Calculate tips and split bills easily with our free tip calculator. Perfect for restaurants, bars, and services. Supports custom tip percentages and party sizes.",
     keywords: "tip calculator, gratuity calculator, bill split calculator, restaurant tip calculator USA, service tip calculator, split bill calculator",
-    canonicalUrl: "/tip",
+    canonicalUrl: "/tip-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -219,7 +219,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Currency Converter - Free Real-Time Exchange Rate Calculator",
     description: "Convert currencies with real-time exchange rates. Our free currency converter supports USD, EUR, GBP, and 150+ world currencies. Updated daily.",
     keywords: "currency converter, exchange rate calculator, USD converter, money converter, forex calculator USA, currency exchange calculator",
-    canonicalUrl: "/currency",
+    canonicalUrl: "/currency-converter",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -232,14 +232,14 @@ export const seoData: Record<string, SEOData> = {
 
   // Math & Science
   calculator: {
-    title: "Basic Calculator - Free Online Calculator",
+    title: "Free Online Calculator - Basic Math Calculator",
     description: "Free online calculator for basic math operations. Add, subtract, multiply, and divide with our easy-to-use calculator. Works on desktop and mobile.",
-    keywords: "online calculator, basic calculator, math calculator, free calculator, simple calculator USA, addition calculator",
-    canonicalUrl: "/calculator",
+    keywords: "online calculator, basic calculator, math calculator, free calculator, simple calculator USA, addition calculator, free online calculator",
+    canonicalUrl: "/online-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Basic Calculator",
+      "name": "Online Calculator",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web Browser",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -250,7 +250,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Percentage Calculator - Free Percent Calculator",
     description: "Calculate percentages easily with our free percentage calculator. Find percentage of a number, percentage increase/decrease, and more. Perfect for discounts and tips.",
     keywords: "percentage calculator, percent calculator, discount calculator, percentage increase calculator USA, percentage decrease calculator",
-    canonicalUrl: "/percentage",
+    canonicalUrl: "/percentage-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -265,7 +265,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Scientific Calculator - Free Advanced Math Calculator",
     description: "Advanced scientific calculator with trigonometry, logarithms, exponents, and more. Free online calculator for students, engineers, and scientists.",
     keywords: "scientific calculator, advanced calculator, trigonometry calculator, logarithm calculator USA, engineering calculator, math calculator",
-    canonicalUrl: "/scientific",
+    canonicalUrl: "/scientific-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -280,7 +280,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Fraction Calculator - Free Fraction Math Calculator",
     description: "Add, subtract, multiply, and divide fractions with our free fraction calculator. Simplify fractions and convert to decimals. Perfect for students.",
     keywords: "fraction calculator, fraction math calculator, add fractions calculator, simplify fractions calculator USA, mixed number calculator",
-    canonicalUrl: "/fraction",
+    canonicalUrl: "/fraction-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -295,7 +295,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Statistics Calculator - Mean, Median, Mode Calculator",
     description: "Calculate mean, median, mode, standard deviation, and variance with our free statistics calculator. Perfect for data analysis and statistics homework.",
     keywords: "statistics calculator, mean calculator, median calculator, mode calculator USA, standard deviation calculator, variance calculator",
-    canonicalUrl: "/statistics",
+    canonicalUrl: "/statistics-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -311,7 +311,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Age Calculator - Calculate Your Exact Age",
     description: "Calculate your exact age in years, months, and days with our free age calculator. Find out how old you are down to the day. Perfect for birthdays.",
     keywords: "age calculator, birthday calculator, how old am I calculator USA, exact age calculator, age in days calculator",
-    canonicalUrl: "/age",
+    canonicalUrl: "/age-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -326,7 +326,7 @@ export const seoData: Record<string, SEOData> = {
     title: "Date Calculator - Days Between Dates Calculator",
     description: "Calculate the number of days, weeks, months, and years between two dates with our free date calculator. Perfect for planning events and deadlines.",
     keywords: "date calculator, days between dates calculator, date difference calculator USA, countdown calculator, date duration calculator",
-    canonicalUrl: "/date-difference",
+    canonicalUrl: "/date-difference-calculator",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -357,34 +357,34 @@ export const seoData: Record<string, SEOData> = {
     title: "About Us - MultiCalculator",
     description: "Learn about MultiCalculator - your trusted source for free online calculators. We provide accurate, easy-to-use tools for health, finance, and math calculations.",
     keywords: "about MultiCalculator, calculator website, free online calculators USA",
-    canonicalUrl: "/about",
+    canonicalUrl: "/about-us",
   },
 
   contact: {
     title: "Contact Us - MultiCalculator",
     description: "Contact MultiCalculator for questions, feedback, or support. We're here to help you with our free online calculators.",
     keywords: "contact MultiCalculator, calculator support, calculator help USA",
-    canonicalUrl: "/contact",
+    canonicalUrl: "/contact-us",
   },
 
   privacy: {
     title: "Privacy Policy - MultiCalculator",
-    description: "Read MultiCalculator's privacy policy. Learn how we protect your data and privacy when using our free online calculators.",
-    keywords: "privacy policy, data protection, MultiCalculator privacy",
-    canonicalUrl: "/privacy",
+    description: "Read our privacy policy to understand how MultiCalculator protects your data and privacy while using our free online calculators.",
+    keywords: "privacy policy, data protection, calculator privacy USA",
+    canonicalUrl: "/privacy-policy",
   },
 
   terms: {
     title: "Terms and Conditions - MultiCalculator",
-    description: "Read MultiCalculator's terms and conditions. Understand your rights and responsibilities when using our free online calculators.",
-    keywords: "terms and conditions, terms of service, MultiCalculator terms",
-    canonicalUrl: "/terms",
+    description: "Read the terms and conditions for using MultiCalculator's free online calculators and tools.",
+    keywords: "terms and conditions, terms of service, calculator terms USA",
+    canonicalUrl: "/terms-and-conditions",
   },
 
   disclaimer: {
     title: "Disclaimer - MultiCalculator",
-    description: "Read MultiCalculator's disclaimer. Important information about the accuracy and use of our free online calculators.",
-    keywords: "disclaimer, calculator accuracy, MultiCalculator disclaimer",
+    description: "Important disclaimer about the use of MultiCalculator's free online calculators. Understand the limitations of our calculator tools.",
+    keywords: "calculator disclaimer, accuracy disclaimer, calculator limitations USA",
     canonicalUrl: "/disclaimer",
   },
 };
