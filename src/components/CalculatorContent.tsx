@@ -41,6 +41,7 @@ export interface CalculatorContentData {
     name: string;
     path: string;
   }[];
+  disclaimer?: string;
 }
 
 interface CalculatorContentProps {
@@ -207,23 +208,22 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
         </section>
       )}
 
-      {/* Disclaimer */}
-      <Card className="border-yellow-500/30 bg-yellow-500/5">
-        <CardContent className="pt-6">
-          <div className="flex gap-4">
-            <AlertTriangle className="w-6 h-6 text-yellow-600 flex-shrink-0" />
-            <div>
-              <p className="font-semibold text-yellow-700 dark:text-yellow-500 mb-2">Disclaimer</p>
-              <p className="text-sm text-muted-foreground">
-                The results from this calculator are estimates for informational purposes only. 
-                Actual outcomes may vary depending on real-world conditions, fees, taxes, and other factors. 
-                This tool should be used for general guidance only. For final decisions, please consult 
-                a qualified professional or financial advisor.
-              </p>
+      {/* Disclaimer - Only show if provided */}
+      {content.disclaimer && (
+        <Card className="border-yellow-500/30 bg-yellow-500/5">
+          <CardContent className="pt-6">
+            <div className="flex gap-4">
+              <AlertTriangle className="w-6 h-6 text-yellow-600 flex-shrink-0" />
+              <div>
+                <p className="font-semibold text-yellow-700 dark:text-yellow-500 mb-2">Important Notice</p>
+                <p className="text-sm text-muted-foreground">
+                  {content.disclaimer}
+                </p>
+              </div>
             </div>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

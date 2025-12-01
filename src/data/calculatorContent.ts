@@ -60,7 +60,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "BMR Calculator", path: "/bmr" },
       { name: "Calorie Calculator", path: "/calorie" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
-    ]
+    ],
+    disclaimer: "BMI is a screening tool, not a medical diagnosis. It does not account for muscle mass, bone density, or fat distribution. For personalized health advice, please consult a healthcare professional."
   },
 
   calorie: {
@@ -121,7 +122,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "BMI Calculator", path: "/bmi" },
       { name: "Body Fat Calculator", path: "/body-fat" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
-    ]
+    ],
+    disclaimer: "Calorie estimates are based on general formulas and may vary based on individual metabolism, health conditions, and activity levels. Consult a registered dietitian or healthcare provider before making significant dietary changes."
   },
 
   bodyFat: {
@@ -183,7 +185,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "BMR Calculator", path: "/bmr" },
       { name: "Calorie Calculator", path: "/calorie" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
-    ]
+    ],
+    disclaimer: "Body fat estimates are approximations. For precise analysis, consider professional assessments."
   },
 
   bmr: {
@@ -244,7 +247,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "BMI Calculator", path: "/bmi" },
       { name: "Body Fat Calculator", path: "/body-fat" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
-    ]
+    ],
+    disclaimer: "BMR calculations are estimates based on population averages. Individual metabolic rates vary. Consult a healthcare professional for personalized guidance."
   },
 
   idealWeight: {
@@ -305,7 +309,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Body Fat Calculator", path: "/body-fat" },
       { name: "Calorie Calculator", path: "/calorie" },
       { name: "BMR Calculator", path: "/bmr" }
-    ]
+    ],
+    disclaimer: "Ideal weight ranges are based on historical formulas and don't account for individual body composition, muscle mass, or health factors. A healthy weight varies by person. Consult a healthcare provider for personalized recommendations."
   },
 
   // ==================== FINANCE ====================
@@ -367,7 +372,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Compound Interest Calculator", path: "/compound-interest" },
       { name: "Investment Calculator", path: "/investment" },
       { name: "ROI Calculator", path: "/roi" }
-    ]
+    ],
+    disclaimer: "Mortgage calculations are estimates. Actual payments vary due to taxes, insurance, PMI, and lender terms. Consult a mortgage professional for accurate quotes."
   },
 
   loan: {
@@ -428,7 +434,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Compound Interest Calculator", path: "/compound-interest" },
       { name: "ROI Calculator", path: "/roi" },
       { name: "Salary Calculator", path: "/salary" }
-    ]
+    ],
+    disclaimer: "Loan calculations are estimates. Actual payments may vary due to fees, variable rates, and lender terms. Compare offers from multiple lenders."
   },
 
   compoundInterest: {
@@ -490,7 +497,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Retirement Calculator", path: "/retirement" },
       { name: "ROI Calculator", path: "/roi" },
       { name: "Mortgage Calculator", path: "/mortgage" }
-    ]
+    ],
+    disclaimer: "Investment projections assume consistent returns, which do not reflect real market volatility. Past performance does not guarantee future results."
   },
 
   investment: {
@@ -551,7 +559,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Retirement Calculator", path: "/retirement" },
       { name: "ROI Calculator", path: "/roi" },
       { name: "Salary Calculator", path: "/salary" }
-    ]
+    ],
+    disclaimer: "Investment projections assume consistent returns. Actual results vary due to market volatility. Consult a financial advisor for personalized advice."
   },
 
   retirement: {
@@ -613,7 +622,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Compound Interest Calculator", path: "/compound-interest" },
       { name: "Salary Calculator", path: "/salary" },
       { name: "ROI Calculator", path: "/roi" }
-    ]
+    ],
+    disclaimer: "Retirement projections are estimates. Actual results vary due to market conditions, inflation, taxes, and healthcare costs. Consult a certified financial planner."
   },
 
   roi: {
@@ -674,7 +684,8 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Compound Interest Calculator", path: "/compound-interest" },
       { name: "Retirement Calculator", path: "/retirement" },
       { name: "Percentage Calculator", path: "/percentage" }
-    ]
+    ],
+    disclaimer: "ROI calculations are simplified estimates. Actual returns vary due to taxes, fees, and market conditions. Consult a financial professional for investment decisions."
   },
 
   salary: {
