@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CalculatorCard from "@/components/CalculatorCard";
@@ -60,7 +61,7 @@ export default function Index() {
       <Header />
       
       {/* Hero Section */}
-      <main>
+      <main id="main-content">
         <section 
           className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 border-b border-border"
           aria-label="Welcome to MultiCalculator"
@@ -152,30 +153,30 @@ export default function Index() {
         </section>
 
         {/* SEO Content Section */}
-        <section className="container mx-auto px-4 py-12 border-t border-border">
+        <section className="container mx-auto px-4 py-12 border-t border-border" aria-label="About MultiCalculator">
           <div className="max-w-4xl mx-auto prose prose-gray dark:prose-invert">
-            <h2 className="text-2xl font-bold mb-4">Why Use MultiCalculator?</h2>
-            <p className="text-muted-foreground mb-6">
+            <h2 className="text-2xl font-bold mb-4 text-foreground">Why Use MultiCalculator?</h2>
+            <p className="text-foreground/80 mb-6">
               MultiCalculator provides <strong>free online calculators</strong> for health, finance, math, and everyday needs. 
-              Whether you need to calculate your <a href="/bmi-calculator" className="text-primary hover:underline">BMI</a>, 
-              estimate <a href="/mortgage-calculator" className="text-primary hover:underline">mortgage payments</a>, 
-              or figure out <a href="/compound-interest-calculator" className="text-primary hover:underline">compound interest</a>, 
+              Whether you need to calculate your <Link to="/bmi-calculator" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">BMI</Link>, 
+              estimate <Link to="/mortgage-calculator" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">mortgage payments</Link>, 
+              or figure out <Link to="/compound-interest-calculator" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">compound interest</Link>, 
               our tools deliver accurate results instantly.
             </p>
             
-            <h3 className="text-xl font-semibold mb-3">Popular Calculator Categories</h3>
-            <ul className="grid md:grid-cols-2 gap-2 list-none pl-0">
+            <h3 className="text-xl font-semibold mb-3 text-foreground">Popular Calculator Categories</h3>
+            <ul className="grid md:grid-cols-2 gap-2 list-none pl-0" role="list">
               <li>
-                <a href="#health" className="text-primary hover:underline">🏥 Health & Fitness Calculators</a> - BMI, Calorie, Body Fat, BMR
+                <a href="#health" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">🏥</span> Health & Fitness Calculators</a> - BMI, Calorie, Body Fat, BMR
               </li>
               <li>
-                <a href="#finance" className="text-primary hover:underline">💰 Finance Calculators</a> - Mortgage, Loan, Investment, Retirement
+                <a href="#finance" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">💰</span> Finance Calculators</a> - Mortgage, Loan, Investment, Retirement
               </li>
               <li>
-                <a href="#math" className="text-primary hover:underline">🔢 Math Calculators</a> - Scientific, Percentage, Fraction, Statistics
+                <a href="#math" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">🔢</span> Math Calculators</a> - Scientific, Percentage, Fraction, Statistics
               </li>
               <li>
-                <a href="#datetime" className="text-primary hover:underline">📅 Date & Time Calculators</a> - Age, Date Difference, Time Calculator
+                <a href="#datetime" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">📅</span> Date & Time Calculators</a> - Age, Date Difference, Time Calculator
               </li>
             </ul>
           </div>
