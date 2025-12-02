@@ -1,182 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
-  <url>
-    <loc>https://multicalculator.online/</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Health & Fitness Calculators -->
-  <url>
-    <loc>https://multicalculator.online/bmi-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/calorie-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/body-fat-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/bmr-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/ideal-weight-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!-- Homepage -->
+<url>
+  <loc>https://multicalculator.online/</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
 
-  <!-- Finance Calculators -->
-  <url>
-    <loc>https://multicalculator.online/mortgage-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/loan-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/compound-interest-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/investment-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/retirement-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/roi-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/salary-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/tip-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/currency-converter</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!-- Health & Fitness Calculators -->
+<url>
+  <loc>https://multicalculator.online/bmi-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/calorie-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/body-fat-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/bmr-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/ideal-weight-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 
-  <!-- Math & Science Calculators -->
-  <url>
-    <loc>https://multicalculator.online/online-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/percentage-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/scientific-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/fraction-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/statistics-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!-- Finance Calculators -->
+<url>
+  <loc>https://multicalculator.online/mortgage-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/loan-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/compound-interest-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/investment-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/retirement-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/roi-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/salary-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/tip-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/currency-converter</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 
-  <!-- Date & Time Calculators -->
-  <url>
-    <loc>https://multicalculator.online/age-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/date-difference-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/time-calculator</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!-- Math & Science Calculators -->
+<url>
+  <loc>https://multicalculator.online/online-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/percentage-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/scientific-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/fraction-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/statistics-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 
-  <!-- Information Pages -->
-  <url>
-    <loc>https://multicalculator.online/about-us</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/contact-us</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/privacy-policy</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/terms-and-conditions</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://multicalculator.online/disclaimer</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+<!-- Date & Time Calculators -->
+<url>
+  <loc>https://multicalculator.online/age-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/date-difference-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/time-calculator</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Information Pages -->
+<url>
+  <loc>https://multicalculator.online/about-us</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/contact-us</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/privacy-policy</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/terms-and-conditions</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/disclaimer</loc>
+  <lastmod>2025-12-02T12:34:37+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+
 </urlset>
