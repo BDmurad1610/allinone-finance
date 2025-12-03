@@ -1,5 +1,6 @@
 import { Calculator, Users, Download } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PWAInstallButton } from "./PWAInstallButton";
 
 export default function Header() {
   return (
@@ -36,6 +37,8 @@ export default function Header() {
               <span className="font-semibold">15.3K</span>
               <span className="hidden md:inline">downloads</span>
             </div>
+            <PWAInstallButton variant="outline" size="sm" showLabel={false} className="hidden sm:flex" />
+            <PWAInstallButton variant="default" size="sm" showLabel={true} className="sm:hidden" />
           </div>
         </div>
       </nav>

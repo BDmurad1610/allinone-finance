@@ -10,6 +10,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Disclaimer from "./pages/Disclaimer";
+import Install from "./pages/Install";
 
 // Health & Fitness Calculators
 import BMICalculator from "./pages/calculators/BMICalculator";
@@ -111,6 +112,7 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/install" element={<Install />} />
           
           {/* Legacy Info Page Redirects */}
           <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
