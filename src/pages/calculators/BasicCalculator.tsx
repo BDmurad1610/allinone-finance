@@ -100,8 +100,8 @@ export default function BasicCalculator() {
     }
   };
 
-  const btnClass = "h-16 text-lg font-semibold transition-all hover:scale-105";
-  const operatorClass = "h-16 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105";
+  const btnClass = "h-16 text-lg font-semibold transition-all hover:scale-105 active:scale-95 active:shadow-[0_0_15px_hsl(45_93%_47%/0.4)]";
+  const operatorClass = "h-16 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 active:shadow-[0_0_20px_hsl(45_93%_47%/0.6)]";
 
   return (
     <CalculatorLayout 
