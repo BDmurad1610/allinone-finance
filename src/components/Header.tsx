@@ -1,6 +1,7 @@
 import { Calculator, Users, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PWAInstallButton } from "./PWAInstallButton";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -26,7 +27,7 @@ export default function Header() {
             </div>
           </Link>
           
-          <div className="flex items-center gap-4 text-sm" aria-label="Site statistics">
+          <div className="flex items-center gap-3 text-sm" aria-label="Site statistics">
             <div className="hidden sm:flex items-center gap-1.5 text-foreground/70 transition-colors" aria-label="42.1 thousand users">
               <Users className="w-4 h-4 text-primary" aria-hidden="true" />
               <span className="font-semibold">42.1K</span>
@@ -37,6 +38,7 @@ export default function Header() {
               <span className="font-semibold">15.3K</span>
               <span className="hidden md:inline">downloads</span>
             </div>
+            <ThemeToggle />
             <PWAInstallButton variant="outline" size="sm" showLabel={false} className="hidden sm:flex" />
             <PWAInstallButton variant="default" size="sm" showLabel={true} className="sm:hidden" />
           </div>
