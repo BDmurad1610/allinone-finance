@@ -116,3 +116,28 @@ All colors MUST be HSL.
     @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
   }
 }
+
+/* Ticker Animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-content {
+  display: flex;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-content:hover {
+  animation-play-state: paused;
+}
