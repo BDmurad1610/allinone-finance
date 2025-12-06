@@ -6,9 +6,10 @@ import CalculatorCard from "@/components/CalculatorCard";
 import { calculators, categories } from "@/data/calculators";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, ArrowRight, Sparkles, Calculator, TrendingUp, Heart, Calendar } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { seoData } from "@/lib/seoData";
+import { Button } from "@/components/ui/button";
 
 export default function Index() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -63,49 +64,101 @@ export default function Index() {
       {/* Hero Section */}
       <main id="main-content">
         <section 
-          className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 border-b border-border"
+          className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border-b border-border"
           aria-label="Welcome to MultiCalculator"
         >
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM1YTY3ZDgiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAgMi4yMS0xLjc5IDQtNCA0cy00LTEuNzktNC00IDEuNzktNCA0LTQgNCAxLjc5IDQgNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
-          <div className="container mx-auto px-4 py-16 text-center relative">
-            <div className="max-w-3xl mx-auto animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 py-16 md:py-24 relative">
+            <div className="max-w-4xl mx-auto text-center animate-fade-in">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 border border-primary/20">
+                <Sparkles className="w-4 h-4" />
+                <span>20+ Free Professional Calculators</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
                 Free Online Calculators for Every Need
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                From <strong>BMI calculators</strong> to <strong>mortgage calculators</strong>, we provide 20+ professional-grade tools trusted by thousands of Americans daily.
+              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto">
+                From <strong className="text-foreground">BMI calculators</strong> to <strong className="text-foreground">mortgage calculators</strong>, trusted by thousands of Americans daily.
               </p>
               
-              {/* Reviews Section with AggregateRating */}
-              <Card className="max-w-lg mx-auto bg-card/95 backdrop-blur-sm shadow-card hover:shadow-card-hover transition-all duration-300 border-border rounded-2xl animate-slide-up">
-                <CardContent className="py-6 px-8">
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="flex items-center gap-3">
-                      <div className="flex gap-1" role="img" aria-label="4.8 out of 5 stars rating">
-                        {[1, 2, 3, 4].map((star) => (
-                          <Star
-                            key={star}
-                            className="w-7 h-7 fill-yellow-400 text-yellow-400"
-                            aria-hidden="true"
-                          />
-                        ))}
-                        <div className="relative w-7 h-7">
-                          <Star className="w-7 h-7 fill-gray-300 text-gray-300" aria-hidden="true" />
-                          <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
-                            <Star className="w-7 h-7 fill-yellow-400 text-yellow-400" aria-hidden="true" />
-                          </div>
-                        </div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <Button asChild size="lg" className="group px-8 py-6 text-lg rounded-xl bg-gradient-to-r from-primary to-accent hover:opacity-90 shadow-lg hover:shadow-xl transition-all">
+                  <a href="#calculators">
+                    Explore All Calculators
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="px-8 py-6 text-lg rounded-xl border-2 hover:bg-primary/5">
+                  <Link to="/bmi-calculator">
+                    Try BMI Calculator
+                  </Link>
+                </Button>
+              </div>
+              
+              {/* Reviews Section */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-0.5" role="img" aria-label="4.8 out of 5 stars rating">
+                    {[1, 2, 3, 4].map((star) => (
+                      <Star
+                        key={star}
+                        className="w-6 h-6 fill-yellow-400 text-yellow-400"
+                        aria-hidden="true"
+                      />
+                    ))}
+                    <div className="relative w-6 h-6">
+                      <Star className="w-6 h-6 fill-muted text-muted" aria-hidden="true" />
+                      <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
+                        <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" aria-hidden="true" />
                       </div>
-                      <div className="h-8 w-px bg-border" aria-hidden="true"></div>
-                      <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.8</span>
                     </div>
-                    <p className="text-base text-muted-foreground text-center">
-                      Rated by <span className="font-semibold text-foreground">9,875</span> happy users
-                    </p>
                   </div>
-                </CardContent>
-              </Card>
+                  <span className="text-2xl font-bold text-foreground">4.8</span>
+                </div>
+                <div className="h-6 w-px bg-border hidden sm:block" aria-hidden="true"></div>
+                <p className="text-muted-foreground">
+                  Trusted by <span className="font-semibold text-foreground">9,875+</span> happy users
+                </p>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* Featured Calculators Section */}
+        <section className="container mx-auto px-4 py-12 -mt-8 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { icon: Heart, title: "Health", desc: "BMI, Calories, Body Fat", path: "/bmi-calculator", color: "from-green-500 to-emerald-600" },
+              { icon: TrendingUp, title: "Finance", desc: "Mortgage, Loans, ROI", path: "/mortgage-calculator", color: "from-blue-500 to-indigo-600" },
+              { icon: Calculator, title: "Math", desc: "Scientific, Percentage", path: "/online-calculator", color: "from-purple-500 to-pink-600" },
+              { icon: Calendar, title: "Date & Time", desc: "Age, Date Difference", path: "/age-calculator", color: "from-orange-500 to-red-600" },
+            ].map((item, index) => (
+              <Link
+                key={item.title}
+                to={item.path}
+                className="group animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <Card className="h-full bg-card/80 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
+                    <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                      <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
+                    <p className="text-xs md:text-sm text-muted-foreground">{item.desc}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </section>
 
