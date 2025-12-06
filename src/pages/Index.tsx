@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CalculatorTicker from "@/components/CalculatorTicker";
 import CalculatorCard from "@/components/CalculatorCard";
 import { calculators, categories } from "@/data/calculators";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -60,6 +61,7 @@ export default function Index() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
       
       <Header />
+      <CalculatorTicker />
       
       {/* Hero Section */}
       <main id="main-content">
