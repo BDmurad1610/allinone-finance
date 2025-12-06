@@ -56,15 +56,24 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
   return (
     <div className="mt-8 space-y-4">
       {/* Instructions Toggle Button */}
-      <Button
-        variant="outline"
+      <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-center justify-center gap-2 py-6 text-base font-semibold"
+        className="w-full flex items-center justify-center gap-3 py-4 px-6 text-base font-semibold 
+          bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 
+          hover:from-primary/20 hover:via-primary/30 hover:to-primary/20
+          dark:from-primary/20 dark:via-primary/30 dark:to-primary/20
+          dark:hover:from-primary/30 dark:hover:via-primary/40 dark:hover:to-primary/30
+          border border-primary/30 hover:border-primary/50
+          rounded-xl transition-all duration-300 ease-in-out
+          hover:shadow-lg hover:shadow-primary/20
+          active:scale-[0.98] group"
       >
-        <BookOpen className="w-5 h-5 text-primary" />
-        {isExpanded ? "Hide Instructions & Guide" : "Show Instructions & Guide"}
-        {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
-      </Button>
+        <BookOpen className="w-5 h-5 text-primary transition-transform duration-300 group-hover:scale-110" />
+        <span className="text-foreground">{isExpanded ? "Hide Instructions & Guide" : "Show Instructions & Guide"}</span>
+        <span className={`transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}>
+          <ChevronDown className="w-5 h-5 text-primary" />
+        </span>
+      </button>
 
       {/* Collapsible Content */}
       <div className={`space-y-8 overflow-hidden transition-all duration-500 ${isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"}`}>
