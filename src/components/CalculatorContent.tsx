@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import {
@@ -6,7 +7,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import { AlertTriangle, Calculator, HelpCircle, Lightbulb, Target, BookOpen } from "lucide-react";
+import { Button } from "./ui/button";
+import { AlertTriangle, Calculator, HelpCircle, Lightbulb, Target, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
 
 export interface CalculatorContentData {
   intro: {
@@ -49,8 +51,23 @@ interface CalculatorContentProps {
 }
 
 export default function CalculatorContent({ content }: CalculatorContentProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="mt-12 space-y-8">
+    <div className="mt-8 space-y-4">
+      {/* Instructions Toggle Button */}
+      <Button
+        variant="outline"
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full flex items-center justify-center gap-2 py-6 text-base font-semibold"
+      >
+        <BookOpen className="w-5 h-5 text-primary" />
+        {isExpanded ? "Hide Instructions & Guide" : "Show Instructions & Guide"}
+        {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+      </Button>
+
+      {/* Collapsible Content */}
+      <div className={`space-y-8 overflow-hidden transition-all duration-500 ${isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"}`}>
       {/* Intro Section */}
       <section aria-labelledby="intro-heading" className="prose prose-gray dark:prose-invert max-w-none">
         <h2 id="intro-heading" className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -225,6 +242,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
           </CardContent>
         </Card>
       )}
+      </div>
     </div>
   );
 }
