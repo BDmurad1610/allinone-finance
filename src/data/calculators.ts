@@ -25,6 +25,7 @@ export interface CalculatorItem {
   icon: any;
   category: string;
   isActive: boolean;
+  isPopular?: boolean;
 }
 
 export const categories = [
@@ -44,6 +45,7 @@ export const calculators: CalculatorItem[] = [
     icon: Scale,
     category: "health",
     isActive: true,
+    isPopular: true,
   },
   {
     id: "calorie",
@@ -53,6 +55,7 @@ export const calculators: CalculatorItem[] = [
     icon: Apple,
     category: "health",
     isActive: true,
+    isPopular: true,
   },
   {
     id: "body-fat",
@@ -91,6 +94,7 @@ export const calculators: CalculatorItem[] = [
     icon: Building2,
     category: "finance",
     isActive: true,
+    isPopular: true,
   },
   {
     id: "loan",
@@ -109,6 +113,7 @@ export const calculators: CalculatorItem[] = [
     icon: TrendingUp,
     category: "finance",
     isActive: true,
+    isPopular: true,
   },
   {
     id: "investment",
@@ -174,6 +179,7 @@ export const calculators: CalculatorItem[] = [
     icon: Calculator,
     category: "math",
     isActive: true,
+    isPopular: true,
   },
   {
     id: "percentage",
@@ -183,6 +189,7 @@ export const calculators: CalculatorItem[] = [
     icon: Percent,
     category: "math",
     isActive: true,
+    isPopular: true,
   },
   {
     id: "scientific",
@@ -221,6 +228,7 @@ export const calculators: CalculatorItem[] = [
     icon: Calendar,
     category: "date",
     isActive: true,
+    isPopular: true,
   },
   {
     id: "date-difference",

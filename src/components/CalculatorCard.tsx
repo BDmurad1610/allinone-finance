@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalculatorItem } from "@/data/calculators";
+import { TrendingUp } from "lucide-react";
 
 interface CalculatorCardProps {
   calculator: CalculatorItem;
@@ -16,7 +17,15 @@ export default function CalculatorCard({ calculator }: CalculatorCardProps) {
       className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-xl"
       aria-label={`${calculator.title} - ${calculator.description}`}
     >
-      <Card className="h-full transition-all duration-300 hover:shadow-[0_12px_32px_-4px_hsl(225_73%_57%_/_0.25)] hover:-translate-y-2 border-border bg-gradient-to-br from-card to-card/50 rounded-xl overflow-hidden">
+      <Card className="h-full transition-all duration-300 hover:shadow-[0_12px_32px_-4px_hsl(225_73%_57%_/_0.25)] hover:-translate-y-2 border-border bg-gradient-to-br from-card to-card/50 rounded-xl overflow-hidden relative">
+        {calculator.isPopular && (
+          <div className="absolute top-3 right-3 z-10">
+            <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 text-xs px-2 py-1 rounded-full shadow-md flex items-center gap-1">
+              <TrendingUp className="w-3 h-3" />
+              Popular
+            </Badge>
+          </div>
+        )}
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
             <div 
