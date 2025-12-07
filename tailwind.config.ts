@@ -102,8 +102,13 @@ export default {
           "100%": { width: "100%" },
         },
         "blink": {
-          "0%, 100%": { borderColor: "transparent" },
-          "50%": { borderColor: "hsl(var(--primary))" },
+          "0%, 45%": { borderColor: "hsl(var(--primary))" },
+          "50%, 95%": { borderColor: "transparent" },
+          "100%": { borderColor: "transparent" },
+        },
+        "blink-hide": {
+          "0%": { borderColor: "hsl(var(--primary))" },
+          "100%": { borderColor: "transparent" },
         },
       },
       animation: {
@@ -113,7 +118,7 @@ export default {
         "slide-up": "slide-up 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
         "typing": "typing 2s steps(40, end) forwards",
-        "blink": "blink 1s step-end infinite",
+        "blink": "blink 0.75s step-end 3 forwards",
       },
     },
   },
