@@ -28,7 +28,7 @@ export default function CalculatorLayout({ children, title, description, breadcr
         <article className="max-w-4xl mx-auto">
           <header className="text-center mb-8">
             <div className="mb-4 p-4 rounded-lg bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border border-primary/20">
-              <p className="text-sm md:text-base text-foreground/80">
+              <p className="text-sm md:text-base text-foreground/80 overflow-hidden whitespace-nowrap animate-typing border-r-2 border-primary animate-blink" style={{ animationFillMode: 'forwards' }}>
                 👋 Welcome to <span className="font-semibold text-primary">{title}</span>! Use this free online tool to get instant, accurate results. No signup required.
               </p>
             </div>
