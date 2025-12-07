@@ -97,6 +97,14 @@ export default {
           "50%": { transform: "translateX(100%) skewX(-12deg)" },
           "100%": { transform: "translateX(100%) skewX(-12deg)" },
         },
+        "typing": {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
+        "blink": {
+          "0%, 100%": { borderColor: "transparent" },
+          "50%": { borderColor: "hsl(var(--primary))" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,6 +112,8 @@ export default {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-up": "slide-up 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
+        "typing": "typing 2s steps(40, end) forwards",
+        "blink": "blink 1s step-end infinite",
       },
     },
   },
