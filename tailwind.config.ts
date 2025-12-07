@@ -92,6 +92,11 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "shine": {
+          "0%": { transform: "translateX(-100%) skewX(-12deg)" },
+          "50%": { transform: "translateX(100%) skewX(-12deg)" },
+          "100%": { transform: "translateX(100%) skewX(-12deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

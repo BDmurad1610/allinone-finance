@@ -58,7 +58,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       {/* Instructions Toggle Button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-center justify-center gap-3 py-4 px-6 text-base font-semibold 
+        className="relative w-full flex items-center justify-center gap-3 py-4 px-6 text-base font-semibold 
           bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 
           hover:from-primary/20 hover:via-primary/30 hover:to-primary/20
           dark:from-primary/20 dark:via-primary/30 dark:to-primary/20
@@ -66,11 +66,14 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
           border border-primary/30 hover:border-primary/50
           rounded-xl transition-all duration-300 ease-in-out
           hover:shadow-lg hover:shadow-primary/20
-          active:scale-[0.98] group"
+          active:scale-[0.98] group overflow-hidden"
       >
-        <BookOpen className="w-5 h-5 text-primary transition-transform duration-300 group-hover:scale-110" />
-        <span className="text-foreground">{isExpanded ? "Hide Instructions & Guide" : "Show Instructions & Guide"}</span>
-        <span className={`transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}>
+        {/* Shine Effect */}
+        <span className="absolute inset-0 -translate-x-full animate-[shine_3s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+        
+        <BookOpen className="w-5 h-5 text-primary transition-transform duration-300 group-hover:scale-110 relative z-10" />
+        <span className="text-foreground relative z-10">{isExpanded ? "Hide Instructions & Guide" : "Show Instructions & Guide"}</span>
+        <span className={`transition-transform duration-300 relative z-10 ${isExpanded ? "rotate-180" : "rotate-0"}`}>
           <ChevronDown className="w-5 h-5 text-primary" />
         </span>
       </button>
