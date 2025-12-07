@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import Header from "./Header";
 import { Button } from "./ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -13,6 +13,28 @@ interface CalculatorLayoutProps {
 }
 
 export default function CalculatorLayout({ children, title, description, breadcrumbItems }: CalculatorLayoutProps) {
+  const fullText = `👋 Welcome to ${title}! Use this free online tool to get instant, accurate results. No signup required.`;
+  const [displayedText, setDisplayedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    setDisplayedText("");
+    setShowCursor(true);
+    let index = 0;
+    
+    const typingInterval = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayedText(fullText.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(typingInterval);
+        setTimeout(() => setShowCursor(false), 500);
+      }
+    }, 30);
+
+    return () => clearInterval(typingInterval);
+  }, [title]);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -28,8 +50,9 @@ export default function CalculatorLayout({ children, title, description, breadcr
         <article className="max-w-4xl mx-auto">
           <header className="text-center mb-8">
             <div className="mb-4 p-4 rounded-lg bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border border-primary/20">
-              <p className="text-sm md:text-base text-foreground/80 overflow-hidden whitespace-nowrap animate-typing border-r-2 border-primary animate-blink" style={{ animationFillMode: 'forwards' }}>
-                👋 Welcome to <span className="font-semibold text-primary">{title}</span>! Use this free online tool to get instant, accurate results. No signup required.
+              <p className="text-sm md:text-base text-foreground/80">
+                {displayedText}
+                {showCursor && <span className="inline-block w-0.5 h-4 ml-1 bg-primary animate-pulse align-middle" />}
               </p>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
