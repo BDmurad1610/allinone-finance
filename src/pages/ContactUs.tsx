@@ -1,10 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import SEOHead from "@/components/SEOHead";
 import { Mail, Globe } from "lucide-react";
 
 export default function ContactUs() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Contact Us - MultiCalculator"
+        description="Contact MultiCalculator for questions, feedback, or suggestions. Reach us via email at info@multicalculator.online."
+        keywords="contact multicalculator, calculator support, feedback, help"
+        canonicalUrl="https://www.multicalculator.online/contact-us"
+      />
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -21,11 +28,28 @@ export default function ContactUs() {
             <CardContent className="p-8 space-y-6">
               <div className="text-center">
                 <p className="text-muted-foreground text-lg">
-                  If you have any questions, feedback, or suggestions regarding our website or tools, you may contact us through our website.
+                  If you have any questions, feedback, or suggestions regarding our website or tools, feel free to reach out to us.
                 </p>
               </div>
 
-              <div className="flex justify-center pt-6">
+              <div className="grid md:grid-cols-2 gap-6 pt-6">
+                <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3">
+                      <Mail className="w-6 h-6 text-primary" />
+                      <div>
+                        <p className="text-sm text-muted-foreground mb-1">Email</p>
+                        <a 
+                          href="mailto:info@multicalculator.online" 
+                          className="text-lg font-semibold text-primary hover:underline"
+                        >
+                          info@multicalculator.online
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
                 <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-3">
@@ -34,7 +58,7 @@ export default function ContactUs() {
                         <p className="text-sm text-muted-foreground mb-1">Website</p>
                         <a 
                           href="https://www.multicalculator.online" 
-                          className="text-xl font-semibold text-primary hover:underline"
+                          className="text-lg font-semibold text-primary hover:underline"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -48,7 +72,7 @@ export default function ContactUs() {
 
               <div className="text-center pt-6">
                 <p className="text-muted-foreground">
-                  We appreciate your support and thank you for using MultiCalculator.
+                  We typically respond within 24-48 hours. Thank you for using MultiCalculator!
                 </p>
               </div>
             </CardContent>
