@@ -1,10 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import SEOHead from "@/components/SEOHead";
 import { AlertTriangle } from "lucide-react";
 
 export default function Disclaimer() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Disclaimer - MultiCalculator"
+        description="Read the disclaimer for MultiCalculator. Understand the limitations of our free online calculator tools and your responsibilities as a user."
+        keywords="disclaimer, multicalculator disclaimer, calculator accuracy, liability disclaimer"
+        canonicalUrl="https://www.multicalculator.online/disclaimer"
+      />
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">

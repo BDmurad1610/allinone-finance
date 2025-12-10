@@ -1,10 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import SEOHead from "@/components/SEOHead";
 import { Shield } from "lucide-react";
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Privacy Policy - MultiCalculator"
+        description="Read MultiCalculator's privacy policy. Learn how we collect, use, and protect your information when you use our free online calculators."
+        keywords="privacy policy, multicalculator privacy, data protection, cookies policy"
+        canonicalUrl="https://www.multicalculator.online/privacy-policy"
+      />
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">

@@ -1,10 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import SEOHead from "@/components/SEOHead";
 import { FileText } from "lucide-react";
 
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Terms and Conditions - MultiCalculator"
+        description="Read the terms and conditions for using MultiCalculator. Understand your rights and responsibilities when using our free online calculator tools."
+        keywords="terms and conditions, terms of service, multicalculator terms, user agreement"
+        canonicalUrl="https://www.multicalculator.online/terms-and-conditions"
+      />
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
