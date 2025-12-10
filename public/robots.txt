@@ -42,7 +42,7 @@ Allow: /
 Crawl-delay: 2
 
 # Sitemaps
-Sitemap: https://www.multicalculator.online/sitemap.xml
+Sitemap: https://multicalculator.online/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /api/
