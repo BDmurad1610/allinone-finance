@@ -58,6 +58,8 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       {/* Instructions Toggle Button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
+        aria-expanded={isExpanded}
+        aria-controls="calculator-instructions-content"
         className="relative w-full flex items-center justify-center gap-3 py-4 px-6 text-base font-semibold 
           bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 
           hover:from-primary/20 hover:via-primary/30 hover:to-primary/20
@@ -69,21 +71,21 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
           active:scale-[0.98] group overflow-hidden"
       >
         {/* Shine Effect */}
-        <span className="absolute inset-0 -translate-x-full animate-[shine_3s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+        <span className="absolute inset-0 -translate-x-full animate-[shine_3s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" aria-hidden="true" />
         
-        <BookOpen className="w-5 h-5 text-primary transition-transform duration-300 group-hover:scale-110 relative z-10" />
+        <BookOpen className="w-5 h-5 text-primary transition-transform duration-300 group-hover:scale-110 relative z-10" aria-hidden="true" />
         <span className="text-foreground relative z-10">{isExpanded ? "Hide Instructions & Guide" : "Show Instructions & Guide"}</span>
-        <span className={`transition-transform duration-300 relative z-10 ${isExpanded ? "rotate-180" : "rotate-0"}`}>
+        <span className={`transition-transform duration-300 relative z-10 ${isExpanded ? "rotate-180" : "rotate-0"}`} aria-hidden="true">
           <ChevronDown className="w-5 h-5 text-primary" />
         </span>
       </button>
 
       {/* Collapsible Content */}
-      <div className={`space-y-8 overflow-hidden transition-all duration-500 ${isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"}`}>
+      <div id="calculator-instructions-content" className={`space-y-8 overflow-hidden transition-all duration-500 ${isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"}`}>
       {/* Intro Section */}
       <section aria-labelledby="intro-heading" className="prose prose-gray dark:prose-invert max-w-none">
         <h2 id="intro-heading" className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <BookOpen className="w-6 h-6 text-primary" />
+          <BookOpen className="w-6 h-6 text-primary" aria-hidden="true" />
           {content.intro.title}
         </h2>
         {content.intro.paragraphs.map((para, idx) => (
@@ -97,7 +99,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       <Card>
         <CardHeader>
           <h3 className="text-xl font-semibold flex items-center gap-2">
-            <Calculator className="w-5 h-5 text-primary" />
+            <Calculator className="w-5 h-5 text-primary" aria-hidden="true" />
             How to Use This Calculator
           </h3>
         </CardHeader>
@@ -135,7 +137,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
         <Card>
           <CardHeader>
             <h3 className="text-xl font-semibold flex items-center gap-2">
-              <HelpCircle className="w-5 h-5 text-primary" />
+              <HelpCircle className="w-5 h-5 text-primary" aria-hidden="true" />
               {content.formula.title}
             </h3>
           </CardHeader>
@@ -161,7 +163,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       <Card>
         <CardHeader>
           <h3 className="text-xl font-semibold flex items-center gap-2">
-            <Target className="w-5 h-5 text-primary" />
+            <Target className="w-5 h-5 text-primary" aria-hidden="true" />
             {content.useCases.title}
           </h3>
         </CardHeader>
@@ -169,7 +171,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
           <ul className="space-y-3">
             {content.useCases.cases.map((useCase, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" aria-hidden="true" />
                 <span className="text-muted-foreground">{useCase}</span>
               </li>
             ))}
@@ -182,7 +184,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
         <Card className="border-primary/20 bg-primary/5">
           <CardHeader>
             <h3 className="text-xl font-semibold flex items-center gap-2">
-              <Lightbulb className="w-5 h-5 text-primary" />
+              <Lightbulb className="w-5 h-5 text-primary" aria-hidden="true" />
               {content.tips.title}
             </h3>
           </CardHeader>
@@ -190,7 +192,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
             <ul className="space-y-3">
               {content.tips.items.map((tip, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="text-primary font-bold">💡</span>
+                  <span className="text-primary font-bold" aria-hidden="true">💡</span>
                   <span className="text-muted-foreground">{tip}</span>
                 </li>
               ))}
@@ -202,7 +204,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
       {/* FAQ Section */}
       <section>
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <HelpCircle className="w-6 h-6 text-primary" />
+          <HelpCircle className="w-6 h-6 text-primary" aria-hidden="true" />
           Frequently Asked Questions
         </h2>
         <Accordion type="single" collapsible className="w-full">
@@ -240,10 +242,10 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
 
       {/* Disclaimer - Only show if provided */}
       {content.disclaimer && (
-        <Card className="border-yellow-500/30 bg-yellow-500/5">
+        <Card className="border-yellow-500/30 bg-yellow-500/5" role="alert">
           <CardContent className="pt-6">
             <div className="flex gap-4">
-              <AlertTriangle className="w-6 h-6 text-yellow-600 flex-shrink-0" />
+              <AlertTriangle className="w-6 h-6 text-yellow-600 flex-shrink-0" aria-hidden="true" />
               <div>
                 <p className="font-semibold text-yellow-700 dark:text-yellow-500 mb-2">Important Notice</p>
                 <p className="text-sm text-muted-foreground">

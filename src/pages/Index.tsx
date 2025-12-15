@@ -60,6 +60,11 @@ export default function Index() {
       {/* Additional Collection Page Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
       
+      {/* Skip to main content link for accessibility */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      
       <Header />
       <CalculatorTicker />
       

@@ -82,11 +82,11 @@ export default function Footer() {
             {/* Newsletter Signup */}
             <div className="bg-muted/50 rounded-xl p-4 border border-border">
               <div className="flex items-center gap-2 mb-3">
-                <Mail className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-foreground">Subscribe to Newsletter</h3>
+                <Mail className="w-5 h-5 text-primary" aria-hidden="true" />
+                <h3 id="newsletter-heading" className="font-semibold text-foreground">Subscribe to Newsletter</h3>
               </div>
               <p className="text-xs text-muted-foreground mb-3">Get tips, updates & new calculator alerts</p>
-              <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+              <form onSubmit={handleNewsletterSubmit} className="flex gap-2" aria-labelledby="newsletter-heading">
                 <Input
                   type="email"
                   placeholder="Enter your email"
@@ -101,12 +101,14 @@ export default function Footer() {
                   size="sm" 
                   disabled={isLoading}
                   className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                  aria-label="Subscribe to newsletter"
                 >
                   {isLoading ? (
-                    <span className="animate-spin">⏳</span>
+                    <span className="animate-spin" aria-hidden="true">⏳</span>
                   ) : (
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4" aria-hidden="true" />
                   )}
+                  <span className="sr-only">{isLoading ? "Subscribing..." : "Subscribe"}</span>
                 </Button>
               </form>
             </div>
