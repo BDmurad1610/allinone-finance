@@ -1549,5 +1549,70 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Scientific Calculator", path: "/scientific-calculator" },
       { name: "Basic Calculator", path: "/online-calculator" }
     ]
+  },
+
+  speed: {
+    intro: {
+      title: "Understanding Speed, Distance, and Time",
+      paragraphs: [
+        "The relationship between speed, distance, and time is fundamental to physics and everyday life. Whether you're planning a road trip, calculating running pace, or solving physics problems, understanding these calculations helps you make better decisions about travel and motion.",
+        "Our speed calculator lets you solve for any of the three variables — just input two values and get the third. With support for multiple units (km/h, mph, m/s, knots), you can calculate anything from walking pace to airplane cruising speed."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Select What to Calculate", description: "Choose Speed, Distance, or Time from the tabs based on what you want to find." },
+        { title: "Enter Known Values", description: "Input the two values you know (e.g., distance and time to find speed)." },
+        { title: "Select Units", description: "Choose appropriate units for each value (km, miles, hours, minutes, etc.)." },
+        { title: "Calculate", description: "Click Calculate to see your result with the option to convert to different units." }
+      ],
+      example: {
+        inputs: "Distance: 100 km, Time: 1.5 hours",
+        output: "Speed: 66.67 km/h (41.4 mph)"
+      }
+    },
+    formula: {
+      title: "Speed, Distance, Time Formulas",
+      content: "Speed = Distance ÷ Time | Distance = Speed × Time | Time = Distance ÷ Speed",
+      assumptions: [
+        "Assumes constant speed (average speed)",
+        "Does not account for acceleration or deceleration",
+        "For varying speeds, use average speed"
+      ]
+    },
+    useCases: {
+      title: "When to Use Speed Calculator",
+      cases: [
+        "Planning road trips and estimating arrival times",
+        "Calculating running or cycling pace for training",
+        "Determining fuel consumption for travel",
+        "Physics homework and educational purposes",
+        "Comparing transportation options",
+        "Aviation and nautical speed calculations"
+      ]
+    },
+    tips: {
+      title: "Speed Calculation Tips",
+      items: [
+        "For road trips, add 10-15% to calculated time for breaks and traffic",
+        "Running pace is often measured in minutes per mile or km (inverse of speed)",
+        "1 knot = 1.15 mph — commonly used for boats and aircraft",
+        "Average speed differs from instantaneous speed — use total distance ÷ total time",
+        "When comparing speeds, ensure you're using the same units"
+      ]
+    },
+    faq: [
+      { question: "How do I convert mph to km/h?", answer: "Multiply mph by 1.609 to get km/h. For example, 60 mph × 1.609 = 96.5 km/h. To convert km/h to mph, multiply by 0.621." },
+      { question: "What's average speed vs. instantaneous speed?", answer: "Average speed is total distance divided by total time, including stops. Instantaneous speed is your speed at a specific moment (what your speedometer shows). For travel planning, use average speed." },
+      { question: "How do I calculate travel time for a road trip?", answer: "Divide total distance by your expected average speed. For a 300-mile trip at 60 mph average: 300 ÷ 60 = 5 hours. Add 15-30 minutes per 2-3 hours for rest stops." },
+      { question: "What's a good running pace?", answer: "For beginners, 10-12 min/mile (6-6.5 min/km) is typical. Intermediate runners aim for 8-10 min/mile. Elite marathoners run under 5 min/mile (3 min/km). Use our calculator to convert pace to speed." },
+      { question: "How fast is the speed of sound?", answer: "The speed of sound in air at sea level is approximately 343 m/s, 1,235 km/h, or 767 mph. It varies with temperature, altitude, and medium." }
+    ],
+    relatedCalculators: [
+      { name: "Unit Converter", path: "/unit-converter" },
+      { name: "Time Calculator", path: "/time-calculator" },
+      { name: "Distance Calculator", path: "/date-difference-calculator" },
+      { name: "Scientific Calculator", path: "/scientific-calculator" }
+    ]
   }
 };

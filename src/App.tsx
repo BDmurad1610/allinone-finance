@@ -41,6 +41,7 @@ import StatisticsCalculator from "./pages/calculators/StatisticsCalculator";
 import GPACalculator from "./pages/calculators/GPACalculator";
 import UnitConverter from "./pages/calculators/UnitConverter";
 import AreaCalculator from "./pages/calculators/AreaCalculator";
+import SpeedCalculator from "./pages/calculators/SpeedCalculator";
 
 // Date & Time Calculators
 import AgeCalculator from "./pages/calculators/AgeCalculator";
@@ -87,6 +88,7 @@ const App = () => (
           <Route path="/gpa-calculator" element={<GPACalculator />} />
           <Route path="/unit-converter" element={<UnitConverter />} />
           <Route path="/area-calculator" element={<AreaCalculator />} />
+          <Route path="/speed-calculator" element={<SpeedCalculator />} />
           
           {/* Date & Time - SEO Optimized URLs */}
           <Route path="/age-calculator" element={<AgeCalculator />} />
