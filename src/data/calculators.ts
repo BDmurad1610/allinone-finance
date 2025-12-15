@@ -170,6 +170,16 @@ export const calculators: CalculatorItem[] = [
     category: "finance",
     isActive: true,
   },
+  {
+    id: "discount",
+    title: "Discount Calculator",
+    description: "Calculate discounts and sale prices",
+    path: "/discount-calculator",
+    icon: Percent,
+    category: "finance",
+    isActive: true,
+    isPopular: true,
+  },
   
   // Math & Science
   {

@@ -230,6 +230,21 @@ export const seoData: Record<string, SEOData> = {
     }
   },
 
+  discount: {
+    title: "Discount Calculator - Free Sale Price & Savings Calculator",
+    description: "Calculate discounts, sale prices, and savings instantly with our free discount calculator. Perfect for shopping deals, coupons, and Black Friday sales.",
+    keywords: "discount calculator, sale price calculator, percent off calculator, savings calculator USA, coupon calculator, Black Friday calculator, shopping discount calculator",
+    canonicalUrl: "/discount-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Discount Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
   // Math & Science
   calculator: {
     title: "Free Online Calculator - Basic Math Calculator",

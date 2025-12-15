@@ -96,9 +96,15 @@
 </url>
 <url>
   <loc>https://multicalculator.online/currency-converter</loc>
-  <lastmod>2025-12-10T12:00:00+00:00</lastmod>
+  <lastmod>2025-12-15T12:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://multicalculator.online/discount-calculator</loc>
+  <lastmod>2025-12-15T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
 </url>
 
 <!-- Math & Science Calculators -->

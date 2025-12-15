@@ -30,6 +30,7 @@ import ROICalculator from "./pages/calculators/ROICalculator";
 import SalaryCalculator from "./pages/calculators/SalaryCalculator";
 import TipCalculator from "./pages/calculators/TipCalculator";
 import CurrencyConverter from "./pages/calculators/CurrencyConverter";
+import DiscountCalculator from "./pages/calculators/DiscountCalculator";
 
 // Math & Science Calculators
 import BasicCalculator from "./pages/calculators/BasicCalculator";
@@ -73,6 +74,7 @@ const App = () => (
           <Route path="/salary-calculator" element={<SalaryCalculator />} />
           <Route path="/tip-calculator" element={<TipCalculator />} />
           <Route path="/currency-converter" element={<CurrencyConverter />} />
+          <Route path="/discount-calculator" element={<DiscountCalculator />} />
           
           {/* Math & Science - SEO Optimized URLs */}
           <Route path="/online-calculator" element={<BasicCalculator />} />
