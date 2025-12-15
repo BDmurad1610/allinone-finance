@@ -275,6 +275,36 @@ export const seoData: Record<string, SEOData> = {
     }
   },
 
+  "fuel-cost": {
+    title: "Fuel Cost Calculator - Free Gas Trip Cost Calculator",
+    description: "Calculate your trip fuel costs based on distance, fuel efficiency, and gas prices. Plan road trips and estimate gas expenses with our free fuel calculator.",
+    keywords: "fuel cost calculator, gas calculator, trip fuel calculator, gas mileage calculator USA, road trip cost calculator, fuel expense calculator",
+    canonicalUrl: "/fuel-cost-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Fuel Cost Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
+  "savings-goal": {
+    title: "Savings Goal Calculator - Free Monthly Savings Planner",
+    description: "Calculate how much you need to save monthly to reach your financial goals. Plan for emergencies, vacations, or major purchases with our free savings calculator.",
+    keywords: "savings goal calculator, savings planner, monthly savings calculator USA, financial goal calculator, savings target calculator",
+    canonicalUrl: "/savings-goal-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Savings Goal Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
   // Math & Science
   calculator: {
     title: "Free Online Calculator - Basic Math Calculator",
