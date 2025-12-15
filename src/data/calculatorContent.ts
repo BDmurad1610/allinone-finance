@@ -1419,5 +1419,70 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Salary Calculator", path: "/salary-calculator" },
       { name: "ROI Calculator", path: "/roi-calculator" }
     ]
+  },
+
+  unitConverter: {
+    intro: {
+      title: "Understanding Unit Conversions",
+      paragraphs: [
+        "Unit conversion is essential in our interconnected world where different measurement systems are used. The United States primarily uses imperial units (miles, pounds, Fahrenheit), while most other countries use the metric system (kilometers, kilograms, Celsius).",
+        "Our free unit converter makes it easy to convert between these systems instantly. Whether you're traveling abroad, following international recipes, understanding weather forecasts, or working on scientific projects, accurate unit conversion is just a click away."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Select Category", description: "Choose Length, Weight, or Temperature from the tabs." },
+        { title: "Enter Value", description: "Type the number you want to convert." },
+        { title: "Select Units", description: "Choose the 'From' and 'To' units from the dropdowns." },
+        { title: "Convert", description: "Click Convert to see the result. Use the swap button to reverse the conversion." }
+      ],
+      example: {
+        inputs: "Length: 5 miles",
+        output: "5 miles = 8.04672 kilometers"
+      }
+    },
+    formula: {
+      title: "Common Conversion Formulas",
+      content: "Length: 1 mile = 1.609 km | Weight: 1 lb = 0.4536 kg | Temperature: °F = (°C × 9/5) + 32",
+      assumptions: [
+        "Conversions use internationally accepted standard values",
+        "Results are rounded for practical use",
+        "Scientific precision available for most conversions"
+      ]
+    },
+    useCases: {
+      title: "When to Use Unit Converter",
+      cases: [
+        "Traveling to countries using different measurement systems",
+        "Following recipes with metric or imperial measurements",
+        "Understanding international weather forecasts",
+        "Scientific and engineering calculations",
+        "Fitness tracking with different unit preferences",
+        "Shopping for products listed in unfamiliar units"
+      ]
+    },
+    tips: {
+      title: "Quick Conversion Tips",
+      items: [
+        "To roughly convert km to miles, multiply by 0.6 (50 km ≈ 30 miles)",
+        "To convert kg to lbs, multiply by 2.2 (10 kg ≈ 22 lbs)",
+        "For a quick °C to °F estimate: double the Celsius and add 30",
+        "Remember: 0°C = 32°F (freezing) and 100°C = 212°F (boiling)",
+        "1 inch = 2.54 cm exactly (this is the official definition)"
+      ]
+    },
+    faq: [
+      { question: "Why does the US use different units?", answer: "The US uses the imperial system historically inherited from Britain. While most of the world adopted the metric system, the US retained imperial units for everyday use, though metric is used in science and medicine." },
+      { question: "How do I convert Fahrenheit to Celsius?", answer: "Subtract 32 from the Fahrenheit temperature, then multiply by 5/9. For example: 98.6°F = (98.6 - 32) × 5/9 = 37°C (body temperature)." },
+      { question: "What's the difference between mass and weight?", answer: "Technically, mass (kg) measures matter, while weight measures gravitational force. On Earth, we use them interchangeably. 1 kg of mass weighs about 2.2 pounds on Earth." },
+      { question: "Why is Kelvin used in science?", answer: "Kelvin starts at absolute zero (-273.15°C), where molecular motion stops. This makes it ideal for scientific calculations since there are no negative values." },
+      { question: "How accurate are these conversions?", answer: "Our converter uses precise conversion factors. For most practical purposes, the results are exact. Minor rounding occurs for display, but calculations maintain high precision." }
+    ],
+    relatedCalculators: [
+      { name: "BMI Calculator", path: "/bmi-calculator" },
+      { name: "Scientific Calculator", path: "/scientific-calculator" },
+      { name: "Percentage Calculator", path: "/percentage-calculator" },
+      { name: "Statistics Calculator", path: "/statistics-calculator" }
+    ]
   }
 };

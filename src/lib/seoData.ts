@@ -336,6 +336,21 @@ export const seoData: Record<string, SEOData> = {
     }
   },
 
+  unitConverter: {
+    title: "Unit Converter - Free Length, Weight & Temperature Converter",
+    description: "Convert units instantly with our free unit converter. Convert length (miles to km), weight (pounds to kg), and temperature (Fahrenheit to Celsius). Fast and accurate.",
+    keywords: "unit converter, length converter, weight converter, temperature converter, metric converter USA, imperial to metric, km to miles, lbs to kg, Fahrenheit to Celsius",
+    canonicalUrl: "/unit-converter",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Unit Converter",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
   // Date & Time
   age: {
     title: "Age Calculator - Calculate Your Exact Age",
