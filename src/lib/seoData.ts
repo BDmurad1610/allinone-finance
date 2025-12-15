@@ -306,6 +306,21 @@ export const seoData: Record<string, SEOData> = {
     }
   },
 
+  gpa: {
+    title: "GPA Calculator - Free Grade Point Average Calculator",
+    description: "Calculate your GPA (Grade Point Average) with our free GPA calculator. Perfect for high school and college students. Supports 4.0 scale with letter grades.",
+    keywords: "GPA calculator, grade point average calculator, college GPA calculator, high school GPA calculator USA, cumulative GPA calculator, semester GPA calculator",
+    canonicalUrl: "/gpa-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GPA Calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
   // Date & Time
   age: {
     title: "Age Calculator - Calculate Your Exact Age",
