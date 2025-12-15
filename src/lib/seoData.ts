@@ -245,6 +245,36 @@ export const seoData: Record<string, SEOData> = {
     }
   },
 
+  emi: {
+    title: "EMI Calculator - Free Loan EMI Payment Calculator",
+    description: "Calculate your Equated Monthly Installment (EMI) for any loan with our free EMI calculator. See total interest, principal breakdown, and payment schedule.",
+    keywords: "EMI calculator, loan EMI calculator, monthly installment calculator, home loan EMI, car loan EMI calculator USA, EMI payment calculator",
+    canonicalUrl: "/emi-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "EMI Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
+  "electricity-bill": {
+    title: "Electricity Bill Calculator - Free Electric Cost Calculator",
+    description: "Calculate your electricity bill based on units consumed with our free calculator. See energy charges, taxes, and total bill breakdown. Perfect for budgeting.",
+    keywords: "electricity bill calculator, electric bill calculator, power bill calculator, energy cost calculator USA, utility bill calculator, kWh calculator",
+    canonicalUrl: "/electricity-bill-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Electricity Bill Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
   // Math & Science
   calculator: {
     title: "Free Online Calculator - Basic Math Calculator",
