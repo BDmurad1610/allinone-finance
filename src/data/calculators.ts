@@ -239,6 +239,16 @@ export const calculators: CalculatorItem[] = [
     isActive: true,
     isPopular: true,
   },
+  {
+    id: "unit-converter",
+    title: "Unit Converter",
+    description: "Convert length, weight, temperature",
+    path: "/unit-converter",
+    icon: Ruler,
+    category: "math",
+    isActive: true,
+    isPopular: true,
+  },
   
   // Date & Time
   {
