@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: "autoUpdate",
+      injectRegister: "script-defer",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "favicon-32x32.png"],
       manifest: {
         name: "Calculator - Free Online Tools",
