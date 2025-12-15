@@ -1290,5 +1290,70 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Salary Calculator", path: "/salary" },
       { name: "Basic Calculator", path: "/calculator" }
     ]
+  },
+
+  gpa: {
+    intro: {
+      title: "Understanding GPA Calculator",
+      paragraphs: [
+        "Grade Point Average (GPA) is a standardized method of measuring academic achievement in the United States. Most high schools and colleges use a 4.0 scale where an A equals 4.0 points. Your GPA is calculated by averaging the grade points you earn in each course, weighted by credit hours.",
+        "Our free GPA calculator helps students quickly determine their semester or cumulative GPA. Whether you're tracking your academic progress, planning for graduate school applications, or determining scholarship eligibility, knowing your exact GPA is essential for academic success."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Enter Course Name", description: "Optionally add the course name to keep track of your classes." },
+        { title: "Enter Credit Hours", description: "Input the number of credit hours for each course (typically 1-5 credits)." },
+        { title: "Select Your Grade", description: "Choose the letter grade you received (A+ through F)." },
+        { title: "Add More Courses", description: "Click 'Add Course' to include additional classes in your calculation." },
+        { title: "Calculate", description: "Click Calculate GPA to see your weighted grade point average." }
+      ],
+      example: {
+        inputs: "Course 1: 3 credits, A (4.0) | Course 2: 4 credits, B+ (3.3) | Course 3: 3 credits, A- (3.7)",
+        output: "GPA = (3×4.0 + 4×3.3 + 3×3.7) ÷ 10 = 3.63"
+      }
+    },
+    formula: {
+      title: "How GPA is Calculated",
+      content: "GPA = Σ(Credit Hours × Grade Points) ÷ Total Credit Hours",
+      assumptions: [
+        "Uses standard 4.0 GPA scale",
+        "Each letter grade corresponds to a specific point value",
+        "Credit hours weight each course's contribution to overall GPA"
+      ]
+    },
+    useCases: {
+      title: "Who Should Use This Calculator",
+      cases: [
+        "High school students tracking academic progress for college applications",
+        "College students monitoring their semester and cumulative GPA",
+        "Students applying for scholarships with GPA requirements",
+        "Graduate school applicants needing to verify their undergraduate GPA",
+        "Academic advisors helping students understand their standing"
+      ]
+    },
+    tips: {
+      title: "Tips for GPA Success",
+      items: [
+        "Calculate your GPA before the semester ends to know if you need to improve",
+        "Higher credit courses have more impact on your GPA — focus on those",
+        "Most graduate programs require a minimum 3.0 GPA for admission",
+        "Dean's List typically requires a 3.5 GPA or higher",
+        "Retaking a course may replace the old grade in GPA calculations (check your school's policy)"
+      ]
+    },
+    faq: [
+      { question: "What is a good GPA?", answer: "A GPA of 3.0 (B average) is generally considered good. A 3.5+ is very good, and 3.7+ is excellent. For competitive graduate programs or scholarships, aim for 3.5 or higher." },
+      { question: "What's the difference between semester and cumulative GPA?", answer: "Semester GPA reflects only the current term's grades, while cumulative GPA includes all courses taken throughout your academic career. Most schools report both on transcripts." },
+      { question: "Do all schools use the 4.0 scale?", answer: "Most U.S. high schools and colleges use the 4.0 scale, but some use different scales (5.0 for weighted, 10.0, or percentage-based). Our calculator uses the standard 4.0 unweighted scale." },
+      { question: "How do plus and minus grades affect GPA?", answer: "Plus grades add 0.3 points (B+ = 3.3) and minus grades subtract 0.3 points (B- = 2.7) from the base grade value. A+ is typically still 4.0, though some schools award 4.3." },
+      { question: "Can I raise my GPA significantly?", answer: "Yes, but it becomes harder as you accumulate more credits. Early in college, one great semester can significantly boost your GPA. Later, consistent good grades are needed for meaningful improvement." }
+    ],
+    relatedCalculators: [
+      { name: "Percentage Calculator", path: "/percentage-calculator" },
+      { name: "Statistics Calculator", path: "/statistics-calculator" },
+      { name: "Basic Calculator", path: "/online-calculator" },
+      { name: "Fraction Calculator", path: "/fraction-calculator" }
+    ]
   }
 };

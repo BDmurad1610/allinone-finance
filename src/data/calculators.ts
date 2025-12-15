@@ -7,6 +7,7 @@ import {
   CircleDollarSign,
   DollarSign,
   Flame,
+  GraduationCap,
   Heart,
   Percent,
   PiggyBank,
@@ -217,6 +218,16 @@ export const calculators: CalculatorItem[] = [
     icon: TrendingUp,
     category: "math",
     isActive: true,
+  },
+  {
+    id: "gpa",
+    title: "GPA Calculator",
+    description: "Calculate your Grade Point Average",
+    path: "/gpa-calculator",
+    icon: GraduationCap,
+    category: "math",
+    isActive: true,
+    isPopular: true,
   },
   
   // Date & Time
