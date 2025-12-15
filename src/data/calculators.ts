@@ -258,6 +258,15 @@ export const calculators: CalculatorItem[] = [
     category: "math",
     isActive: true,
   },
+  {
+    id: "speed",
+    title: "Speed Calculator",
+    description: "Calculate speed, distance, time",
+    path: "/speed-calculator",
+    icon: Zap,
+    category: "math",
+    isActive: true,
+  },
   
   // Date & Time
   {

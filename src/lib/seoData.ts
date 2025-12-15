@@ -366,6 +366,21 @@ export const seoData: Record<string, SEOData> = {
     }
   },
 
+  speed: {
+    title: "Speed Calculator - Free Speed, Distance & Time Calculator",
+    description: "Calculate speed, distance, or time with our free speed calculator. Supports km/h, mph, m/s. Perfect for travel planning, running pace, and physics calculations.",
+    keywords: "speed calculator, distance calculator, time calculator, mph to kmh, travel time calculator USA, running pace calculator, velocity calculator",
+    canonicalUrl: "/speed-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Speed Calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
   // Date & Time
   age: {
     title: "Age Calculator - Calculate Your Exact Age",
