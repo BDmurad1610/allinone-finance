@@ -19,8 +19,8 @@ export const PWAInstallButton = ({
 
   if (isInstalled) {
     return (
-      <Button variant="outline" size={size} disabled className={className}>
-        <Check className="h-4 w-4" />
+      <Button variant="outline" size={size} disabled className={className} aria-label="App installed">
+        <Check className="h-4 w-4" aria-hidden="true" />
         {showLabel && <span className="ml-2">Installed</span>}
       </Button>
     );
@@ -36,8 +36,9 @@ export const PWAInstallButton = ({
       size={size} 
       onClick={installApp}
       className={className}
+      aria-label={showLabel ? undefined : "Install app"}
     >
-      <Download className="h-4 w-4" />
+      <Download className="h-4 w-4" aria-hidden="true" />
       {showLabel && <span className="ml-2">Install App</span>}
     </Button>
   );
@@ -51,10 +52,14 @@ export const PWAInstallBanner = () => {
   }
 
   return (
-    <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-3 px-4">
+    <div 
+      className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-3 px-4"
+      role="banner"
+      aria-label="App installation promotion"
+    >
       <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-3">
-          <Smartphone className="h-5 w-5" />
+          <Smartphone className="h-5 w-5" aria-hidden="true" />
           <p className="text-sm font-medium">
             Install Calculator app for quick access anytime!
           </p>
@@ -64,8 +69,9 @@ export const PWAInstallBanner = () => {
           size="sm" 
           onClick={installApp}
           className="whitespace-nowrap"
+          aria-label="Install Calculator app now"
         >
-          <Download className="h-4 w-4 mr-2" />
+          <Download className="h-4 w-4 mr-2" aria-hidden="true" />
           Install Now
         </Button>
       </div>
