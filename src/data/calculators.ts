@@ -249,6 +249,15 @@ export const calculators: CalculatorItem[] = [
     isActive: true,
     isPopular: true,
   },
+  {
+    id: "area",
+    title: "Area Calculator",
+    description: "Calculate room and land area",
+    path: "/area-calculator",
+    icon: Calculator,
+    category: "math",
+    isActive: true,
+  },
   
   // Date & Time
   {

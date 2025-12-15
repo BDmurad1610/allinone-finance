@@ -351,6 +351,21 @@ export const seoData: Record<string, SEOData> = {
     }
   },
 
+  area: {
+    title: "Area Calculator - Free Room & Land Area Calculator",
+    description: "Calculate area of rooms, land, and shapes with our free area calculator. Supports rectangle, circle, triangle, trapezoid. Perfect for flooring, painting, and land measurement.",
+    keywords: "area calculator, room area calculator, land area calculator, square footage calculator USA, floor area calculator, acreage calculator, sq ft calculator",
+    canonicalUrl: "/area-calculator",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Area Calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  },
+
   // Date & Time
   age: {
     title: "Age Calculator - Calculate Your Exact Age",

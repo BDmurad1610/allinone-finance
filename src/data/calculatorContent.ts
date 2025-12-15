@@ -1484,5 +1484,70 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Percentage Calculator", path: "/percentage-calculator" },
       { name: "Statistics Calculator", path: "/statistics-calculator" }
     ]
+  },
+
+  area: {
+    intro: {
+      title: "Understanding Area Calculations",
+      paragraphs: [
+        "Area measurement is fundamental whether you're planning home renovations, buying flooring, calculating paint coverage, or measuring land for purchase. Understanding how to calculate area for different shapes helps you estimate materials, costs, and make informed decisions.",
+        "Our area calculator handles multiple shapes and scenarios — from simple rectangles to complex room layouts with multiple spaces. Whether you measure in square feet, square meters, or acres, we've got you covered with instant, accurate calculations."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Select Shape or Room", description: "Choose between Room calculator for multiple spaces, or specific shapes like rectangle, circle, or triangle." },
+        { title: "Enter Dimensions", description: "Input the measurements (length, width, radius, etc.) for your shape." },
+        { title: "Select Unit", description: "Choose your preferred unit (sq ft, sq m, acres, etc.)." },
+        { title: "Calculate", description: "Click Calculate to get your area. For rooms, add multiple spaces and get a total." }
+      ],
+      example: {
+        inputs: "Living Room: 15 ft × 12 ft, Bedroom: 12 ft × 10 ft",
+        output: "Living Room: 180 sq ft, Bedroom: 120 sq ft, Total: 300 sq ft"
+      }
+    },
+    formula: {
+      title: "Area Formulas",
+      content: "Rectangle: Length × Width | Circle: π × r² | Triangle: ½ × Base × Height | Trapezoid: ½ × (a + b) × Height",
+      assumptions: [
+        "Measurements should be in the same unit before calculating",
+        "Room dimensions assume rectangular shapes",
+        "For irregular rooms, divide into regular shapes and sum"
+      ]
+    },
+    useCases: {
+      title: "When to Use Area Calculator",
+      cases: [
+        "Calculating flooring materials (carpet, tile, hardwood)",
+        "Estimating paint coverage for walls and ceilings",
+        "Measuring land plots for real estate purchases",
+        "Planning garden beds and landscaping projects",
+        "Determining room sizes for furniture placement",
+        "Calculating material costs for construction projects"
+      ]
+    },
+    tips: {
+      title: "Measurement Tips",
+      items: [
+        "Always measure twice to ensure accuracy",
+        "For flooring, add 10% extra for cuts and waste",
+        "One gallon of paint typically covers 350-400 sq ft",
+        "Break irregular rooms into rectangles, calculate each, then add",
+        "1 acre = 43,560 sq ft — about 90% of a football field"
+      ]
+    },
+    faq: [
+      { question: "How do I calculate square footage?", answer: "For rectangular spaces, multiply length by width. If your room is 12 feet by 10 feet, the area is 120 square feet. For irregular shapes, break into rectangles and add them together." },
+      { question: "How many square feet are in an acre?", answer: "One acre equals 43,560 square feet. A football field (including end zones) is about 1.32 acres or 57,600 square feet." },
+      { question: "How do I convert square feet to square meters?", answer: "Divide square feet by 10.764 to get square meters. For example, 500 sq ft ÷ 10.764 = 46.45 sq m. Or multiply square meters by 10.764 to get square feet." },
+      { question: "How much flooring do I need?", answer: "Calculate total square footage of all rooms, then add 10% for waste and cuts. If your total is 500 sq ft, buy at least 550 sq ft of flooring material." },
+      { question: "How do I measure an irregularly shaped room?", answer: "Divide the room into rectangles or triangles, calculate each section's area separately, then add them all together for the total area." }
+    ],
+    relatedCalculators: [
+      { name: "Unit Converter", path: "/unit-converter" },
+      { name: "Percentage Calculator", path: "/percentage-calculator" },
+      { name: "Scientific Calculator", path: "/scientific-calculator" },
+      { name: "Basic Calculator", path: "/online-calculator" }
+    ]
   }
 };
