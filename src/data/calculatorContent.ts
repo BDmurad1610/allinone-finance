@@ -1421,6 +1421,133 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
     ]
   },
 
+  emi: {
+    intro: {
+      title: "Understanding EMI Calculations",
+      paragraphs: [
+        "Equated Monthly Installment (EMI) is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. EMIs are used to pay off both interest and principal each month so that over a specified number of years, the loan is paid off in full.",
+        "Our EMI calculator helps you plan your finances by showing exactly how much you'll pay each month for loans like home loans, car loans, personal loans, and education loans. Understanding your EMI helps you budget effectively and compare loan options."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Enter Loan Amount", description: "The total amount you want to borrow (principal)." },
+        { title: "Enter Interest Rate", description: "The annual interest rate offered by the lender." },
+        { title: "Enter Loan Tenure", description: "The duration in months over which you'll repay the loan." },
+        { title: "Calculate", description: "Click Calculate to see your monthly EMI, total interest, and total amount payable." }
+      ],
+      example: {
+        inputs: "Loan Amount: $25,000, Interest Rate: 8%, Tenure: 60 months",
+        output: "Monthly EMI: $507 | Total Interest: $5,420 | Total Amount: $30,420"
+      }
+    },
+    formula: {
+      title: "EMI Calculation Formula",
+      content: "EMI = P × r × (1 + r)^n / [(1 + r)^n - 1] | Where: P = Principal, r = Monthly interest rate (annual rate / 12 / 100), n = Number of monthly installments",
+      assumptions: [
+        "Assumes fixed interest rate throughout the loan tenure",
+        "Does not include processing fees or other charges",
+        "Monthly compounding of interest is assumed"
+      ]
+    },
+    useCases: {
+      title: "When to Use This Calculator",
+      cases: [
+        "Planning a home loan or mortgage to determine affordable EMI",
+        "Comparing auto loan offers from different lenders",
+        "Evaluating personal loan options for major purchases",
+        "Planning education loans for college or graduate studies",
+        "Understanding total cost of financing before taking a loan"
+      ]
+    },
+    tips: {
+      title: "EMI Planning Tips",
+      items: [
+        "Keep your total EMIs under 40% of your monthly income for financial stability",
+        "A longer tenure reduces EMI but increases total interest paid",
+        "Compare interest rates from multiple lenders before deciding",
+        "Consider making prepayments when possible to reduce total interest",
+        "Factor in processing fees and other charges when comparing loans"
+      ]
+    },
+    faq: [
+      { question: "What is EMI?", answer: "EMI stands for Equated Monthly Installment. It's the fixed amount you pay to the lender each month until the loan is fully repaid. Each EMI includes both principal repayment and interest." },
+      { question: "How does tenure affect EMI?", answer: "Longer tenure means lower EMI but more total interest paid. A $25,000 loan at 8% costs $507/month for 60 months (total: $30,420) vs $413/month for 84 months (total: $34,692)." },
+      { question: "Can EMI change during the loan period?", answer: "For fixed-rate loans, EMI stays constant. For floating-rate loans, EMI can change when interest rates change. Some lenders adjust tenure instead of EMI when rates change." },
+      { question: "Should I choose lower EMI or shorter tenure?", answer: "If you can afford it, shorter tenure saves significant interest. But ensure your EMI is comfortable within your budget to avoid financial stress." }
+    ],
+    relatedCalculators: [
+      { name: "Loan Calculator", path: "/loan-calculator" },
+      { name: "Mortgage Calculator", path: "/mortgage-calculator" },
+      { name: "Compound Interest Calculator", path: "/compound-interest-calculator" },
+      { name: "Investment Calculator", path: "/investment-calculator" }
+    ],
+    disclaimer: "EMI calculations are estimates based on the inputs provided. Actual EMI may vary based on lender terms, processing fees, and other charges. This calculator is for informational purposes only."
+  },
+
+  "electricity-bill": {
+    intro: {
+      title: "Understanding Electricity Bill Calculations",
+      paragraphs: [
+        "Understanding how your electricity bill is calculated can help you manage energy costs and identify ways to save money. Your bill typically includes charges for the energy you consume (measured in kWh), fixed service charges, and applicable taxes.",
+        "Our electricity bill calculator breaks down each component of your bill, helping you understand where your money goes and plan your energy budget. Use it to estimate costs before the bill arrives or to verify your utility company's calculations."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Enter Units Consumed", description: "Find the kWh (kilowatt-hours) consumed from your meter or previous bill." },
+        { title: "Enter Rate Per Unit", description: "Your utility company's charge per kWh (varies by region and provider)." },
+        { title: "Enter Fixed Charges", description: "Monthly service fees that apply regardless of usage." },
+        { title: "Enter Tax Rate", description: "Applicable taxes on electricity (varies by state/region)." }
+      ],
+      example: {
+        inputs: "Units: 500 kWh, Rate: $0.12/kWh, Fixed: $10, Tax: 8%",
+        output: "Energy Charges: $60 | Fixed: $10 | Tax: $5.60 | Total: $75.60"
+      }
+    },
+    formula: {
+      title: "Electricity Bill Formula",
+      content: "Energy Charge = Units × Rate per Unit | Subtotal = Energy Charge + Fixed Charges | Tax = Subtotal × Tax Rate | Total Bill = Subtotal + Tax",
+      assumptions: [
+        "Simple flat-rate calculation (some utilities use tiered rates)",
+        "Does not include demand charges for commercial users",
+        "Tax rates vary by state and locality"
+      ]
+    },
+    useCases: {
+      title: "When to Use This Calculator",
+      cases: [
+        "Estimating your monthly electricity costs for budgeting",
+        "Understanding how increased usage affects your bill",
+        "Comparing costs before and after energy-saving improvements",
+        "Verifying your utility bill for accuracy",
+        "Planning for seasonal changes in electricity consumption"
+      ]
+    },
+    tips: {
+      title: "Energy Saving Tips",
+      items: [
+        "Switch to LED bulbs — they use 75% less energy than incandescent bulbs",
+        "Set your thermostat 1-2 degrees lower in winter and higher in summer",
+        "Unplug devices when not in use to eliminate phantom energy drain",
+        "Use smart power strips to cut power to electronics automatically",
+        "Run major appliances during off-peak hours if your utility offers time-of-use rates"
+      ]
+    },
+    faq: [
+      { question: "What is a kWh?", answer: "A kilowatt-hour (kWh) is a unit of energy. It represents using 1,000 watts of power for one hour. A 100W bulb running for 10 hours uses 1 kWh." },
+      { question: "Why do electricity rates vary?", answer: "Rates depend on your utility company, region, energy source mix, time of use, and consumption tier. Some areas have deregulated markets with multiple provider options." },
+      { question: "What are fixed charges?", answer: "Fixed charges (service fees) cover grid maintenance, meter reading, billing, and customer service. They apply regardless of how much electricity you use." },
+      { question: "How can I reduce my electricity bill?", answer: "Use energy-efficient appliances, LED lighting, smart thermostats, and be mindful of phantom loads. Consider solar panels for long-term savings." }
+    ],
+    relatedCalculators: [
+      { name: "Percentage Calculator", path: "/percentage-calculator" },
+      { name: "Discount Calculator", path: "/discount-calculator" },
+      { name: "Salary Calculator", path: "/salary-calculator" },
+      { name: "ROI Calculator", path: "/roi-calculator" }
+    ]
+  },
+
   unitConverter: {
     intro: {
       title: "Understanding Unit Conversions",
