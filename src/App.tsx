@@ -36,6 +36,8 @@ const CurrencyConverter = lazy(() => import("./pages/calculators/CurrencyConvert
 const DiscountCalculator = lazy(() => import("./pages/calculators/DiscountCalculator"));
 const EMICalculator = lazy(() => import("./pages/calculators/EMICalculator"));
 const ElectricityBillCalculator = lazy(() => import("./pages/calculators/ElectricityBillCalculator"));
+const FuelCostCalculator = lazy(() => import("./pages/calculators/FuelCostCalculator"));
+const SavingsGoalCalculator = lazy(() => import("./pages/calculators/SavingsGoalCalculator"));
 
 // Math & Science Calculators - Lazy loaded
 const BasicCalculator = lazy(() => import("./pages/calculators/BasicCalculator"));
@@ -93,6 +95,8 @@ const App = () => (
               <Route path="/discount-calculator" element={<DiscountCalculator />} />
               <Route path="/emi-calculator" element={<EMICalculator />} />
               <Route path="/electricity-bill-calculator" element={<ElectricityBillCalculator />} />
+              <Route path="/fuel-cost-calculator" element={<FuelCostCalculator />} />
+              <Route path="/savings-goal-calculator" element={<SavingsGoalCalculator />} />
               
               {/* Math & Science - SEO Optimized URLs */}
               <Route path="/online-calculator" element={<BasicCalculator />} />

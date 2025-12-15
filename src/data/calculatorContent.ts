@@ -1741,5 +1741,134 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Distance Calculator", path: "/date-difference-calculator" },
       { name: "Scientific Calculator", path: "/scientific-calculator" }
     ]
+  },
+
+  "fuel-cost": {
+    intro: {
+      title: "Understanding Fuel Cost Calculations",
+      paragraphs: [
+        "Planning a road trip or daily commute? Understanding your fuel costs is essential for budgeting and making informed decisions about transportation. Whether you're comparing routes, evaluating a new vehicle purchase, or simply tracking expenses, knowing how much you'll spend on gas helps you plan better.",
+        "Our fuel cost calculator takes the guesswork out of gas expenses. Simply enter your trip distance, your vehicle's fuel efficiency (MPG), and the current gas price to instantly see how much fuel you'll need and what it will cost. This tool is invaluable for road trip planning, commute cost analysis, and vehicle efficiency comparisons."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Enter Distance", description: "Input the total distance of your trip in miles." },
+        { title: "Enter Fuel Efficiency", description: "Input your vehicle's miles per gallon (MPG). Check your owner's manual or look up EPA estimates for your vehicle." },
+        { title: "Enter Gas Price", description: "Input the current price per gallon at your local gas station." },
+        { title: "Calculate", description: "Click calculate to see fuel needed, total cost, and cost per mile." }
+      ],
+      example: {
+        inputs: "Distance: 350 miles, MPG: 28, Gas Price: $3.50/gallon",
+        output: "Fuel Needed: 12.5 gallons, Total Cost: $43.75, Cost Per Mile: $0.125"
+      }
+    },
+    formula: {
+      title: "Fuel Cost Formula",
+      content: "Fuel Needed = Distance ÷ MPG | Total Cost = Fuel Needed × Price Per Gallon | Cost Per Mile = Total Cost ÷ Distance",
+      assumptions: [
+        "Assumes consistent fuel efficiency throughout the trip",
+        "Actual MPG may vary based on driving conditions",
+        "Highway vs city driving affects fuel consumption"
+      ]
+    },
+    useCases: {
+      title: "When to Use Fuel Cost Calculator",
+      cases: [
+        "Planning road trips and vacation travel budgets",
+        "Comparing fuel costs between different vehicles",
+        "Calculating daily or weekly commute expenses",
+        "Budgeting for rideshare or delivery driving",
+        "Evaluating the cost-effectiveness of different routes",
+        "Comparing gas prices between locations"
+      ]
+    },
+    tips: {
+      title: "Fuel Savings Tips",
+      items: [
+        "Maintain proper tire pressure — underinflated tires reduce fuel efficiency by 3%",
+        "Remove excess weight from your vehicle — every 100 lbs reduces MPG by 1-2%",
+        "Use cruise control on highways to maintain consistent speed",
+        "Avoid aggressive acceleration and braking",
+        "Plan your route to avoid traffic congestion when possible"
+      ]
+    },
+    faq: [
+      { question: "How do I find my car's MPG?", answer: "Check your owner's manual, the sticker on the driver's door jamb, or look up your vehicle at fueleconomy.gov. For real-world MPG, divide your miles traveled by gallons used at your next fill-up." },
+      { question: "Why does my actual MPG differ from EPA estimates?", answer: "EPA estimates are based on standardized tests. Real-world factors like driving style, terrain, traffic, weather, and vehicle condition can significantly affect actual fuel economy." },
+      { question: "Is highway or city driving more fuel efficient?", answer: "Highway driving is typically 20-30% more fuel efficient than city driving due to fewer stops and consistent speeds. However, speeds above 60 mph reduce efficiency." },
+      { question: "How does weather affect fuel costs?", answer: "Cold weather can reduce fuel economy by 12-22% for short trips. Summer heat also affects efficiency if you use AC heavily. Moderate temperatures provide the best fuel economy." }
+    ],
+    relatedCalculators: [
+      { name: "ROI Calculator", path: "/roi-calculator" },
+      { name: "Discount Calculator", path: "/discount-calculator" },
+      { name: "Speed Calculator", path: "/speed-calculator" },
+      { name: "Unit Converter", path: "/unit-converter" }
+    ]
+  },
+
+  "savings-goal": {
+    intro: {
+      title: "Planning Your Savings Goals",
+      paragraphs: [
+        "Whether you're saving for an emergency fund, dream vacation, new car, or down payment on a house, having a clear savings plan is crucial for success. Knowing exactly how much you need to set aside each month removes the guesswork and keeps you motivated toward your financial goals.",
+        "Our savings goal calculator helps you create a realistic savings plan. Enter your target amount, current savings, time frame, and expected interest rate (if using a high-yield savings account), and we'll calculate your required monthly contribution. This tool accounts for compound interest, showing you how your money can work harder for you."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Set Your Goal", description: "Enter the total amount you want to save (e.g., $10,000 for emergency fund)." },
+        { title: "Enter Current Savings", description: "Input any money you've already saved toward this goal (optional)." },
+        { title: "Choose Time Frame", description: "Enter the number of months until you want to reach your goal." },
+        { title: "Add Interest Rate", description: "Enter your savings account's annual interest rate (optional, 0% if keeping in cash)." }
+      ],
+      example: {
+        inputs: "Goal: $15,000, Current: $2,000, Time: 24 months, Rate: 4.5% APY",
+        output: "Monthly Contribution: $520.83, Interest Earned: ~$500"
+      }
+    },
+    formula: {
+      title: "Savings Goal Formula",
+      content: "With Interest: PMT = (Goal - Current × (1+r)^n) × r / ((1+r)^n - 1) | Without Interest: PMT = (Goal - Current) / Months",
+      assumptions: [
+        "Interest is compounded monthly",
+        "Contributions are made at the end of each month",
+        "Interest rate remains constant throughout the period"
+      ]
+    },
+    useCases: {
+      title: "Popular Savings Goals",
+      cases: [
+        "Building an emergency fund (3-6 months of expenses)",
+        "Saving for a down payment on a home or car",
+        "Planning for vacation or wedding expenses",
+        "Creating a college fund for children",
+        "Saving for retirement beyond 401(k) contributions",
+        "Building a business startup fund"
+      ]
+    },
+    tips: {
+      title: "Savings Success Tips",
+      items: [
+        "Use a high-yield savings account (4-5% APY) to maximize interest earnings",
+        "Set up automatic transfers on payday to ensure consistent contributions",
+        "Start with your goal and work backward to find an achievable monthly amount",
+        "Break large goals into smaller milestones for motivation",
+        "Review and adjust your savings plan quarterly as circumstances change"
+      ]
+    },
+    faq: [
+      { question: "How much should I have in emergency savings?", answer: "Financial experts recommend 3-6 months of essential expenses. For job security concerns or self-employment, aim for 6-12 months. Start with $1,000 as an initial goal, then build from there." },
+      { question: "Should I pay off debt or save first?", answer: "Generally, build a small emergency fund ($1,000-2,000) first, then focus on high-interest debt (above 7%). Once that's paid, balance between savings goals and lower-interest debt payoff." },
+      { question: "What's the best savings account for goals?", answer: "High-yield savings accounts (HYSAs) currently offer 4-5% APY. Consider money market accounts or CDs for larger amounts. Avoid regular savings accounts with rates below 1%." },
+      { question: "How do I stay motivated while saving?", answer: "Visualize your goal with pictures or progress charts. Celebrate milestones. Use automatic savings to reduce decision fatigue. Track your progress monthly and reward yourself for consistency." }
+    ],
+    relatedCalculators: [
+      { name: "Compound Interest Calculator", path: "/compound-interest-calculator" },
+      { name: "Investment Calculator", path: "/investment-calculator" },
+      { name: "Retirement Calculator", path: "/retirement-calculator" },
+      { name: "EMI Calculator", path: "/emi-calculator" }
+    ],
+    disclaimer: "Savings projections are estimates based on assumed interest rates. Actual returns may vary. This calculator is for educational purposes and should not be considered financial advice. Consult a financial advisor for personalized planning."
   }
 };
