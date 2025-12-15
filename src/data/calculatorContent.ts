@@ -1355,5 +1355,69 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Basic Calculator", path: "/online-calculator" },
       { name: "Fraction Calculator", path: "/fraction-calculator" }
     ]
+  },
+
+  discount: {
+    intro: {
+      title: "Understanding Discount Calculations",
+      paragraphs: [
+        "Whether you're shopping during Black Friday sales, using coupons, or comparing deals, understanding how discounts work helps you make smarter purchasing decisions. Our discount calculator instantly shows you exactly how much you'll save and what you'll pay.",
+        "Beyond simple percentage-off calculations, this tool helps you find the original price of sale items, determine what percent off you're getting, and even calculate stacked discounts. Master these calculations to become a savvy shopper and never overpay again."
+      ]
+    },
+    howToUse: {
+      steps: [
+        { title: "Enter Original Price", description: "Input the item's original or regular price before any discounts." },
+        { title: "Enter Discount Percentage", description: "Input the discount percentage (e.g., 25 for 25% off)." },
+        { title: "Calculate", description: "Click calculate to see your savings and final price." },
+        { title: "Try Other Calculators", description: "Use the percent-off finder or double discount calculator for more complex scenarios." }
+      ],
+      example: {
+        inputs: "Original Price: $80, Discount: 25%",
+        output: "You Save: $20, Final Price: $60"
+      }
+    },
+    formula: {
+      title: "Discount Calculation Formulas",
+      content: "Discount Amount = Original Price × (Discount % ÷ 100) | Final Price = Original Price - Discount Amount | Percent Off = ((Original - Sale) ÷ Original) × 100",
+      assumptions: [
+        "Discounts are calculated on the original price unless stacked",
+        "Stacked discounts are applied sequentially, not added together",
+        "Tax is typically calculated on the final discounted price"
+      ]
+    },
+    useCases: {
+      title: "When to Use This Calculator",
+      cases: [
+        "Shopping during sales events like Black Friday, Cyber Monday, or Prime Day",
+        "Comparing deals across different stores with various discount offers",
+        "Calculating savings when using coupons or promo codes",
+        "Figuring out the original price of clearance items",
+        "Understanding stacked discounts (store discount + coupon)"
+      ]
+    },
+    tips: {
+      title: "Smart Shopping Tips",
+      items: [
+        "A 20% off coupon on top of 30% off is NOT 50% off — it's actually about 44% off",
+        "Compare the final price, not just the discount percentage — $50 at 20% off beats $60 at 25% off",
+        "Price per unit often matters more than total discount for bulk items",
+        "Watch for 'up to X% off' — the biggest discounts may only apply to select items",
+        "Calculate whether 'buy one get one 50% off' beats a straight 25% discount"
+      ]
+    },
+    faq: [
+      { question: "How do I calculate 20% off?", answer: "Multiply the price by 0.20 (or divide by 5) to get the discount amount. Then subtract from the original price. For $50 at 20% off: $50 × 0.20 = $10 discount, so final price is $40." },
+      { question: "Why don't stacked discounts just add up?", answer: "Because the second discount applies to the already-reduced price. If you get 30% off then 20% off: First, $100 becomes $70. Then 20% off $70 = $14 more off, making it $56. That's 44% total, not 50%." },
+      { question: "How do I find the original price from a sale price?", answer: "Divide the sale price by (1 - discount/100). If something is $60 after 25% off: $60 ÷ 0.75 = $80 original price." },
+      { question: "Is 50% off the same as half price?", answer: "Yes! 50% off means you pay half the original price. A $100 item at 50% off costs $50." },
+      { question: "What's a good discount percentage?", answer: "It depends on the item. For clothing, 40-60% off is common during sales. For electronics, 15-30% is typical. Luxury items rarely exceed 30% off. Always compare the final price to competitors." }
+    ],
+    relatedCalculators: [
+      { name: "Percentage Calculator", path: "/percentage-calculator" },
+      { name: "Tip Calculator", path: "/tip-calculator" },
+      { name: "Salary Calculator", path: "/salary-calculator" },
+      { name: "ROI Calculator", path: "/roi-calculator" }
+    ]
   }
 };
