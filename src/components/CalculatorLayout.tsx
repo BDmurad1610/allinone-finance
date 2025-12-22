@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Breadcrumb from "./Breadcrumb";
+import ShareButton from "./ShareButton";
 
 interface CalculatorLayoutProps {
   children: ReactNode;
@@ -40,12 +41,15 @@ export default function CalculatorLayout({ children, title, description, breadcr
       <Header />
       <main className="container mx-auto px-4 py-8">
         {breadcrumbItems && <Breadcrumb items={breadcrumbItems} />}
-        <Link to="/">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Calculators
-          </Button>
-        </Link>
+        <div className="flex items-center justify-between mb-6">
+          <Link to="/">
+            <Button variant="ghost">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Calculators
+            </Button>
+          </Link>
+          <ShareButton title={title} description={description} />
+        </div>
         
         <article className="max-w-4xl mx-auto">
           <header className="text-center mb-8">
