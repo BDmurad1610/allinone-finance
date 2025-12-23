@@ -69,23 +69,6 @@ export default function ShareButton({ title, description }: ShareButtonProps) {
     );
   };
 
-  // Use native share on mobile if available
-  const supportsNativeShare = typeof navigator !== "undefined" && navigator.share;
-
-  if (supportsNativeShare) {
-    return (
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={handleNativeShare}
-        className="gap-2"
-      >
-        <Share2 className="h-4 w-4" />
-        Share
-      </Button>
-    );
-  }
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -95,6 +78,14 @@ export default function ShareButton({ title, description }: ShareButtonProps) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48">
+        <DropdownMenuItem onClick={handleCopyLink} className="cursor-pointer">
+          {copied ? (
+            <Check className="h-4 w-4 mr-2 text-green-500" />
+          ) : (
+            <Link className="h-4 w-4 mr-2" />
+          )}
+          Copy Link
+        </DropdownMenuItem>
         <DropdownMenuItem onClick={shareToFacebook} className="cursor-pointer">
           <Facebook className="h-4 w-4 mr-2 text-blue-600" />
           Facebook
@@ -106,14 +97,6 @@ export default function ShareButton({ title, description }: ShareButtonProps) {
         <DropdownMenuItem onClick={shareToLinkedIn} className="cursor-pointer">
           <Linkedin className="h-4 w-4 mr-2 text-blue-700" />
           LinkedIn
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={handleCopyLink} className="cursor-pointer">
-          {copied ? (
-            <Check className="h-4 w-4 mr-2 text-green-500" />
-          ) : (
-            <Link className="h-4 w-4 mr-2" />
-          )}
-          Copy Link
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
