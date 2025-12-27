@@ -139,6 +139,10 @@ const App = () => (
               <Route path="/age" element={<Navigate to="/age-calculator" replace />} />
               <Route path="/date-difference" element={<Navigate to="/date-difference-calculator" replace />} />
               
+              {/* Blog Pages */}
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              
               {/* Legal & Info Pages */}
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
