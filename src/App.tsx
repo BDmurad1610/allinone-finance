@@ -15,6 +15,8 @@ const AboutUs = lazy(() => import("./pages/AboutUs"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const Install = lazy(() => import("./pages/Install"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 
 // Health & Fitness Calculators - Lazy loaded
 const BMICalculator = lazy(() => import("./pages/calculators/BMICalculator"));
