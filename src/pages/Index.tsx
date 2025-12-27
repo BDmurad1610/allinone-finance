@@ -212,33 +212,221 @@ export default function Index() {
           </Tabs>
         </section>
 
-        {/* SEO Content Section */}
-        <section className="container mx-auto px-4 py-12 border-t border-border" aria-label="About MultiCalculator">
-          <div className="max-w-4xl mx-auto prose prose-gray dark:prose-invert">
-            <h2 className="text-2xl font-bold mb-4 text-foreground">Why Use MultiCalculator?</h2>
-            <p className="text-foreground/80 mb-6">
-              MultiCalculator provides <strong>free online calculators</strong> for health, finance, math, and everyday needs. 
-              Whether you need to calculate your <Link to="/bmi-calculator" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">BMI</Link>, 
-              estimate <Link to="/mortgage-calculator" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">mortgage payments</Link>, 
-              or figure out <Link to="/compound-interest-calculator" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">compound interest</Link>, 
-              our tools deliver accurate results instantly.
+        {/* How It Works Section */}
+        <section className="bg-muted/30 py-16" aria-label="How MultiCalculator Works">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-4 text-foreground">How Our Calculators Work</h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Our calculators use industry-standard formulas and algorithms trusted by professionals worldwide. Get accurate results in seconds.
             </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Enter Your Data</h3>
+                <p className="text-muted-foreground">Simply input your values into the calculator. All fields are clearly labeled with helpful tooltips.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Instant Calculation</h3>
+                <p className="text-muted-foreground">Our algorithms process your data instantly using scientifically-proven formulas.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Get Detailed Results</h3>
+                <p className="text-muted-foreground">Receive comprehensive results with explanations, charts, and actionable recommendations.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="container mx-auto px-4 py-16" aria-label="Why Choose MultiCalculator">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Why 10,000+ Users Trust MultiCalculator</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <Card className="text-center p-6">
+              <CardContent className="pt-4">
+                <div className="text-4xl mb-4">✓</div>
+                <h3 className="font-semibold mb-2">100% Free Forever</h3>
+                <p className="text-sm text-muted-foreground">No hidden fees, no subscriptions, no credit card required. All calculators are completely free.</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6">
+              <CardContent className="pt-4">
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="font-semibold mb-2">Privacy First</h3>
+                <p className="text-sm text-muted-foreground">Your data never leaves your browser. We don't store or share any personal information.</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6">
+              <CardContent className="pt-4">
+                <div className="text-4xl mb-4">📱</div>
+                <h3 className="font-semibold mb-2">Works Everywhere</h3>
+                <p className="text-sm text-muted-foreground">Use on any device - desktop, tablet, or mobile. No app download needed.</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6">
+              <CardContent className="pt-4">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="font-semibold mb-2">Lightning Fast</h3>
+                <p className="text-sm text-muted-foreground">Get instant results. No waiting, no loading screens, no delays.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Detailed Calculator Descriptions */}
+        <section className="bg-muted/30 py-16" aria-label="Calculator Details">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Our Most Popular Calculators</h2>
             
-            <h3 className="text-xl font-semibold mb-3 text-foreground">Popular Calculator Categories</h3>
-            <ul className="grid md:grid-cols-2 gap-2 list-none pl-0" role="list">
-              <li>
-                <a href="#health" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">🏥</span> Health & Fitness Calculators</a> - BMI, Calorie, Body Fat, BMR
-              </li>
-              <li>
-                <a href="#finance" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">💰</span> Finance Calculators</a> - Mortgage, Loan, Investment, Retirement
-              </li>
-              <li>
-                <a href="#math" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">🔢</span> Math Calculators</a> - Scientific, Percentage, Fraction, Statistics
-              </li>
-              <li>
-                <a href="#datetime" className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"><span aria-hidden="true">📅</span> Date & Time Calculators</a> - Age, Date Difference, Time Calculator
-              </li>
-            </ul>
+            <div className="max-w-4xl mx-auto space-y-8">
+              {/* Health Calculators */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Heart className="w-6 h-6 text-green-500" />
+                    Health & Fitness Calculators
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Monitor your health with our scientifically-accurate health calculators. Our <Link to="/bmi-calculator" className="text-primary hover:underline">BMI Calculator</Link> uses the World Health Organization formula to assess your weight status. The <Link to="/calorie-calculator" className="text-primary hover:underline">Calorie Calculator</Link> employs the Mifflin-St Jeor equation, considered the most accurate method for estimating daily calorie needs. Track your body composition with our <Link to="/body-fat-calculator" className="text-primary hover:underline">Body Fat Calculator</Link> using the U.S. Navy method.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Link to="/bmi-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">BMI Calculator</Link>
+                    <Link to="/calorie-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Calorie Calculator</Link>
+                    <Link to="/bmr-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">BMR Calculator</Link>
+                    <Link to="/body-fat-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Body Fat Calculator</Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Finance Calculators */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <TrendingUp className="w-6 h-6 text-blue-500" />
+                    Finance & Investment Calculators
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Make smarter financial decisions with our comprehensive finance calculators. Our <Link to="/mortgage-calculator" className="text-primary hover:underline">Mortgage Calculator</Link> helps you estimate monthly payments, total interest, and amortization schedules. Use the <Link to="/compound-interest-calculator" className="text-primary hover:underline">Compound Interest Calculator</Link> to see how your investments can grow over time. Planning for retirement? Our <Link to="/retirement-calculator" className="text-primary hover:underline">Retirement Calculator</Link> helps you determine how much you need to save.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Link to="/mortgage-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Mortgage Calculator</Link>
+                    <Link to="/compound-interest-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Compound Interest</Link>
+                    <Link to="/loan-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Loan Calculator</Link>
+                    <Link to="/retirement-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Retirement Calculator</Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Math Calculators */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Calculator className="w-6 h-6 text-purple-500" />
+                    Math & Scientific Calculators
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    From basic arithmetic to advanced scientific calculations, we have you covered. Our <Link to="/scientific-calculator" className="text-primary hover:underline">Scientific Calculator</Link> handles trigonometry, logarithms, and complex equations. The <Link to="/percentage-calculator" className="text-primary hover:underline">Percentage Calculator</Link> makes quick work of discounts, tips, and growth rates. Students love our <Link to="/fraction-calculator" className="text-primary hover:underline">Fraction Calculator</Link> for homework help.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Link to="/scientific-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Scientific Calculator</Link>
+                    <Link to="/percentage-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Percentage Calculator</Link>
+                    <Link to="/fraction-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Fraction Calculator</Link>
+                    <Link to="/statistics-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Statistics Calculator</Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Date & Time Calculators */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Calendar className="w-6 h-6 text-orange-500" />
+                    Date & Time Calculators
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Track time and dates with precision. Our <Link to="/age-calculator" className="text-primary hover:underline">Age Calculator</Link> tells you your exact age in years, months, days, and even seconds. The <Link to="/date-difference-calculator" className="text-primary hover:underline">Date Difference Calculator</Link> counts days between any two dates. Need to add or subtract time? Use our <Link to="/time-calculator" className="text-primary hover:underline">Time Calculator</Link> for accurate time arithmetic.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Link to="/age-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Age Calculator</Link>
+                    <Link to="/date-difference-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Date Difference</Link>
+                    <Link to="/time-calculator" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20">Time Calculator</Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content Section */}
+        <section className="container mx-auto px-4 py-16 border-t border-border" aria-label="About MultiCalculator">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-foreground">About MultiCalculator - Your Trusted Calculation Partner</h2>
+            
+            <div className="prose prose-gray dark:prose-invert max-w-none space-y-6">
+              <p className="text-lg text-muted-foreground">
+                MultiCalculator is a comprehensive collection of <strong className="text-foreground">free online calculators</strong> designed to help you with everyday calculations. Whether you are a student, professional, or simply someone who needs quick, accurate answers, our tools are built for you.
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground">What Makes Our Calculators Different?</h3>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li><strong className="text-foreground">Scientifically Accurate:</strong> We use industry-standard formulas approved by health organizations, financial institutions, and educational bodies.</li>
+                <li><strong className="text-foreground">User-Friendly Design:</strong> Clear instructions, intuitive interfaces, and instant results make calculations effortless.</li>
+                <li><strong className="text-foreground">Educational Content:</strong> Each calculator includes detailed explanations, formulas, examples, and FAQs to help you understand the concepts.</li>
+                <li><strong className="text-foreground">Mobile Optimized:</strong> All calculators work perfectly on smartphones, tablets, and desktop computers.</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-foreground">Trusted by Thousands</h3>
+              <p className="text-muted-foreground">
+                Since our launch, over 10,000 users have relied on MultiCalculator for their daily calculation needs. From students completing homework to professionals making financial decisions, our calculators provide the accuracy and reliability you need.
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground">Our Calculator Categories</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Health & Fitness</h4>
+                  <p className="text-sm text-muted-foreground">Calculate BMI, daily calories, body fat percentage, basal metabolic rate, and ideal weight using medically-approved formulas.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Finance & Money</h4>
+                  <p className="text-sm text-muted-foreground">Plan mortgages, loans, investments, retirement savings, and understand compound interest with our finance tools.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Math & Science</h4>
+                  <p className="text-sm text-muted-foreground">Solve equations, convert units, calculate percentages, fractions, and statistics with precision.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Date & Time</h4>
+                  <p className="text-sm text-muted-foreground">Calculate age, count days between dates, and perform time arithmetic for planning and scheduling.</p>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-semibold text-foreground">Frequently Asked Questions</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-foreground">Are these calculators really free?</h4>
+                  <p className="text-sm text-muted-foreground">Yes! All our calculators are 100% free to use with no hidden fees, subscriptions, or registrations required.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground">How accurate are the results?</h4>
+                  <p className="text-sm text-muted-foreground">Our calculators use scientifically-validated formulas and are regularly tested for accuracy. However, for medical or financial decisions, always consult with a professional.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground">Is my data safe?</h4>
+                  <p className="text-sm text-muted-foreground">Absolutely. All calculations are performed in your browser. We never store, transmit, or share your personal data.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground">Can I use these on my phone?</h4>
+                  <p className="text-sm text-muted-foreground">Yes! MultiCalculator is fully responsive and works perfectly on all devices including iPhones, Android phones, iPads, and tablets.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
