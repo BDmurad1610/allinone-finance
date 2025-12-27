@@ -145,6 +145,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
+                  to="/blog" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link 
                   to="/contact-us" 
                   className="text-sm text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
                 >

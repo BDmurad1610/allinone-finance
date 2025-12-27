@@ -1,4 +1,4 @@
-import { Calculator, Users, Download } from "lucide-react";
+import { Calculator, Users, Download, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PWAInstallButton } from "./PWAInstallButton";
 import { ThemeToggle } from "./ThemeToggle";
@@ -27,16 +27,24 @@ export default function Header() {
             </div>
           </Link>
           
-          <div className="flex items-center gap-3 text-sm" aria-label="Site statistics">
-            <div className="hidden sm:flex items-center gap-1.5 text-foreground/70 transition-colors" aria-label="42.1 thousand users">
+          <div className="flex items-center gap-3 text-sm" aria-label="Site navigation and statistics">
+            <Link 
+              to="/blog" 
+              className="hidden sm:flex items-center gap-1.5 text-foreground/70 hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-muted"
+              aria-label="Read our blog"
+            >
+              <BookOpen className="w-4 h-4" aria-hidden="true" />
+              <span className="font-medium">Blog</span>
+            </Link>
+            <div className="hidden md:flex items-center gap-1.5 text-foreground/70 transition-colors" aria-label="42.1 thousand users">
               <Users className="w-4 h-4 text-primary" aria-hidden="true" />
               <span className="font-semibold">42.1K</span>
-              <span className="hidden md:inline">users</span>
+              <span className="hidden lg:inline">users</span>
             </div>
-            <div className="hidden sm:flex items-center gap-1.5 text-foreground/70 transition-colors" aria-label="15.3 thousand downloads">
+            <div className="hidden md:flex items-center gap-1.5 text-foreground/70 transition-colors" aria-label="15.3 thousand downloads">
               <Download className="w-4 h-4 text-accent" aria-hidden="true" />
               <span className="font-semibold">15.3K</span>
-              <span className="hidden md:inline">downloads</span>
+              <span className="hidden lg:inline">downloads</span>
             </div>
             <ThemeToggle />
             <PWAInstallButton variant="outline" size="sm" showLabel={false} className="hidden sm:flex" />
