@@ -968,6 +968,723 @@ Use our free Percentage Calculator to solve any percentage problem instantly!
       { name: "Tip Calculator", path: "/tip-calculator" },
       { name: "GPA Calculator", path: "/gpa-calculator" }
     ]
+  },
+  {
+    slug: "emi-calculator-guide-loan-management",
+    title: "EMI Calculator Guide: How to Calculate and Manage Your Loan Payments",
+    excerpt: "Master EMI calculations to make smarter borrowing decisions. Learn how to calculate EMI, reduce interest costs, and manage multiple loans effectively.",
+    category: "Finance",
+    author: "Finance Expert Team",
+    publishedDate: "2024-12-20",
+    readTime: "9 min read",
+    metaDescription: "Complete guide to understanding EMI calculations. Learn the EMI formula, compare loan options, and discover strategies to pay off loans faster and save on interest.",
+    keywords: ["EMI calculator", "loan EMI", "monthly installment", "loan payment", "interest calculation", "debt management"],
+    content: `
+## What is EMI?
+
+EMI stands for Equated Monthly Installment — the fixed payment amount you pay to a lender every month until your loan is fully repaid. Each EMI includes both principal repayment and interest, calculated so that you pay off the entire debt over the loan tenure.
+
+Understanding EMI helps you:
+- Budget your monthly expenses accurately
+- Compare different loan offers
+- Decide on the right loan amount and tenure
+- Plan early repayment strategies
+
+## The EMI Formula Explained
+
+**EMI = P × r × (1 + r)^n / [(1 + r)^n - 1]**
+
+Where:
+- **P** = Principal loan amount
+- **r** = Monthly interest rate (annual rate ÷ 12 ÷ 100)
+- **n** = Total number of monthly installments
+
+### Example Calculation
+
+For a ₹10,00,000 loan at 10% annual interest for 5 years (60 months):
+- P = 10,00,000
+- r = 10 / 12 / 100 = 0.00833
+- n = 60
+
+EMI = 10,00,000 × 0.00833 × (1.00833)^60 / [(1.00833)^60 - 1]
+**EMI = ₹21,247**
+
+Total amount paid = ₹21,247 × 60 = ₹12,74,820
+Total interest = ₹12,74,820 - ₹10,00,000 = ₹2,74,820
+
+## How EMI Changes Over Time
+
+Each EMI payment consists of:
+- **Interest component**: Higher in early months
+- **Principal component**: Increases over time
+
+| Month | EMI | Interest | Principal | Balance |
+|-------|-----|----------|-----------|---------|
+| 1 | ₹21,247 | ₹8,333 | ₹12,914 | ₹9,87,086 |
+| 12 | ₹21,247 | ₹7,244 | ₹14,003 | ₹8,55,152 |
+| 36 | ₹21,247 | ₹4,473 | ₹16,774 | ₹5,19,447 |
+| 60 | ₹21,247 | ₹176 | ₹21,071 | ₹0 |
+
+This is called an **amortization schedule**.
+
+## Factors Affecting Your EMI
+
+### 1. Loan Amount
+Higher loan = Higher EMI. Simple but often overlooked.
+
+### 2. Interest Rate
+Even small rate differences add up significantly:
+
+| Loan Amount | Rate | Tenure | EMI | Total Interest |
+|-------------|------|--------|-----|----------------|
+| ₹50,00,000 | 8% | 20 years | ₹41,822 | ₹50,37,280 |
+| ₹50,00,000 | 9% | 20 years | ₹44,986 | ₹57,96,640 |
+| ₹50,00,000 | 10% | 20 years | ₹48,251 | ₹65,80,240 |
+
+A 2% rate difference = ₹15,42,960 more interest!
+
+### 3. Loan Tenure
+Longer tenure means lower EMI but much higher total interest:
+
+| Tenure | EMI | Total Interest |
+|--------|-----|----------------|
+| 15 years | ₹53,737 | ₹46,72,660 |
+| 20 years | ₹48,251 | ₹65,80,240 |
+| 25 years | ₹45,436 | ₹86,30,800 |
+| 30 years | ₹43,871 | ₹1,07,93,560 |
+
+## Types of Loans and Their EMIs
+
+### Home Loans
+- Tenure: 10-30 years
+- Interest: 8-12%
+- Typically the largest EMI most people have
+
+### Personal Loans
+- Tenure: 1-7 years
+- Interest: 10-24%
+- Higher rates due to unsecured nature
+
+### Car Loans
+- Tenure: 3-7 years
+- Interest: 7-15%
+- Vehicle serves as collateral
+
+### Education Loans
+- Tenure: 5-15 years
+- Interest: 8-14%
+- Often have moratorium periods
+
+## Strategies to Reduce Your EMI Burden
+
+### 1. Make a Larger Down Payment
+For home and car loans, higher down payments mean:
+- Lower loan amount
+- Lower EMI
+- Less total interest
+
+### 2. Negotiate Interest Rates
+- Good credit score = negotiating power
+- Existing relationship with bank helps
+- Compare multiple lenders
+
+### 3. Choose Longer Tenure (Carefully)
+Lower EMI but more interest. Only if cash flow is tight.
+
+### 4. Prepayment Strategy
+Making extra payments toward principal:
+- Reduces loan tenure
+- Saves significant interest
+- Most beneficial in early years
+
+### 5. Balance Transfer
+If rates have dropped or your credit improved:
+- Transfer to lower-rate lender
+- Consider processing fees
+- Calculate break-even point
+
+## EMI Affordability: How Much Can You Pay?
+
+Financial experts recommend:
+- **Total EMIs ≤ 40%** of monthly income
+- **Home loan EMI ≤ 30%** of monthly income
+- Maintain 3-6 months EMI as emergency fund
+
+### Example:
+Monthly income: ₹1,00,000
+- Maximum total EMIs: ₹40,000
+- Maximum home loan EMI: ₹30,000
+- Remaining for other loans: ₹10,000
+
+## Fixed vs. Floating Rate EMIs
+
+### Fixed Rate
+- EMI remains constant throughout
+- Predictable budgeting
+- Usually slightly higher initial rate
+
+### Floating Rate
+- EMI changes with market rates
+- Can go up or down
+- Historically averages lower over time
+
+## Common EMI Mistakes to Avoid
+
+1. **Only focusing on EMI, not total cost**
+   - Lower EMI often means higher total payment
+
+2. **Ignoring processing fees**
+   - Can add 0.5-2% to effective cost
+
+3. **Not reading prepayment terms**
+   - Some loans have prepayment penalties
+
+4. **Taking maximum approved amount**
+   - Just because you qualify doesn't mean you should
+
+5. **Forgetting insurance costs**
+   - Loan protection plans add to monthly outflow
+
+## Managing Multiple EMIs
+
+If you have multiple loans:
+1. List all EMIs with rates and balances
+2. Pay minimums on all
+3. Extra payments toward highest-rate loan (avalanche method)
+4. Or pay smallest balance first for motivation (snowball method)
+
+## Conclusion
+
+Understanding EMI calculations empowers you to make smarter borrowing decisions. Remember:
+- Calculate EMI before taking any loan
+- Compare total cost, not just monthly payment
+- Keep total EMIs under 40% of income
+- Consider prepayment to save interest
+
+Use our free EMI Calculator to plan your loan payments and see the complete amortization schedule.
+    `,
+    relatedCalculators: [
+      { name: "EMI Calculator", path: "/emi-calculator" },
+      { name: "Loan Calculator", path: "/loan-calculator" },
+      { name: "Mortgage Calculator", path: "/mortgage-calculator" },
+      { name: "Compound Interest Calculator", path: "/compound-interest-calculator" }
+    ]
+  },
+  {
+    slug: "savings-goal-calculator-guide",
+    title: "How to Set and Achieve Savings Goals: A Complete Calculator Guide",
+    excerpt: "Learn how to set realistic savings goals, calculate how much to save monthly, and build a savings plan that actually works for your financial future.",
+    category: "Finance",
+    author: "Finance Expert Team",
+    publishedDate: "2024-12-18",
+    readTime: "10 min read",
+    metaDescription: "Master savings goal planning with our comprehensive guide. Learn to calculate monthly savings, choose the right accounts, and stay motivated to reach your financial targets.",
+    keywords: ["savings goal", "savings calculator", "financial planning", "emergency fund", "save money", "budgeting"],
+    content: `
+## Why Savings Goals Matter
+
+Having specific savings goals transforms vague intentions into actionable plans. Studies show that people with written financial goals are significantly more likely to achieve them than those without clear targets.
+
+Whether you're saving for an emergency fund, vacation, home down payment, or retirement, a structured approach makes all the difference.
+
+## Types of Savings Goals
+
+### Short-Term Goals (Under 1 Year)
+- Emergency fund starter (₹50,000-1,00,000)
+- Vacation or travel
+- New phone or gadget
+- Holiday gifts
+- Small home improvements
+
+### Medium-Term Goals (1-5 Years)
+- Full emergency fund (3-6 months expenses)
+- Car down payment
+- Wedding expenses
+- Education courses
+- Home renovation
+
+### Long-Term Goals (5+ Years)
+- Home down payment
+- Children's education
+- Retirement corpus
+- Financial independence
+- Business capital
+
+## The Savings Goal Formula
+
+To calculate how much to save monthly:
+
+**Monthly Savings = Target Amount / Number of Months**
+
+With interest consideration:
+**Monthly Savings = Target Amount / [(1 + r)^n - 1] × r / (1 + r)^n**
+
+Where:
+- r = Monthly interest rate
+- n = Number of months
+
+### Example Calculation
+
+Goal: ₹5,00,000 for home down payment in 3 years
+Without interest: ₹5,00,000 ÷ 36 = ₹13,889/month
+With 6% annual returns: ₹12,823/month (saves ₹38,376!)
+
+## The 50/30/20 Budgeting Rule
+
+A proven framework for allocating income:
+
+| Category | Percentage | Purpose |
+|----------|------------|---------|
+| Needs | 50% | Rent, utilities, groceries, insurance |
+| Wants | 30% | Entertainment, dining, hobbies |
+| Savings | 20% | Goals, investments, emergency fund |
+
+### Modifying for Aggressive Savings
+- 50/20/30: Save 30%, reduce wants to 20%
+- 60/10/30: For high earners with major goals
+- 70/0/30: Extreme saving phase (temporary)
+
+## Building Your Emergency Fund First
+
+Before other goals, establish an emergency fund:
+
+### Emergency Fund Targets
+- **Starter**: ₹50,000-1,00,000 (as fast as possible)
+- **Basic**: 3 months of expenses
+- **Full**: 6 months of expenses
+- **Secure**: 12 months (for variable income)
+
+### Where to Keep Emergency Funds
+- High-yield savings account
+- Liquid mutual funds
+- Short-term fixed deposits
+- NOT invested in stocks (too volatile)
+
+## Setting SMART Savings Goals
+
+Make each goal:
+- **S**pecific: "Save ₹3,00,000" not "Save for vacation"
+- **M**easurable: Track progress monthly
+- **A**chievable: Within your income capacity
+- **R**elevant: Aligned with your values
+- **T**ime-bound: "By December 2025"
+
+### Example SMART Goal
+❌ "Save money for a car"
+✅ "Save ₹5,00,000 for car down payment by March 2026, contributing ₹27,778 monthly to dedicated savings account"
+
+## Strategies to Reach Goals Faster
+
+### 1. Automate Your Savings
+- Set up automatic transfers on payday
+- "Pay yourself first" principle
+- Remove the temptation to skip
+
+### 2. Use Separate Accounts
+- One account per goal
+- Visual progress tracking
+- Reduces spending temptation
+
+### 3. Find Extra Money
+- Review and cancel unused subscriptions
+- Sell items you don't need
+- Take on side income
+- Use cashback and rewards strategically
+
+### 4. Increase Savings Rate Gradually
+Start with what's comfortable, then:
+- Increase by 1% each month
+- Save 50% of any raise or bonus
+- Redirect money when a bill is paid off
+
+### 5. Use Windfalls Wisely
+When you receive unexpected money:
+- Tax refunds
+- Bonuses
+- Gifts
+- Side income
+
+Apply the 50/50 rule: 50% to goals, 50% guilt-free spending.
+
+## Best Accounts for Savings Goals
+
+### High-Yield Savings Accounts
+- Easy access
+- 4-6% interest
+- Best for: Emergency fund, short-term goals
+
+### Fixed Deposits (FDs)
+- Higher interest (6-7%)
+- Lock-in period
+- Best for: Medium-term goals with known dates
+
+### Recurring Deposits (RDs)
+- Forced monthly saving
+- Competitive rates
+- Best for: Building discipline
+
+### Mutual Funds (Debt)
+- Better returns (7-9%)
+- Some market risk
+- Best for: 2-5 year goals
+
+### Equity Mutual Funds (SIP)
+- Highest potential returns
+- High volatility
+- Best for: 5+ year goals
+
+## Dealing with Setbacks
+
+Life happens. When you can't make a savings contribution:
+
+1. **Don't give up entirely** — partial saving is better than none
+2. **Adjust timeline** — extend goal date if needed
+3. **Reduce temporarily** — lower the amount, don't stop
+4. **Review priorities** — maybe a goal needs rethinking
+5. **Get back on track** — increase contributions when possible
+
+## Tracking Your Progress
+
+### Monthly Review
+- Check balance vs. target
+- Calculate percentage complete
+- Adjust if off track
+
+### Milestone Celebrations
+- 25% complete: Small treat
+- 50% complete: Medium reward
+- 75% complete: Motivation boost
+- 100% complete: Celebrate appropriately!
+
+### Tools for Tracking
+- Spreadsheets
+- Savings goal calculators
+- Banking apps with goal features
+- Dedicated saving apps
+
+## Multiple Goals Strategy
+
+When saving for several goals simultaneously:
+
+### Prioritization Matrix
+| Priority | Goal Type | Allocation |
+|----------|-----------|------------|
+| 1 | Emergency fund | Until complete |
+| 2 | Employer match (if applicable) | Maximum match |
+| 3 | High-interest debt | Until paid |
+| 4 | Short-term goals | Proportional |
+| 5 | Long-term goals | Remaining |
+
+### The Proportional Method
+Example: ₹20,000 monthly savings budget
+- Emergency fund: ₹8,000 (40%)
+- Vacation: ₹4,000 (20%)
+- Car: ₹5,000 (25%)
+- Retirement: ₹3,000 (15%)
+
+## Avoiding Common Mistakes
+
+1. **Setting too many goals** — Focus on 3-5 at a time
+2. **Unrealistic timelines** — Better to extend than fail
+3. **Not accounting for inflation** — Long-term goals need adjustment
+4. **Ignoring interest earnings** — Let money work for you
+5. **No emergency fund** — Leads to derailing other goals
+
+## Conclusion
+
+Successful saving is about consistency, not perfection. Start with:
+1. One clear goal
+2. Realistic monthly amount
+3. Automated transfers
+4. Regular progress reviews
+
+As you achieve smaller goals, your confidence and skills grow for bigger targets.
+
+Use our Savings Goal Calculator to create your personalized savings plan today!
+    `,
+    relatedCalculators: [
+      { name: "Savings Goal Calculator", path: "/savings-goal-calculator" },
+      { name: "Compound Interest Calculator", path: "/compound-interest-calculator" },
+      { name: "Investment Calculator", path: "/investment-calculator" },
+      { name: "Retirement Calculator", path: "/retirement-calculator" }
+    ]
+  },
+  {
+    slug: "unit-conversion-complete-guide",
+    title: "Unit Conversion Made Easy: The Complete Guide to Converting Measurements",
+    excerpt: "Master unit conversions with our comprehensive guide. Learn to convert length, weight, temperature, and more with easy formulas and practical examples.",
+    category: "Math",
+    author: "Math Expert Team",
+    publishedDate: "2024-12-16",
+    readTime: "11 min read",
+    metaDescription: "Complete guide to unit conversions. Learn to convert between metric and imperial units for length, weight, volume, temperature, and area with formulas and examples.",
+    keywords: ["unit converter", "metric conversion", "measurement units", "imperial to metric", "length conversion", "weight conversion"],
+    content: `
+## Why Unit Conversion Matters
+
+In our globally connected world, understanding unit conversions is essential. Whether you're:
+- Cooking with international recipes
+- Traveling abroad
+- Working in science or engineering
+- Shopping online from foreign sites
+- Following health and fitness from different countries
+
+Knowing how to convert between measurement systems saves time and prevents costly mistakes.
+
+## The Two Major Measurement Systems
+
+### Metric System (SI)
+Used by: Most of the world
+Base units: Meter (length), Kilogram (mass), Liter (volume)
+Advantage: Decimal-based, easy conversions
+
+### Imperial/US Customary System
+Used by: United States, partially in UK
+Base units: Foot (length), Pound (mass), Gallon (volume)
+Advantage: Familiar to Americans
+
+## Length Conversions
+
+### Metric to Metric
+| From | To | Multiply by |
+|------|-----|-------------|
+| Kilometer | Meter | 1,000 |
+| Meter | Centimeter | 100 |
+| Centimeter | Millimeter | 10 |
+| Meter | Kilometer | 0.001 |
+
+### Imperial to Imperial
+| From | To | Multiply by |
+|------|-----|-------------|
+| Mile | Feet | 5,280 |
+| Yard | Feet | 3 |
+| Foot | Inches | 12 |
+| Feet | Mile | 0.000189 |
+
+### Metric ↔ Imperial
+| From | To | Multiply by |
+|------|-----|-------------|
+| Kilometer | Mile | 0.621 |
+| Mile | Kilometer | 1.609 |
+| Meter | Feet | 3.281 |
+| Feet | Meter | 0.305 |
+| Centimeter | Inch | 0.394 |
+| Inch | Centimeter | 2.54 |
+
+### Quick Estimates
+- 1 inch ≈ 2.5 cm (exactly 2.54)
+- 1 foot ≈ 30 cm (exactly 30.48)
+- 1 meter ≈ 3 feet 3 inches
+- 1 km ≈ 0.6 miles
+- 5 km ≈ 3.1 miles (useful for running!)
+
+## Weight/Mass Conversions
+
+### Metric to Metric
+| From | To | Multiply by |
+|------|-----|-------------|
+| Kilogram | Gram | 1,000 |
+| Gram | Milligram | 1,000 |
+| Metric Ton | Kilogram | 1,000 |
+
+### Imperial to Imperial
+| From | To | Multiply by |
+|------|-----|-------------|
+| Pound | Ounces | 16 |
+| Ton (US) | Pounds | 2,000 |
+| Stone | Pounds | 14 |
+
+### Metric ↔ Imperial
+| From | To | Multiply by |
+|------|-----|-------------|
+| Kilogram | Pound | 2.205 |
+| Pound | Kilogram | 0.454 |
+| Gram | Ounce | 0.035 |
+| Ounce | Gram | 28.35 |
+
+### Practical Examples
+- Your body weight: 70 kg = 154 lbs
+- Food packaging: 500g = 17.6 oz ≈ 1.1 lbs
+- Luggage limit: 23 kg = 50.7 lbs
+
+## Volume Conversions
+
+### Metric to Metric
+| From | To | Multiply by |
+|------|-----|-------------|
+| Liter | Milliliter | 1,000 |
+| Cubic Meter | Liter | 1,000 |
+| Milliliter | Cubic Centimeter | 1 |
+
+### US Volume
+| From | To | Multiply by |
+|------|-----|-------------|
+| Gallon | Quarts | 4 |
+| Quart | Pints | 2 |
+| Pint | Cups | 2 |
+| Cup | Fluid Ounces | 8 |
+| Cup | Tablespoons | 16 |
+| Tablespoon | Teaspoons | 3 |
+
+### Metric ↔ US Volume
+| From | To | Multiply by |
+|------|-----|-------------|
+| Liter | US Gallon | 0.264 |
+| US Gallon | Liter | 3.785 |
+| Liter | US Quart | 1.057 |
+| Milliliter | Fluid Ounce | 0.034 |
+| Fluid Ounce | Milliliter | 29.57 |
+
+### Cooking Conversions
+- 1 cup = 240 ml (approximately)
+- 1 tablespoon = 15 ml
+- 1 teaspoon = 5 ml
+- 1 liter ≈ 4 cups
+
+## Temperature Conversions
+
+### The Formulas
+**Celsius to Fahrenheit:**
+°F = (°C × 9/5) + 32
+
+**Fahrenheit to Celsius:**
+°C = (°F - 32) × 5/9
+
+**Celsius to Kelvin:**
+K = °C + 273.15
+
+### Key Reference Points
+| Description | Celsius | Fahrenheit |
+|------------|---------|------------|
+| Water freezes | 0°C | 32°F |
+| Room temperature | 20-22°C | 68-72°F |
+| Body temperature | 37°C | 98.6°F |
+| Water boils | 100°C | 212°F |
+| Hot summer day | 35°C | 95°F |
+| Cold winter day | -10°C | 14°F |
+
+### Quick Estimation Trick
+For rough Celsius to Fahrenheit:
+1. Double the Celsius temperature
+2. Add 30
+
+Example: 20°C → (20 × 2) + 30 = 70°F (actual: 68°F)
+
+## Area Conversions
+
+### Metric to Metric
+| From | To | Multiply by |
+|------|-----|-------------|
+| Square Kilometer | Square Meter | 1,000,000 |
+| Hectare | Square Meter | 10,000 |
+| Square Meter | Square Centimeter | 10,000 |
+
+### Imperial to Imperial
+| From | To | Multiply by |
+|------|-----|-------------|
+| Square Mile | Acre | 640 |
+| Acre | Square Feet | 43,560 |
+| Square Yard | Square Feet | 9 |
+| Square Foot | Square Inches | 144 |
+
+### Metric ↔ Imperial
+| From | To | Multiply by |
+|------|-----|-------------|
+| Square Kilometer | Square Mile | 0.386 |
+| Hectare | Acre | 2.471 |
+| Square Meter | Square Feet | 10.764 |
+| Square Feet | Square Meter | 0.093 |
+
+### Real Estate Context
+- Average apartment: 100 sq m = 1,076 sq ft
+- Tennis court: 260 sq m = 2,800 sq ft
+- Football field: 5,351 sq m = 57,600 sq ft
+- 1 acre = 4,047 sq m = 0.4 hectare
+
+## Speed Conversions
+
+### Common Conversions
+| From | To | Multiply by |
+|------|-----|-------------|
+| km/h | mph | 0.621 |
+| mph | km/h | 1.609 |
+| m/s | km/h | 3.6 |
+| km/h | m/s | 0.278 |
+
+### Speed References
+| Description | km/h | mph |
+|------------|------|-----|
+| Walking | 5 | 3.1 |
+| Running | 10-15 | 6-9 |
+| City driving | 50 | 31 |
+| Highway (India) | 100 | 62 |
+| Highway (US) | 113 | 70 |
+
+## Digital Storage Units
+
+### The Basics
+| From | To | Multiply by |
+|------|-----|-------------|
+| Terabyte (TB) | Gigabyte (GB) | 1,024 |
+| Gigabyte (GB) | Megabyte (MB) | 1,024 |
+| Megabyte (MB) | Kilobyte (KB) | 1,024 |
+| Kilobyte (KB) | Byte | 1,024 |
+| Byte | Bit | 8 |
+
+### Practical Context
+- Photo (high quality): 5-10 MB
+- Song (MP3): 3-5 MB
+- HD Movie: 4-8 GB
+- 4K Movie: 20-40 GB
+
+## Tips for Easy Conversions
+
+### 1. Memorize Key Conversion Factors
+Learn these by heart:
+- 1 inch = 2.54 cm
+- 1 kg = 2.2 lbs
+- 1 mile = 1.6 km
+- 1 gallon = 3.8 liters
+
+### 2. Use Dimensional Analysis
+Always write units and cancel them:
+50 miles × (1.609 km/1 mile) = 80.45 km
+
+### 3. Sanity Check Results
+- Converting kg to lbs should give a BIGGER number
+- Converting km to miles should give a SMALLER number
+- If your answer seems wrong, it probably is
+
+### 4. Use Technology
+- Smartphone calculators
+- Voice assistants ("Hey Google, convert 100 kg to pounds")
+- Online converters
+- Our Unit Converter tool!
+
+## Common Conversion Mistakes
+
+1. **Confusing weight and mass** — Pounds measure weight, kilograms measure mass
+2. **US vs. UK gallons** — UK gallon is 20% larger than US gallon
+3. **Square vs. linear units** — 1 m² ≠ 100 cm² (it's 10,000 cm²!)
+4. **Temperature brain freeze** — Always use the formula, don't guess
+5. **Rounding too early** — Keep precision until the final answer
+
+## Conclusion
+
+Unit conversion is a life skill that becomes second nature with practice. Remember:
+- Memorize key conversion factors
+- Always double-check your work
+- Use tools when precision matters
+- Practice with everyday examples
+
+Use our free Unit Converter to convert any measurement instantly and accurately!
+    `,
+    relatedCalculators: [
+      { name: "Unit Converter", path: "/unit-converter" },
+      { name: "Area Calculator", path: "/area-calculator" },
+      { name: "Speed Calculator", path: "/speed-calculator" },
+      { name: "Temperature in BMR Calculator", path: "/bmr-calculator" }
+    ]
   }
 ];
 
