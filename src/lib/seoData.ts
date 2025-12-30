@@ -12,7 +12,7 @@ export const seoData: Record<string, SEOData> = {
   // Homepage
   home: {
     title: "Free Online Calculators | BMI, Mortgage, Loan & More",
-    description: "Free online calculators for health, finance, math & more. Calculate BMI, mortgage payments, loan interest, retirement savings, body fat percentage. Trusted by 10,000+ Americans daily.",
+    description: "🔢 40+ free calculators for health, finance & math. Calculate BMI, mortgage, loans, retirement in seconds. No signup. 100% accurate. Try now!",
     keywords: "online calculator, free calculator, BMI calculator, mortgage calculator, loan calculator, retirement calculator, USA calculator tools",
     canonicalUrl: "/",
   },
@@ -20,7 +20,7 @@ export const seoData: Record<string, SEOData> = {
   // Health & Fitness
   bmi: {
     title: "BMI Calculator - Free Body Mass Index Calculator",
-    description: "Calculate your Body Mass Index (BMI) instantly with our free BMI calculator. Understand if you're underweight, normal, overweight, or obese. Used by healthcare professionals across America.",
+    description: "Calculate your BMI in 10 seconds! Free Body Mass Index tool with instant results. See if you're healthy, underweight, or overweight. No signup required.",
     keywords: "BMI calculator, body mass index calculator, BMI chart, healthy weight calculator, weight calculator, BMI for adults, BMI USA",
     canonicalUrl: "/bmi-calculator",
     structuredData: {
@@ -36,7 +36,7 @@ export const seoData: Record<string, SEOData> = {
 
   calorie: {
     title: "Calorie Calculator - Daily Calorie Needs Calculator",
-    description: "Calculate your daily calorie needs with our free calorie calculator. Find out how many calories you need to lose, maintain, or gain weight. Based on scientifically proven formulas.",
+    description: "How many calories do YOU need? Find out in seconds! Free TDEE & BMR calculator for weight loss, maintenance, or muscle gain. Science-backed formulas.",
     keywords: "calorie calculator, daily calorie calculator, calorie needs calculator, weight loss calculator, TDEE calculator, calorie counter USA",
     canonicalUrl: "/calorie-calculator",
     structuredData: {
@@ -51,7 +51,7 @@ export const seoData: Record<string, SEOData> = {
 
   bodyFat: {
     title: "Body Fat Calculator - Free Body Fat Percentage Calculator",
-    description: "Calculate your body fat percentage with our free body fat calculator. Uses US Navy and other proven methods. Track your fitness progress accurately.",
+    description: "What's your REAL body fat %? Find out now with the US Navy method. Free, accurate body fat calculator. Takes 30 seconds. Track your fitness progress!",
     keywords: "body fat calculator, body fat percentage calculator, body composition calculator, fat percentage calculator, fitness calculator USA",
     canonicalUrl: "/body-fat-calculator",
     structuredData: {
@@ -66,7 +66,7 @@ export const seoData: Record<string, SEOData> = {
 
   bmr: {
     title: "BMR Calculator - Basal Metabolic Rate Calculator",
-    description: "Calculate your Basal Metabolic Rate (BMR) with our free calculator. Find out how many calories your body burns at rest. Essential for weight management.",
+    description: "How many calories do you burn at rest? Calculate your BMR instantly! Free metabolism calculator using Mifflin-St Jeor formula. Start losing weight smarter.",
     keywords: "BMR calculator, basal metabolic rate calculator, metabolism calculator, resting calories calculator, weight loss planning USA",
     canonicalUrl: "/bmr-calculator",
     structuredData: {
@@ -81,7 +81,7 @@ export const seoData: Record<string, SEOData> = {
 
   idealWeight: {
     title: "Ideal Weight Calculator - Find Your Healthy Weight",
-    description: "Calculate your ideal body weight with our free calculator. Uses multiple scientific formulas including Devine, Robinson, Miller, and Hamwi. Perfect for health goals.",
+    description: "What should YOU weigh? Get your ideal weight using 4 scientific formulas (Devine, Robinson, Miller, Hamwi). Free calculator. Set realistic health goals today!",
     keywords: "ideal weight calculator, healthy weight calculator, target weight calculator, ideal body weight, weight goal calculator USA",
     canonicalUrl: "/ideal-weight-calculator",
     structuredData: {
@@ -97,7 +97,7 @@ export const seoData: Record<string, SEOData> = {
   // Finance Calculators
   mortgage: {
     title: "Mortgage Calculator - Free Home Loan Payment Calculator",
-    description: "Calculate your monthly mortgage payments with our free mortgage calculator. Includes principal, interest, taxes, and insurance. Perfect for home buyers in America.",
+    description: "Can you afford that house? Calculate your monthly mortgage payment in seconds. See principal, interest, taxes & insurance breakdown. Free. No signup.",
     keywords: "mortgage calculator, home loan calculator, mortgage payment calculator, house payment calculator, home mortgage calculator USA, PITI calculator",
     canonicalUrl: "/mortgage-calculator",
     structuredData: {
@@ -112,7 +112,7 @@ export const seoData: Record<string, SEOData> = {
 
   loan: {
     title: "Loan Calculator - Free Loan Payment Calculator",
-    description: "Calculate loan payments, interest, and amortization with our free loan calculator. Works for personal loans, auto loans, and more. See your total cost breakdown.",
+    description: "How much will your loan REALLY cost? Calculate monthly payments + total interest instantly. Works for auto, personal & student loans. 100% free tool.",
     keywords: "loan calculator, loan payment calculator, personal loan calculator, auto loan calculator, car loan calculator USA, loan interest calculator",
     canonicalUrl: "/loan-calculator",
     structuredData: {
@@ -127,7 +127,7 @@ export const seoData: Record<string, SEOData> = {
 
   compoundInterest: {
     title: "Compound Interest Calculator - Free Investment Growth Calculator",
-    description: "Calculate compound interest and investment growth with our free calculator. See how your money grows over time with daily, monthly, or annual compounding.",
+    description: "See your money GROW! Calculate compound interest with daily/monthly/yearly compounding. Free investment calculator. Watch $1,000 become $10,000+ over time.",
     keywords: "compound interest calculator, investment calculator, interest calculator, savings calculator, compound growth calculator USA, money growth calculator",
     canonicalUrl: "/compound-interest-calculator",
     structuredData: {
@@ -142,7 +142,7 @@ export const seoData: Record<string, SEOData> = {
 
   investment: {
     title: "Investment Calculator - Free Investment Return Calculator",
-    description: "Calculate investment returns and growth with our free investment calculator. Plan your financial future with accurate projections for stocks, bonds, and more.",
+    description: "How much will your investments be worth? Project future returns for stocks, bonds, 401k. Free calculator with monthly contributions. Plan your wealth today!",
     keywords: "investment calculator, investment return calculator, stock calculator, portfolio calculator, investment growth calculator USA, ROI calculator",
     canonicalUrl: "/investment-calculator",
     structuredData: {
@@ -157,7 +157,7 @@ export const seoData: Record<string, SEOData> = {
 
   retirement: {
     title: "Retirement Calculator - Free Retirement Savings Calculator",
-    description: "Plan your retirement with our free retirement calculator. Calculate how much you need to save for a comfortable retirement. Perfect for 401k and IRA planning.",
+    description: "When can YOU retire? Calculate exactly how much you need to save. Free 401k & IRA planner. See if you're on track for a comfortable retirement. Start now!",
     keywords: "retirement calculator, retirement savings calculator, 401k calculator, IRA calculator, retirement planning calculator USA, pension calculator",
     canonicalUrl: "/retirement-calculator",
     structuredData: {
@@ -172,7 +172,7 @@ export const seoData: Record<string, SEOData> = {
 
   roi: {
     title: "ROI Calculator - Free Return on Investment Calculator",
-    description: "Calculate Return on Investment (ROI) with our free calculator. Measure the profitability of your investments and business decisions accurately.",
+    description: "Is your investment worth it? Calculate ROI instantly! Free tool to measure profitability of any investment or business decision. Get your % return now.",
     keywords: "ROI calculator, return on investment calculator, investment ROI calculator, business ROI calculator, profit calculator USA",
     canonicalUrl: "/roi-calculator",
     structuredData: {
@@ -187,7 +187,7 @@ export const seoData: Record<string, SEOData> = {
 
   salary: {
     title: "Salary Calculator - Hourly to Annual Salary Converter",
-    description: "Convert between hourly, weekly, monthly, and annual salary with our free salary calculator. Perfect for job offers and paycheck calculations in the USA.",
+    description: "$25/hour = how much per year? Convert hourly ↔ weekly ↔ monthly ↔ annual salary instantly. Free calculator for job offers & negotiations. Know your worth!",
     keywords: "salary calculator, hourly to salary calculator, annual salary calculator, paycheck calculator USA, wage calculator, income calculator",
     canonicalUrl: "/salary-calculator",
     structuredData: {
@@ -202,7 +202,7 @@ export const seoData: Record<string, SEOData> = {
 
   tip: {
     title: "Tip Calculator - Free Tip & Bill Split Calculator",
-    description: "Calculate tips and split bills easily with our free tip calculator. Perfect for restaurants, bars, and services. Supports custom tip percentages and party sizes.",
+    description: "How much should you tip? Calculate 15%, 18%, 20% or custom tips instantly. Split bills evenly between friends. Free restaurant tip calculator. No math needed!",
     keywords: "tip calculator, gratuity calculator, bill split calculator, restaurant tip calculator USA, service tip calculator, split bill calculator",
     canonicalUrl: "/tip-calculator",
     structuredData: {
@@ -217,7 +217,7 @@ export const seoData: Record<string, SEOData> = {
 
   currency: {
     title: "Currency Converter - Free Real-Time Exchange Rate Calculator",
-    description: "Convert currencies with real-time exchange rates. Our free currency converter supports USD, EUR, GBP, and 150+ world currencies. Updated daily.",
+    description: "Convert USD to EUR, GBP, JPY & 150+ currencies instantly! Free currency converter with live exchange rates. Updated daily. Perfect for travel & business.",
     keywords: "currency converter, exchange rate calculator, USD converter, money converter, forex calculator USA, currency exchange calculator",
     canonicalUrl: "/currency-converter",
     structuredData: {
@@ -232,7 +232,7 @@ export const seoData: Record<string, SEOData> = {
 
   discount: {
     title: "Discount Calculator - Free Sale Price & Savings Calculator",
-    description: "Calculate discounts, sale prices, and savings instantly with our free discount calculator. Perfect for shopping deals, coupons, and Black Friday sales.",
+    description: "30% off = how much? Calculate sale prices & savings in 1 click! Perfect for Black Friday, coupons & clearance sales. See exactly what you'll pay. Shop smart!",
     keywords: "discount calculator, sale price calculator, percent off calculator, savings calculator USA, coupon calculator, Black Friday calculator, shopping discount calculator",
     canonicalUrl: "/discount-calculator",
     structuredData: {
@@ -247,7 +247,7 @@ export const seoData: Record<string, SEOData> = {
 
   emi: {
     title: "EMI Calculator - Free Loan EMI Payment Calculator",
-    description: "Calculate your Equated Monthly Installment (EMI) for any loan with our free EMI calculator. See total interest, principal breakdown, and payment schedule.",
+    description: "What's your monthly EMI? Calculate loan payments for home, car, or personal loans. See total interest & payment breakdown. Free EMI calculator. Plan smarter!",
     keywords: "EMI calculator, loan EMI calculator, monthly installment calculator, home loan EMI, car loan EMI calculator USA, EMI payment calculator",
     canonicalUrl: "/emi-calculator",
     structuredData: {
@@ -262,7 +262,7 @@ export const seoData: Record<string, SEOData> = {
 
   "electricity-bill": {
     title: "Electricity Bill Calculator - Free Electric Cost Calculator",
-    description: "Calculate your electricity bill based on units consumed with our free calculator. See energy charges, taxes, and total bill breakdown. Perfect for budgeting.",
+    description: "Why is your electric bill so high? Calculate exact costs by kWh usage. See energy charges, taxes & breakdown. Free tool to budget & reduce electricity costs!",
     keywords: "electricity bill calculator, electric bill calculator, power bill calculator, energy cost calculator USA, utility bill calculator, kWh calculator",
     canonicalUrl: "/electricity-bill-calculator",
     structuredData: {
@@ -277,7 +277,7 @@ export const seoData: Record<string, SEOData> = {
 
   "fuel-cost": {
     title: "Fuel Cost Calculator - Free Gas Trip Cost Calculator",
-    description: "Calculate your trip fuel costs based on distance, fuel efficiency, and gas prices. Plan road trips and estimate gas expenses with our free fuel calculator.",
+    description: "How much gas for your road trip? Calculate fuel costs by distance, MPG & gas price. Plan trips & budget travel expenses. Free gas cost calculator. Try now!",
     keywords: "fuel cost calculator, gas calculator, trip fuel calculator, gas mileage calculator USA, road trip cost calculator, fuel expense calculator",
     canonicalUrl: "/fuel-cost-calculator",
     structuredData: {
@@ -292,7 +292,7 @@ export const seoData: Record<string, SEOData> = {
 
   "savings-goal": {
     title: "Savings Goal Calculator - Free Monthly Savings Planner",
-    description: "Calculate how much you need to save monthly to reach your financial goals. Plan for emergencies, vacations, or major purchases with our free savings calculator.",
+    description: "Saving for a house, car, or vacation? Calculate exactly how much to save monthly to hit your goal. Free savings planner with timeline. Start saving smarter!",
     keywords: "savings goal calculator, savings planner, monthly savings calculator USA, financial goal calculator, savings target calculator",
     canonicalUrl: "/savings-goal-calculator",
     structuredData: {
@@ -308,7 +308,7 @@ export const seoData: Record<string, SEOData> = {
   // Math & Science
   calculator: {
     title: "Free Online Calculator - Basic Math Calculator",
-    description: "Free online calculator for basic math operations. Add, subtract, multiply, and divide with our easy-to-use calculator. Works on desktop and mobile.",
+    description: "Need a quick calculation? Free online calculator for +, -, ×, ÷ and more. Works on mobile & desktop. No app download. Fast, simple & always accurate!",
     keywords: "online calculator, basic calculator, math calculator, free calculator, simple calculator USA, addition calculator, free online calculator",
     canonicalUrl: "/online-calculator",
     structuredData: {
@@ -323,7 +323,7 @@ export const seoData: Record<string, SEOData> = {
 
   percentage: {
     title: "Percentage Calculator - Free Percent Calculator",
-    description: "Calculate percentages easily with our free percentage calculator. Find percentage of a number, percentage increase/decrease, and more. Perfect for discounts and tips.",
+    description: "What is 15% of 200? Calculate percentages, increases & decreases instantly! Free tool for discounts, tips, grades & more. Get answers in 1 second!",
     keywords: "percentage calculator, percent calculator, discount calculator, percentage increase calculator USA, percentage decrease calculator",
     canonicalUrl: "/percentage-calculator",
     structuredData: {
@@ -338,7 +338,7 @@ export const seoData: Record<string, SEOData> = {
 
   scientific: {
     title: "Scientific Calculator - Free Advanced Math Calculator",
-    description: "Advanced scientific calculator with trigonometry, logarithms, exponents, and more. Free online calculator for students, engineers, and scientists.",
+    description: "Sin, cos, tan, log, exponents & more! Free scientific calculator for students & engineers. Works like TI-84. No download required. Solve complex math now!",
     keywords: "scientific calculator, advanced calculator, trigonometry calculator, logarithm calculator USA, engineering calculator, math calculator",
     canonicalUrl: "/scientific-calculator",
     structuredData: {
@@ -353,7 +353,7 @@ export const seoData: Record<string, SEOData> = {
 
   fraction: {
     title: "Fraction Calculator - Free Fraction Math Calculator",
-    description: "Add, subtract, multiply, and divide fractions with our free fraction calculator. Simplify fractions and convert to decimals. Perfect for students.",
+    description: "Struggling with fractions? Add, subtract, multiply, divide & simplify fractions instantly! Free calculator with step-by-step answers. Perfect for homework!",
     keywords: "fraction calculator, fraction math calculator, add fractions calculator, simplify fractions calculator USA, mixed number calculator",
     canonicalUrl: "/fraction-calculator",
     structuredData: {
@@ -368,7 +368,7 @@ export const seoData: Record<string, SEOData> = {
 
   statistics: {
     title: "Statistics Calculator - Mean, Median, Mode Calculator",
-    description: "Calculate mean, median, mode, standard deviation, and variance with our free statistics calculator. Perfect for data analysis and statistics homework.",
+    description: "Calculate mean, median, mode, standard deviation & variance in seconds! Free statistics calculator for data analysis & homework. Just enter your numbers!",
     keywords: "statistics calculator, mean calculator, median calculator, mode calculator USA, standard deviation calculator, variance calculator",
     canonicalUrl: "/statistics-calculator",
     structuredData: {
@@ -383,7 +383,7 @@ export const seoData: Record<string, SEOData> = {
 
   gpa: {
     title: "GPA Calculator - Free Grade Point Average Calculator",
-    description: "Calculate your GPA (Grade Point Average) with our free GPA calculator. Perfect for high school and college students. Supports 4.0 scale with letter grades.",
+    description: "What's your GPA? Calculate your grade point average on 4.0 scale. Works for high school & college. Add courses, credits & grades. Free GPA calculator!",
     keywords: "GPA calculator, grade point average calculator, college GPA calculator, high school GPA calculator USA, cumulative GPA calculator, semester GPA calculator",
     canonicalUrl: "/gpa-calculator",
     structuredData: {
@@ -398,7 +398,7 @@ export const seoData: Record<string, SEOData> = {
 
   unitConverter: {
     title: "Unit Converter - Free Length, Weight & Temperature Converter",
-    description: "Convert units instantly with our free unit converter. Convert length (miles to km), weight (pounds to kg), and temperature (Fahrenheit to Celsius). Fast and accurate.",
+    description: "Miles to km? Pounds to kg? °F to °C? Convert any unit instantly! Free converter for length, weight, temperature & more. Metric ↔ Imperial made easy!",
     keywords: "unit converter, length converter, weight converter, temperature converter, metric converter USA, imperial to metric, km to miles, lbs to kg, Fahrenheit to Celsius",
     canonicalUrl: "/unit-converter",
     structuredData: {
@@ -413,7 +413,7 @@ export const seoData: Record<string, SEOData> = {
 
   area: {
     title: "Area Calculator - Free Room & Land Area Calculator",
-    description: "Calculate area of rooms, land, and shapes with our free area calculator. Supports rectangle, circle, triangle, trapezoid. Perfect for flooring, painting, and land measurement.",
+    description: "How many square feet is your room? Calculate area for any shape: rectangle, circle, triangle, trapezoid. Free tool for flooring, painting & land measurement!",
     keywords: "area calculator, room area calculator, land area calculator, square footage calculator USA, floor area calculator, acreage calculator, sq ft calculator",
     canonicalUrl: "/area-calculator",
     structuredData: {
@@ -428,7 +428,7 @@ export const seoData: Record<string, SEOData> = {
 
   speed: {
     title: "Speed Calculator - Free Speed, Distance & Time Calculator",
-    description: "Calculate speed, distance, or time with our free speed calculator. Supports km/h, mph, m/s. Perfect for travel planning, running pace, and physics calculations.",
+    description: "How long will your trip take? Calculate speed, distance or time instantly. Supports mph, km/h, m/s. Perfect for road trips, running pace & physics homework!",
     keywords: "speed calculator, distance calculator, time calculator, mph to kmh, travel time calculator USA, running pace calculator, velocity calculator",
     canonicalUrl: "/speed-calculator",
     structuredData: {
@@ -444,7 +444,7 @@ export const seoData: Record<string, SEOData> = {
   // Date & Time
   age: {
     title: "Age Calculator - Calculate Your Exact Age",
-    description: "Calculate your exact age in years, months, and days with our free age calculator. Find out how old you are down to the day. Perfect for birthdays.",
+    description: "How old are you EXACTLY? Calculate your age in years, months, days, hours & minutes! Free birthday calculator. Perfect for birthdays & legal documents!",
     keywords: "age calculator, birthday calculator, how old am I calculator USA, exact age calculator, age in days calculator",
     canonicalUrl: "/age-calculator",
     structuredData: {
@@ -459,7 +459,7 @@ export const seoData: Record<string, SEOData> = {
 
   dateDifference: {
     title: "Date Calculator - Days Between Dates Calculator",
-    description: "Calculate the number of days, weeks, months, and years between two dates with our free date calculator. Perfect for planning events and deadlines.",
+    description: "How many days until your deadline? Calculate days, weeks, months & years between any two dates. Free date calculator for events, projects & countdowns!",
     keywords: "date calculator, days between dates calculator, date difference calculator USA, countdown calculator, date duration calculator",
     canonicalUrl: "/date-difference-calculator",
     structuredData: {
@@ -474,7 +474,7 @@ export const seoData: Record<string, SEOData> = {
 
   timeCalculator: {
     title: "Time Calculator - Add & Subtract Time Calculator",
-    description: "Add and subtract hours, minutes, and seconds with our free time calculator. Calculate time duration and differences easily. Perfect for timesheets.",
+    description: "Add or subtract hours, minutes & seconds easily! Free time calculator for timesheets, project tracking & scheduling. Calculate total work hours instantly!",
     keywords: "time calculator, hours calculator, time duration calculator USA, add time calculator, subtract time calculator, timesheet calculator",
     canonicalUrl: "/time-calculator",
     structuredData: {
