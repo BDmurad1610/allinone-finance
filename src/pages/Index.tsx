@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CalculatorTicker from "@/components/CalculatorTicker";
 import CalculatorCard from "@/components/CalculatorCard";
+import Testimonials from "@/components/Testimonials";
 import { calculators, categories } from "@/data/calculators";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -279,6 +280,9 @@ export default function Index() {
             </Card>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <Testimonials />
 
         {/* Detailed Calculator Descriptions */}
         <section className="bg-muted/30 py-16" aria-label="Calculator Details">
