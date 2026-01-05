@@ -1,5 +1,12 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -65,58 +72,71 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={testimonial.name}
-              className="relative overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="p-6">
-                {/* Quote Icon */}
-                <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/10" />
-                
-                {/* Rating */}
-                <div className="flex gap-0.5 mb-4" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star
-                      key={star}
-                      className={`w-4 h-4 ${
-                        star <= testimonial.rating
-                          ? "fill-yellow-400 text-yellow-400"
-                          : "fill-muted text-muted"
-                      }`}
-                      aria-hidden="true"
-                    />
-                  ))}
-                </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="max-w-6xl mx-auto"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={testimonial.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card 
+                  className="relative overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in h-full"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardContent className="p-6 flex flex-col h-full">
+                    {/* Quote Icon */}
+                    <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/10" aria-hidden="true" />
+                    
+                    {/* Rating */}
+                    <div className="flex gap-0.5 mb-4" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star
+                          key={star}
+                          className={`w-4 h-4 ${
+                            star <= testimonial.rating
+                              ? "fill-yellow-400 text-yellow-400"
+                              : "fill-muted text-muted"
+                          }`}
+                          aria-hidden="true"
+                        />
+                      ))}
+                    </div>
 
-                {/* Testimonial Text */}
-                <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                  "{testimonial.text}"
-                </p>
+                    {/* Testimonial Text */}
+                    <p className="text-muted-foreground mb-6 text-sm leading-relaxed flex-grow">
+                      "{testimonial.text}"
+                    </p>
 
-                {/* User Info */}
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-semibold">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </div>
+                    {/* User Info */}
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-semibold">
+                        {testimonial.avatar}
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{testimonial.name}</p>
+                        <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                      </div>
+                    </div>
 
-                {/* Calculator Badge */}
-                <div className="mt-4 pt-4 border-t border-border">
-                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                    Used: {testimonial.calculator}
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                    {/* Calculator Badge */}
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                        Used: {testimonial.calculator}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center gap-2 mt-6">
+            <CarouselPrevious className="static translate-y-0" />
+            <CarouselNext className="static translate-y-0" />
+          </div>
+        </Carousel>
 
         {/* Stats Row */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
