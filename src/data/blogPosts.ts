@@ -1,3 +1,11 @@
+// Blog images
+import healthFitnessBmi from "@/assets/blog/health-fitness-bmi.jpg";
+import financeInvestment from "@/assets/blog/finance-investment.jpg";
+import nutritionCalories from "@/assets/blog/nutrition-calories.jpg";
+import retirementSavings from "@/assets/blog/retirement-savings.jpg";
+import productivityTime from "@/assets/blog/productivity-time.jpg";
+import mortgageHome from "@/assets/blog/mortgage-home.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -10,7 +18,23 @@ export interface BlogPost {
   metaDescription: string;
   keywords: string[];
   relatedCalculators: { name: string; path: string }[];
+  image?: string;
 }
+
+// Helper function to get image by category
+const getCategoryImage = (category: string): string => {
+  const imageMap: Record<string, string> = {
+    "Health & Fitness": healthFitnessBmi,
+    "Finance": financeInvestment,
+    "Nutrition": nutritionCalories,
+    "Retirement": retirementSavings,
+    "Productivity": productivityTime,
+    "Real Estate": mortgageHome,
+    "Math & Education": productivityTime,
+    "Lifestyle": nutritionCalories,
+  };
+  return imageMap[category] || financeInvestment;
+};
 
 export const blogPosts: BlogPost[] = [
   {
@@ -5768,16 +5792,29 @@ Use our Mortgage Calculator to estimate your monthly payments!
 ];
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {
-  return blogPosts.find(post => post.slug === slug);
+  const post = blogPosts.find(post => post.slug === slug);
+  if (post && !post.image) {
+    return { ...post, image: getCategoryImage(post.category) };
+  }
+  return post;
 };
 
 export const getRelatedPosts = (currentSlug: string, limit: number = 3): BlogPost[] => {
   const currentPost = getBlogPostBySlug(currentSlug);
-  if (!currentPost) return blogPosts.slice(0, limit);
+  if (!currentPost) return blogPosts.slice(0, limit).map(p => ({ ...p, image: p.image || getCategoryImage(p.category) }));
   
   return blogPosts
     .filter(post => post.slug !== currentSlug)
     .filter(post => post.category === currentPost.category || 
       post.keywords.some(kw => currentPost.keywords.includes(kw)))
-    .slice(0, limit);
+    .slice(0, limit)
+    .map(p => ({ ...p, image: p.image || getCategoryImage(p.category) }));
+};
+
+// Get blog posts with images
+export const getBlogPostsWithImages = (): BlogPost[] => {
+  return blogPosts.map(post => ({
+    ...post,
+    image: post.image || getCategoryImage(post.category)
+  }));
 };
