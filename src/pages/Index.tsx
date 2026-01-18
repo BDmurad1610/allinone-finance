@@ -6,7 +6,7 @@ import CalculatorTicker from "@/components/CalculatorTicker";
 import CalculatorCard from "@/components/CalculatorCard";
 import Testimonials from "@/components/Testimonials";
 import { calculators, categories } from "@/data/calculators";
-import { blogPosts } from "@/data/blogPosts";
+import { getBlogPostsWithImages } from "@/data/blogPosts";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 export default function Index() {
   const [activeCategory, setActiveCategory] = useState("all");
   const seo = seoData.home;
+  const blogPostsWithImages = getBlogPostsWithImages();
   
   const filteredCalculators = activeCategory === "all" 
     ? calculators 
@@ -304,39 +305,43 @@ export default function Index() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.slice(0, 6).map((post) => (
+              {blogPostsWithImages.slice(0, 6).map((post) => (
                 <Link key={post.slug} to={`/blog/${post.slug}`}>
                   <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group overflow-hidden">
-                    <div className="h-2 bg-gradient-to-r from-primary to-primary/60" />
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Badge variant="outline" className="text-xs">
-                          {post.category}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground flex items-center gap-1">
+                    {/* Feature Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <Badge className="absolute top-3 left-3" variant="secondary">
+                        {post.category}
+                      </Badge>
+                    </div>
+                    <CardContent className="p-5">
+                      <div className="flex items-center gap-3 mb-3 text-xs text-muted-foreground">
+                        <span className="flex items-center gap-1">
                           <Clock className="w-3 h-3" />
                           {post.readTime}
-                        </span>
-                      </div>
-                      <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <User className="w-3 h-3" />
-                          {post.author}
                         </span>
                         <span className="flex items-center gap-1">
                           <Calendar className="w-3 h-3" />
                           {new Date(post.publishedDate).toLocaleDateString('en-US', { 
                             month: 'short', 
-                            day: 'numeric',
-                            year: 'numeric'
+                            day: 'numeric'
                           })}
                         </span>
+                      </div>
+                      <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center text-primary text-sm font-medium">
+                        Read More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </CardContent>
                   </Card>
@@ -346,7 +351,7 @@ export default function Index() {
 
             <div className="text-center mt-10">
               <p className="text-muted-foreground mb-4">
-                Explore {blogPosts.length}+ comprehensive guides on calculators, health metrics, and financial planning
+                Explore {blogPostsWithImages.length}+ comprehensive guides on calculators, health metrics, and financial planning
               </p>
               <Link to="/blog">
                 <Button size="lg" className="group">

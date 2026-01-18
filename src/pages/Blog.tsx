@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts, getBlogPostsWithImages } from "@/data/blogPosts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,7 @@ const categories = [
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const postsWithImages = getBlogPostsWithImages();
 
   // Calculate category counts
   const categoriesWithCounts = useMemo(() => {
@@ -33,7 +34,7 @@ export default function Blog() {
 
   // Filter posts based on category and search
   const filteredPosts = useMemo(() => {
-    return blogPosts.filter(post => {
+    return postsWithImages.filter(post => {
       const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
       const matchesSearch = searchQuery === "" || 
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -41,13 +42,13 @@ export default function Blog() {
         post.category.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery, postsWithImages]);
 
   // Get featured posts (first 3)
-  const featuredPosts = blogPosts.slice(0, 3);
+  const featuredPosts = postsWithImages.slice(0, 3);
 
   // Get recent posts
-  const recentPosts = [...blogPosts]
+  const recentPosts = [...postsWithImages]
     .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
     .slice(0, 5);
 
@@ -121,25 +122,34 @@ export default function Blog() {
             <div className="grid md:grid-cols-3 gap-6">
               {featuredPosts.map((post, index) => (
                 <Link key={post.slug} to={`/blog/${post.slug}`}>
-                  <Card className={`h-full hover:shadow-lg transition-all hover:-translate-y-1 ${index === 0 ? "md:col-span-1 border-primary/30 bg-gradient-to-br from-primary/5 to-transparent" : ""}`}>
-                    <CardHeader>
-                      <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <Badge variant={index === 0 ? "default" : "outline"}>{post.category}</Badge>
-                        <span className="text-xs text-muted-foreground flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {post.readTime}
-                        </span>
+                  <Card className={`h-full hover:shadow-lg transition-all hover:-translate-y-1 overflow-hidden group ${index === 0 ? "md:col-span-1 border-primary/30" : ""}`}>
+                    {/* Feature Image */}
+                    <div className="relative h-40 overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <Badge className="absolute top-3 left-3" variant={index === 0 ? "default" : "secondary"}>
+                        {post.category}
+                      </Badge>
+                    </div>
+                    <CardHeader className="pb-2">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Clock className="w-3 h-3" />
+                        {post.readTime}
                       </div>
                       <CardTitle className="text-lg hover:text-primary transition-colors line-clamp-2">
                         {post.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
+                      <p className="text-muted-foreground text-sm line-clamp-2 mb-3">
                         {post.excerpt}
                       </p>
                       <div className="flex items-center gap-2 text-primary text-sm font-medium">
-                        Read Article <ArrowRight className="w-4 h-4" />
+                        Read Article <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </CardContent>
                   </Card>
@@ -176,35 +186,40 @@ export default function Blog() {
                 <div className="grid md:grid-cols-2 gap-6">
                   {filteredPosts.map((post) => (
                     <Link key={post.slug} to={`/blog/${post.slug}`}>
-                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1">
-                        <CardHeader>
-                          <div className="flex flex-wrap items-center gap-2 mb-2">
-                            <Badge variant="outline">{post.category}</Badge>
-                            <span className="text-xs text-muted-foreground flex items-center gap-1">
-                              <Clock className="w-3 h-3" />
-                              {post.readTime}
-                            </span>
+                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 overflow-hidden group">
+                        {/* Feature Image */}
+                        <div className="relative h-36 overflow-hidden">
+                          <img 
+                            src={post.image} 
+                            alt={post.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                          <Badge className="absolute top-2 left-2 text-xs" variant="secondary">
+                            {post.category}
+                          </Badge>
+                        </div>
+                        <CardHeader className="pb-2">
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <Clock className="w-3 h-3" />
+                            {post.readTime}
+                            <span>•</span>
+                            <Calendar className="w-3 h-3" />
+                            {new Date(post.publishedDate).toLocaleDateString('en-US', { 
+                              month: 'short', 
+                              day: 'numeric'
+                            })}
                           </div>
-                          <CardTitle className="text-lg hover:text-primary transition-colors line-clamp-2">
+                          <CardTitle className="text-base hover:text-primary transition-colors line-clamp-2">
                             {post.title}
                           </CardTitle>
                         </CardHeader>
-                        <CardContent>
-                          <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
+                        <CardContent className="pt-0">
+                          <p className="text-muted-foreground text-sm line-clamp-2 mb-3">
                             {post.excerpt}
                           </p>
-                          <div className="flex items-center justify-between text-sm">
-                            <span className="flex items-center gap-1 text-muted-foreground">
-                              <User className="w-3 h-3" />
-                              {post.author}
-                            </span>
-                            <span className="text-muted-foreground">
-                              {new Date(post.publishedDate).toLocaleDateString('en-US', { 
-                                month: 'short', 
-                                day: 'numeric',
-                                year: 'numeric'
-                              })}
-                            </span>
+                          <div className="flex items-center text-primary text-sm font-medium">
+                            Read More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                           </div>
                         </CardContent>
                       </Card>
