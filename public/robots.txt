@@ -1,21 +1,54 @@
 # Robots.txt for MultiCalculator
 # https://multicalculator.online
-# Last updated: 2025-12-01
+# Last updated: 2025-01-19
 
-# Google
+# ===========================================
+# MAIN SEARCH ENGINE CRAWLERS
+# ===========================================
+
+# Google (Primary - No crawl delay for faster indexing)
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+Disallow: /api/
+Disallow: /admin/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*?*
 
 User-agent: Googlebot-Image
-Allow: /
+Allow: /assets/
+Allow: /images/
 
 # Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 Crawl-delay: 1
 
-# Social Media Bots
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# ===========================================
+# SOCIAL MEDIA BOTS (For rich previews)
+# ===========================================
+
 User-agent: Twitterbot
 Allow: /
 
@@ -28,24 +61,65 @@ Allow: /
 User-agent: Pinterest
 Allow: /
 
-# Other search engines
-User-agent: DuckDuckBot
+User-agent: WhatsApp
 Allow: /
 
-User-agent: Slurp
+User-agent: TelegramBot
 Allow: /
-Crawl-delay: 1
 
-# All other bots
+# ===========================================
+# AI & GPT CRAWLERS
+# ===========================================
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# ===========================================
+# SEO TOOLS (Allow for analysis)
+# ===========================================
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 5
+
+# ===========================================
+# DEFAULT RULES FOR ALL OTHER BOTS
+# ===========================================
+
 User-agent: *
 Allow: /
-Crawl-delay: 2
-
-# Sitemaps
-Sitemap: https://multicalculator.online/sitemap.xml
-
-# Disallow admin and private areas
 Disallow: /api/
 Disallow: /admin/
-Disallow: /*.json$
 Disallow: /src/
+Disallow: /*.json$
+Disallow: /*?*
+Crawl-delay: 3
+
+# ===========================================
+# SITEMAP LOCATION
+# ===========================================
+
+Sitemap: https://multicalculator.online/sitemap.xml
+
+# ===========================================
+# HOST DIRECTIVE (Preferred domain)
+# ===========================================
+
+Host: https://multicalculator.online
