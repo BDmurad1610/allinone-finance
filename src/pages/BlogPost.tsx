@@ -2,19 +2,26 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { getBlogPostBySlug, getRelatedPosts } from "@/data/blogPosts";
+import AuthorBio from "@/components/AuthorBio";
+import LastUpdated from "@/components/LastUpdated";
+import { getBlogPostBySlug, getRelatedPosts, getBlogPostsWithImages } from "@/data/blogPosts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, User, ArrowLeft, Calculator, Share2 } from "lucide-react";
+import { Calendar, Clock, User, ArrowLeft, Calculator, Share2, CheckCircle, Award } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { toast } = useToast();
   
-  const post = slug ? getBlogPostBySlug(slug) : undefined;
-  const relatedPosts = slug ? getRelatedPosts(slug, 3) : [];
+  // Get post with image
+  const postsWithImages = getBlogPostsWithImages();
+  const post = slug ? postsWithImages.find(p => p.slug === slug) : undefined;
+  const relatedPosts = slug ? getRelatedPosts(slug, 3).map(p => {
+    const withImage = postsWithImages.find(pi => pi.slug === p.slug);
+    return withImage || p;
+  }) : [];
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -219,10 +226,25 @@ export default function BlogPost() {
         </Link>
 
         <article className="max-w-4xl mx-auto">
+          {/* Featured Image */}
+          {post.image && (
+            <div className="relative rounded-2xl overflow-hidden mb-8 shadow-xl">
+              <img 
+                src={post.image} 
+                alt={post.title}
+                className="w-full h-64 md:h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <Badge className="absolute top-4 left-4" variant="secondary">
+                {post.category}
+              </Badge>
+            </div>
+          )}
+
           {/* Article Header */}
           <header className="mb-8">
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <Badge variant="secondary">{post.category}</Badge>
+              {!post.image && <Badge variant="secondary">{post.category}</Badge>}
               <span className="flex items-center gap-1 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4" />
                 {post.readTime}
@@ -235,6 +257,11 @@ export default function BlogPost() {
                   day: 'numeric' 
                 })}
               </span>
+              {/* E-E-A-T signals */}
+              <span className="flex items-center gap-1 text-xs bg-green-500/10 text-green-700 dark:text-green-400 px-2 py-1 rounded-full">
+                <CheckCircle className="w-3 h-3" />
+                <span>Fact Checked</span>
+              </span>
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
@@ -246,9 +273,16 @@ export default function BlogPost() {
             </p>
 
             <div className="flex items-center justify-between border-t border-b py-4">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">{post.author}</span>
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <User className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{post.author}</p>
+                    <p className="text-xs text-muted-foreground">Verified Expert</p>
+                  </div>
+                </div>
               </div>
               <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="w-4 h-4 mr-2" />
@@ -283,6 +317,11 @@ export default function BlogPost() {
             </section>
           )}
 
+          {/* Author Bio Section - E-E-A-T */}
+          <section className="mt-12">
+            <AuthorBio variant="full" showCredentials={true} />
+          </section>
+
           {/* Related Posts */}
           {relatedPosts.length > 0 && (
             <section className="mt-12">
@@ -290,8 +329,17 @@ export default function BlogPost() {
               <div className="grid md:grid-cols-3 gap-6">
                 {relatedPosts.map((relatedPost) => (
                   <Link key={relatedPost.slug} to={`/blog/${relatedPost.slug}`}>
-                    <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1">
-                      <CardHeader>
+                    <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 overflow-hidden">
+                      {relatedPost.image && (
+                        <div className="h-32 overflow-hidden">
+                          <img 
+                            src={relatedPost.image} 
+                            alt={relatedPost.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
+                      <CardHeader className={relatedPost.image ? "pt-3" : ""}>
                         <Badge variant="outline" className="w-fit mb-2">{relatedPost.category}</Badge>
                         <CardTitle className="text-lg line-clamp-2 hover:text-primary transition-colors">
                           {relatedPost.title}

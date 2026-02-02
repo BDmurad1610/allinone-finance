@@ -61,6 +61,7 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Calorie Calculator", path: "/calorie" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
     ],
+    lastUpdated: "2026-01-28",
     disclaimer: "BMI is a screening tool, not a medical diagnosis. It does not account for muscle mass, bone density, or fat distribution. For personalized health advice, please consult a healthcare professional."
   },
 
@@ -123,6 +124,7 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Body Fat Calculator", path: "/body-fat" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
     ],
+    lastUpdated: "2026-01-25",
     disclaimer: "Calorie estimates are based on general formulas and may vary based on individual metabolism, health conditions, and activity levels. Consult a registered dietitian or healthcare provider before making significant dietary changes."
   },
 
@@ -186,6 +188,7 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Calorie Calculator", path: "/calorie" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
     ],
+    lastUpdated: "2026-01-22",
     disclaimer: "Body fat estimates are approximations. For precise analysis, consider professional assessments."
   },
 
@@ -248,6 +251,7 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Body Fat Calculator", path: "/body-fat" },
       { name: "Ideal Weight Calculator", path: "/ideal-weight" }
     ],
+    lastUpdated: "2026-01-20",
     disclaimer: "BMR calculations are estimates based on population averages. Individual metabolic rates vary. Consult a healthcare professional for personalized guidance."
   },
 
@@ -373,6 +377,7 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "Investment Calculator", path: "/investment" },
       { name: "ROI Calculator", path: "/roi" }
     ],
+    lastUpdated: "2026-01-30",
     disclaimer: "Mortgage calculations are estimates. Actual payments vary due to taxes, insurance, PMI, and lender terms. Consult a mortgage professional for accurate quotes."
   },
 
@@ -435,6 +440,7 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "ROI Calculator", path: "/roi" },
       { name: "Salary Calculator", path: "/salary" }
     ],
+    lastUpdated: "2026-01-18",
     disclaimer: "Loan calculations are estimates. Actual payments may vary due to fees, variable rates, and lender terms. Compare offers from multiple lenders."
   },
 
@@ -498,6 +504,7 @@ export const calculatorContent: Record<string, CalculatorContentData> = {
       { name: "ROI Calculator", path: "/roi" },
       { name: "Mortgage Calculator", path: "/mortgage" }
     ],
+    lastUpdated: "2026-01-27",
     disclaimer: "Investment projections assume consistent returns, which do not reflect real market volatility. Past performance does not guarantee future results."
   },
 
