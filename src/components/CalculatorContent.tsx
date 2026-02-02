@@ -9,6 +9,8 @@ import {
 } from "./ui/accordion";
 import { Button } from "./ui/button";
 import { AlertTriangle, Calculator, HelpCircle, Lightbulb, Target, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
+import AuthorBio from "./AuthorBio";
+import LastUpdated from "./LastUpdated";
 
 export interface CalculatorContentData {
   intro: {
@@ -43,6 +45,7 @@ export interface CalculatorContentData {
     name: string;
     path: string;
   }[];
+  lastUpdated?: string;
   disclaimer?: string;
 }
 
@@ -82,6 +85,13 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
 
       {/* Collapsible Content */}
       <div id="calculator-instructions-content" className={`space-y-8 overflow-hidden transition-all duration-500 ${isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"}`}>
+      
+      {/* E-E-A-T: Last Updated & Author Info */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 bg-muted/30 rounded-lg border">
+        <AuthorBio variant="compact" />
+        {content.lastUpdated && <LastUpdated date={content.lastUpdated} variant="badge" />}
+      </div>
+      
       {/* Intro Section */}
       <section aria-labelledby="intro-heading" className="prose prose-gray dark:prose-invert max-w-none">
         <h2 id="intro-heading" className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -256,6 +266,9 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
           </CardContent>
         </Card>
       )}
+
+      {/* Full Author Bio at end */}
+      <AuthorBio variant="full" showCredentials={true} />
       </div>
     </div>
   );
