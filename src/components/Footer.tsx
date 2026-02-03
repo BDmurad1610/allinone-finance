@@ -139,21 +139,21 @@ export default function Footer() {
             <Link 
               to="/" 
               className="flex items-center gap-2 mb-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg w-fit"
-              aria-label="Calculator - Go to homepage"
+              aria-label="MultiCalculator - Go to homepage"
             >
               <div className="p-2 rounded-xl bg-gradient-to-br from-primary to-accent" aria-hidden="true">
                 <Calculator className="w-6 h-6 text-primary-foreground" aria-hidden="true" />
               </div>
               <div>
                 <span className="font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent block">
-                  Calculator
+                  MultiCalculator
                 </span>
                 <span className="text-xs text-muted-foreground">Free Online Tools</span>
               </div>
             </Link>
             
             <p className="text-sm text-muted-foreground mb-4 max-w-sm">
-              Your trusted source for free online calculators. Accurate, fast, and easy to use tools for health, finance, math, and more. No registration required.
+              Your trusted source for free online calculators. Accurate, fast, and easy to use tools for health, finance, math, and more. No registration required. Expert-reviewed and scientifically validated.
             </p>
 
             {/* Key Stats */}
@@ -352,10 +352,10 @@ export default function Footer() {
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Calculator. All rights reserved.
+              © {new Date().getFullYear()} MultiCalculator. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              Made with ❤️ for everyone who loves quick calculations
+              Made with ❤️ for everyone who loves quick, accurate calculations
             </p>
           </div>
           

@@ -5,6 +5,10 @@ import Footer from "@/components/Footer";
 import CalculatorTicker from "@/components/CalculatorTicker";
 import CalculatorCard from "@/components/CalculatorCard";
 import Testimonials from "@/components/Testimonials";
+import UniqueValueProposition from "@/components/UniqueValueProposition";
+import MethodologySection from "@/components/MethodologySection";
+import ExpertCredentials from "@/components/ExpertCredentials";
+import TrustBadges from "@/components/TrustBadges";
 import { calculators, categories } from "@/data/calculators";
 import { getBlogPostsWithImages } from "@/data/blogPosts";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -139,6 +143,11 @@ export default function Index() {
                 <p className="text-muted-foreground">
                   Trusted by <span className="font-semibold text-foreground">9,875+</span> happy users
                 </p>
+              </div>
+              
+              {/* Trust Badges */}
+              <div className="mt-8">
+                <TrustBadges variant="compact" />
               </div>
             </div>
           </div>
@@ -363,6 +372,15 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        {/* Unique Value Proposition */}
+        <UniqueValueProposition />
+
+        {/* Our Methodology */}
+        <MethodologySection />
+
+        {/* Expert Credentials */}
+        <ExpertCredentials />
 
         {/* Testimonials Section */}
         <Testimonials />
