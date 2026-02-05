@@ -1,19 +1,35 @@
-import { ReactNode, useState, useEffect } from "react";
+import { ReactNode, useState, useEffect, useMemo } from "react";
 import Header from "./Header";
 import { Button } from "./ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Breadcrumb from "./Breadcrumb";
 import ShareButton from "./ShareButton";
+import CalculatorIntro from "./CalculatorIntro";
+import CalculatorFeatures from "./CalculatorFeatures";
+import Footer from "./Footer";
 
 interface CalculatorLayoutProps {
   children: ReactNode;
   title: string;
   description?: string;
   breadcrumbItems?: { name: string; url: string }[];
+  introContent?: {
+    description: string;
+    benefits?: string[];
+    lastUpdated?: string;
+  };
+  showFeatures?: boolean;
 }
 
-export default function CalculatorLayout({ children, title, description, breadcrumbItems }: CalculatorLayoutProps) {
+export default function CalculatorLayout({ 
+  children, 
+  title, 
+  description, 
+  breadcrumbItems,
+  introContent,
+  showFeatures = true
+}: CalculatorLayoutProps) {
   const fullText = `👋 Welcome to ${title}! Use this free online tool to get instant, accurate results. No signup required.`;
   const [displayedText, setDisplayedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
@@ -67,9 +83,23 @@ export default function CalculatorLayout({ children, title, description, breadcr
             )}
           </header>
           
+          {/* Educational Intro Section - Visible for SEO */}
+          {introContent && (
+            <CalculatorIntro
+              title={title}
+              description={introContent.description}
+              benefits={introContent.benefits}
+              lastUpdated={introContent.lastUpdated}
+            />
+          )}
+          
           {children}
+          
+          {/* Engagement Features */}
+          {showFeatures && <CalculatorFeatures title={title} />}
         </article>
       </main>
+      <Footer />
     </div>
   );
 }

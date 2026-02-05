@@ -53,6 +53,21 @@ export default function CalorieCalculator() {
     <CalculatorLayout 
       title="Calorie Calculator" 
       description="Calculate your daily calorie needs based on your goals"
+      introContent={{
+        description: "Understanding your daily calorie needs is the foundation of any successful nutrition plan. Our calculator uses the Mifflin-St Jeor equation, recognized by the American Dietetic Association as the most accurate formula for estimating Basal Metabolic Rate (BMR). Combined with your activity level, we calculate your Total Daily Energy Expenditure (TDEE) to help you achieve weight loss, maintenance, or muscle gain goals with scientific precision.",
+        benefits: [
+          "Mifflin-St Jeor equation",
+          "BMR + TDEE calculation",
+          "Goal-based recommendations",
+          "Expert-verified formula"
+        ],
+        lastUpdated: "2026-02-01"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Health Calculators", url: "/#health" },
+        { name: "Calorie Calculator", url: "/calorie-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}
