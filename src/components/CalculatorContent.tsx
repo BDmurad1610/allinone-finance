@@ -54,7 +54,7 @@ interface CalculatorContentProps {
 }
 
 export default function CalculatorContent({ content }: CalculatorContentProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <div className="mt-8 space-y-4">
@@ -77,7 +77,7 @@ export default function CalculatorContent({ content }: CalculatorContentProps) {
         <span className="absolute inset-0 -translate-x-full animate-[shine_3s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" aria-hidden="true" />
         
         <BookOpen className="w-5 h-5 text-primary transition-transform duration-300 group-hover:scale-110 relative z-10" aria-hidden="true" />
-        <span className="text-foreground relative z-10">{isExpanded ? "Hide Instructions & Guide" : "Show Instructions & Guide"}</span>
+        <span className="text-foreground relative z-10">{isExpanded ? "Hide Detailed Guide" : "Show Detailed Guide"}</span>
         <span className={`transition-transform duration-300 relative z-10 ${isExpanded ? "rotate-180" : "rotate-0"}`} aria-hidden="true">
           <ChevronDown className="w-5 h-5 text-primary" />
         </span>
