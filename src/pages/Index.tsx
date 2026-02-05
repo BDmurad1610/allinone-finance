@@ -9,6 +9,7 @@ import UniqueValueProposition from "@/components/UniqueValueProposition";
 import MethodologySection from "@/components/MethodologySection";
 import ExpertCredentials from "@/components/ExpertCredentials";
 import TrustBadges from "@/components/TrustBadges";
+import HomepageFAQ from "@/components/HomepageFAQ";
 import { calculators, categories } from "@/data/calculators";
 import { getBlogPostsWithImages } from "@/data/blogPosts";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -381,6 +382,9 @@ export default function Index() {
 
         {/* Expert Credentials */}
         <ExpertCredentials />
+
+        {/* Comprehensive FAQ Section with Schema */}
+        <HomepageFAQ />
 
         {/* Testimonials Section */}
         <Testimonials />

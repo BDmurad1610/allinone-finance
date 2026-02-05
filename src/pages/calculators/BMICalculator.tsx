@@ -54,6 +54,21 @@ export default function BMICalculator() {
     <CalculatorLayout 
       title="BMI Calculator" 
       description="Calculate your Body Mass Index to assess if your weight is healthy"
+      introContent={{
+        description: "Body Mass Index (BMI) is a scientifically validated measurement used worldwide to assess whether your weight is healthy relative to your height. Our free BMI calculator uses the official WHO formula to instantly categorize your weight status and help you understand potential health implications. Trusted by healthcare professionals and fitness experts, this tool provides accurate results in seconds with complete privacy - no data is stored or shared.",
+        benefits: [
+          "Uses official WHO formula",
+          "Instant accurate results",
+          "100% private & secure",
+          "Works on all devices"
+        ],
+        lastUpdated: "2026-02-01"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Health Calculators", url: "/#health" },
+        { name: "BMI Calculator", url: "/bmi-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

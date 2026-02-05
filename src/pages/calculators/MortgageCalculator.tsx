@@ -53,6 +53,21 @@ export default function MortgageCalculator() {
     <CalculatorLayout 
       title="Mortgage Calculator" 
       description="Calculate your monthly mortgage payments and total interest"
+      introContent={{
+        description: "Planning to buy a home? Our mortgage calculator uses standard amortization formulas trusted by banks and financial institutions to give you accurate monthly payment estimates. Whether you're a first-time homebuyer or refinancing, understand exactly how much you'll pay each month, total interest costs, and how different down payments affect your loan. This free tool helps you make informed decisions about one of life's biggest purchases.",
+        benefits: [
+          "Bank-standard formulas",
+          "Total cost breakdown",
+          "Compare loan scenarios",
+          "No data stored"
+        ],
+        lastUpdated: "2026-02-01"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Finance Calculators", url: "/#finance" },
+        { name: "Mortgage Calculator", url: "/mortgage-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}
