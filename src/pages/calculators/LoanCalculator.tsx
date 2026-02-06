@@ -44,10 +44,29 @@ export default function LoanCalculator() {
     });
   };
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Finance Calculators", url: "/#finance" },
+    { name: "Loan Calculator", url: "/loan-calculator" }
+  ];
+
+  const introContent = {
+    description: "Our Loan Calculator uses the standard amortization formula trusted by banks and financial institutions worldwide. Simply enter your loan amount, term, and interest rate to instantly see your monthly payment, total interest cost, and total amount you'll pay over the life of the loan. Whether you're financing a car, consolidating debt, or planning any major purchase, this calculator helps you make informed borrowing decisions.",
+    benefits: [
+      "Standard banking amortization formula",
+      "Instant monthly payment calculation",
+      "See total interest cost upfront",
+      "Compare different loan scenarios"
+    ],
+    lastUpdated: "2026-02-01"
+  };
+
   return (
     <CalculatorLayout 
       title="Loan Calculator" 
       description="Calculate loan payments and total interest over time"
+      breadcrumbItems={breadcrumbItems}
+      introContent={introContent}
     >
       <SEOHead
         title={seo.title}

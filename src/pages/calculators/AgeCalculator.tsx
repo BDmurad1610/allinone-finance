@@ -49,10 +49,29 @@ export default function AgeCalculator() {
     setResult({ years, months, days, totalDays, totalMonths });
   };
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Date & Time Calculators", url: "/#datetime" },
+    { name: "Age Calculator", url: "/age-calculator" }
+  ];
+
+  const introContent = {
+    description: "Our Age Calculator provides your exact age down to the day, using precise date arithmetic that accounts for varying month lengths and leap years. Simply enter your date of birth to see your age in years, months, and days, plus total months and total days lived. Perfect for legal documents, milestone tracking, birthday planning, or simply satisfying your curiosity about your exact age.",
+    benefits: [
+      "Precise to the exact day",
+      "Accounts for leap years",
+      "Shows total days & months",
+      "No signup required"
+    ],
+    lastUpdated: "2026-02-01"
+  };
+
   return (
     <CalculatorLayout 
       title="Age Calculator" 
       description="Calculate your exact age in years, months, and days"
+      breadcrumbItems={breadcrumbItems}
+      introContent={introContent}
     >
       <SEOHead
         title={seo.title}

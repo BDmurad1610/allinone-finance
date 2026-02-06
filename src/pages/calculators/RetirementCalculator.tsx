@@ -57,10 +57,29 @@ export default function RetirementCalculator() {
     });
   };
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Finance Calculators", url: "/#finance" },
+    { name: "Retirement Calculator", url: "/retirement-calculator" }
+  ];
+
+  const introContent = {
+    description: "Plan your financial future with our Retirement Calculator. Using compound interest formulas, this tool projects how your current savings and monthly contributions will grow by your retirement age. Factor in expected investment returns to see your projected nest egg, total contributions vs. investment returns, and years until retirement. Essential for 401(k), IRA, and personal retirement planning.",
+    benefits: [
+      "Compound growth projection",
+      "Contributions vs returns breakdown",
+      "Customizable retirement age",
+      "Based on standard financial formulas"
+    ],
+    lastUpdated: "2026-02-01"
+  };
+
   return (
     <CalculatorLayout 
       title="Retirement Calculator" 
       description="Plan your retirement savings and see your projected nest egg"
+      breadcrumbItems={breadcrumbItems}
+      introContent={introContent}
     >
       <SEOHead
         title={seo.title}
