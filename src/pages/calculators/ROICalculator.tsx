@@ -57,10 +57,29 @@ export default function ROICalculator() {
     return { text: "Excellent Return", color: "text-emerald-600" };
   };
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Finance Calculators", url: "/#finance" },
+    { name: "ROI Calculator", url: "/roi-calculator" }
+  ];
+
+  const introContent = {
+    description: "Return on Investment (ROI) is the most fundamental metric for evaluating investment performance. Our ROI Calculator uses the standard financial formula: ROI = (Net Profit / Investment Cost) × 100. Enter your investment cost and either the return amount or investment gain to instantly calculate your ROI percentage. Essential for comparing different investment opportunities and measuring financial performance.",
+    benefits: [
+      "Standard ROI financial formula",
+      "Flexible input options",
+      "Color-coded return categories",
+      "Compare multiple investments"
+    ],
+    lastUpdated: "2026-02-01"
+  };
+
   return (
     <CalculatorLayout
       title="ROI Calculator"
       description="Calculate return on investment percentage and profit"
+      breadcrumbItems={breadcrumbItems}
+      introContent={introContent}
     >
       <SEOHead
         title={seo.title}
