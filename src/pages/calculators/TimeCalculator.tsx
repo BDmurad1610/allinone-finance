@@ -71,6 +71,21 @@ export default function TimeCalculator() {
     <CalculatorLayout
       title="Time Calculator"
       description="Add and subtract time durations"
+      introContent={{
+        description: "Managing time-based calculations can be tricky with hours rolling over into days and minutes into hours. Our time calculator handles the complexity for you - add or subtract any combination of hours, minutes, and seconds instantly. Perfect for tracking work hours, calculating exercise durations, project time management, or any scenario requiring precise time arithmetic.",
+        benefits: [
+          "Add & subtract modes",
+          "Auto hour rollover",
+          "Negative time support",
+          "Total seconds display"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Date & Time Calculators", url: "/#datetime" },
+        { name: "Time Calculator", url: "/time-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

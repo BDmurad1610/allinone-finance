@@ -54,6 +54,21 @@ const FuelCostCalculator = () => {
       <CalculatorLayout
         title="Fuel Cost Calculator"
         description="Calculate your trip fuel costs based on distance, fuel efficiency, and gas prices"
+        introContent={{
+          description: "Planning a road trip or tracking commute expenses? Our fuel cost calculator helps you budget accurately by computing exactly how much gas you'll need and what it will cost. Simply enter your trip distance, vehicle's MPG rating, and current gas prices to get instant, accurate estimates. Perfect for trip planning, comparing vehicles, or tracking transportation expenses for tax purposes.",
+          benefits: [
+            "Trip cost estimation",
+            "Cost per mile tracking",
+            "MPG-based calculations",
+            "Budget planning tool"
+          ],
+          lastUpdated: "2026-02-05"
+        }}
+        breadcrumbItems={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Fuel Cost Calculator", url: "/fuel-cost-calculator" }
+        ]}
       >
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="border-border/50 bg-card/50 backdrop-blur-sm">

@@ -69,6 +69,21 @@ export default function BodyFatCalculator() {
     <CalculatorLayout
       title="Body Fat Calculator"
       description="Estimate your body fat percentage using US Navy method"
+      introContent={{
+        description: "Body fat percentage is a more accurate indicator of fitness than weight alone. Our calculator uses the US Navy circumference method, a scientifically validated technique used by military and health professionals worldwide. By measuring neck, waist, and hip circumferences (for females), we provide accurate body fat estimates without expensive equipment like DEXA scans or calipers.",
+        benefits: [
+          "US Navy method accuracy",
+          "Gender-specific formulas",
+          "Body composition categories",
+          "No equipment needed"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Health Calculators", url: "/#health" },
+        { name: "Body Fat Calculator", url: "/body-fat-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

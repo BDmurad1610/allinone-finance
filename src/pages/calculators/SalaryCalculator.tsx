@@ -68,6 +68,21 @@ export default function SalaryCalculator() {
     <CalculatorLayout 
       title="Salary Calculator" 
       description="Convert between different salary periods"
+      introContent={{
+        description: "Whether you're evaluating a job offer, negotiating a raise, or budgeting your finances, understanding how your salary breaks down across different time periods is essential. Our salary calculator instantly converts between hourly, daily, weekly, monthly, and annual rates based on your work schedule. Compare full-time and part-time opportunities with accurate calculations.",
+        benefits: [
+          "All pay periods covered",
+          "Custom work hours",
+          "Real-time conversion",
+          "Job comparison tool"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Finance Calculators", url: "/#finance" },
+        { name: "Salary Calculator", url: "/salary-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

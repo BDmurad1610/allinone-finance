@@ -67,6 +67,16 @@ const EMICalculator = () => {
         title="EMI Calculator"
         description="Calculate your Equated Monthly Installment for loans"
         breadcrumbItems={seoBreadcrumbs}
+        introContent={{
+          description: "Equated Monthly Installment (EMI) is the fixed payment amount you make to a lender each month until your loan is paid off. Our EMI calculator uses the standard amortization formula trusted by banks and financial institutions worldwide to give you precise monthly payment estimates for personal loans, car loans, home loans, and education loans. Plan your budget confidently with instant, accurate results.",
+          benefits: [
+            "Bank-standard EMI formula",
+            "Total interest breakdown",
+            "Compare loan scenarios",
+            "100% free & private"
+          ],
+          lastUpdated: "2026-02-05"
+        }}
       >
         <div className="grid gap-8 md:grid-cols-2">
           <Card>

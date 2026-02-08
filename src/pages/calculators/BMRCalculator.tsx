@@ -65,6 +65,21 @@ export default function BMRCalculator() {
     <CalculatorLayout 
       title="BMR Calculator" 
       description="Calculate your Basal Metabolic Rate and daily calorie needs"
+      introContent={{
+        description: "Basal Metabolic Rate (BMR) represents the calories your body burns to maintain basic life functions like breathing, circulation, and cell production while at complete rest. Our calculator uses the Mifflin-St Jeor equation, recommended by the American Dietetic Association as the most reliable BMR formula. Combined with your activity level, we calculate your Total Daily Energy Expenditure (TDEE) for precise nutrition planning.",
+        benefits: [
+          "Mifflin-St Jeor equation",
+          "Activity-adjusted TDEE",
+          "Metabolic health insights",
+          "Scientific accuracy"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Health Calculators", url: "/#health" },
+        { name: "BMR Calculator", url: "/bmr-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

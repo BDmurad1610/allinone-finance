@@ -75,6 +75,16 @@ const ElectricityBillCalculator = () => {
         title="Electricity Bill Calculator"
         description="Calculate your electricity bill based on units consumed"
         breadcrumbItems={seoBreadcrumbs}
+        introContent={{
+          description: "Understanding your electricity bill can be confusing with energy charges, fixed fees, and taxes all adding up. Our electricity bill calculator breaks down every component so you know exactly what you're paying for. Enter your kWh consumption, rate per unit, and local tax rate to see a complete bill breakdown - perfect for budgeting, comparing utility rates, or estimating costs before moving.",
+          benefits: [
+            "Complete bill breakdown",
+            "Tax calculation included",
+            "Multiple billing periods",
+            "Energy cost tracking"
+          ],
+          lastUpdated: "2026-02-05"
+        }}
       >
         <div className="grid gap-8 md:grid-cols-2">
           <Card>

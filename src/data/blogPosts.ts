@@ -5,6 +5,7 @@ import nutritionCalories from "@/assets/blog/nutrition-calories.jpg";
 import retirementSavings from "@/assets/blog/retirement-savings.jpg";
 import productivityTime from "@/assets/blog/productivity-time.jpg";
 import mortgageHome from "@/assets/blog/mortgage-home.jpg";
+import { additionalBlogPosts } from "./additionalBlogPosts";
 
 export interface BlogPost {
   slug: string;
@@ -6513,7 +6514,8 @@ Use our Age Calculator to track your exact age and plan for upcoming milestones.
       { name: "Date Difference Calculator", path: "/date-difference-calculator" },
       { name: "Savings Goal Calculator", path: "/savings-goal-calculator" }
     ]
-  }
+  },
+  ...additionalBlogPosts
 ];
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {

@@ -113,6 +113,21 @@ export default function GPACalculator() {
     <CalculatorLayout 
       title="GPA Calculator" 
       description="Calculate your Grade Point Average easily"
+      introContent={{
+        description: "Your Grade Point Average (GPA) is a crucial academic metric used by schools, employers, and graduate programs worldwide. Our GPA calculator supports the standard 4.0 scale used by most American universities, allowing you to add unlimited courses with varying credit hours. Instantly see your cumulative GPA and understand where you stand academically with clear performance categories.",
+        benefits: [
+          "Standard 4.0 scale",
+          "Unlimited courses",
+          "Credit-weighted calculation",
+          "Performance categories"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Math Calculators", url: "/#math" },
+        { name: "GPA Calculator", url: "/gpa-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}
