@@ -100,6 +100,21 @@ export default function DiscountCalculator() {
     <CalculatorLayout 
       title="Discount Calculator" 
       description="Calculate discounts, sale prices, and savings instantly"
+      introContent={{
+        description: "Shopping smart means knowing exactly how much you save. Our comprehensive discount calculator handles every scenario: calculate final prices after percentage discounts, find out what percent off a sale item is, reverse-calculate original prices, and even stack multiple discounts. Black Friday, clearance sales, or everyday shopping - never overpay again with accurate savings calculations.",
+        benefits: [
+          "Multiple discount modes",
+          "Double discount stacking",
+          "Reverse price calculation",
+          "Instant savings display"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Finance Calculators", url: "/#finance" },
+        { name: "Discount Calculator", url: "/discount-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

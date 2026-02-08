@@ -132,6 +132,21 @@ export default function UnitConverter() {
     <CalculatorLayout 
       title="Unit Converter" 
       description="Convert length, weight, and temperature units instantly"
+      introContent={{
+        description: "Whether you're cooking with international recipes, planning travel abroad, or working on scientific projects, unit conversions are essential. Our comprehensive converter handles length (meters, feet, miles), weight (kilograms, pounds, ounces), and temperature (Celsius, Fahrenheit, Kelvin) with precise conversion factors. Includes quick-reference tables and conversion formulas for educational use.",
+        benefits: [
+          "Length, weight, temperature",
+          "Precise conversion factors",
+          "Quick reference tables",
+          "Swap units easily"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Math Calculators", url: "/#math" },
+        { name: "Unit Converter", url: "/unit-converter" }
+      ]}
     >
       <SEOHead
         title={seo.title}

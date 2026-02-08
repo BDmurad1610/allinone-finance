@@ -60,6 +60,21 @@ export default function IdealWeightCalculator() {
     <CalculatorLayout
       title="Ideal Weight Calculator"
       description="Calculate your ideal body weight using multiple formulas"
+      introContent={{
+        description: "There's no single 'ideal weight' - different formulas developed by medical researchers give varying results based on body frame and composition. Our calculator uses four scientifically established formulas: Robinson (1983), Miller (1983), Hamwi (1964), and Devine (1974), plus the healthy BMI range recommended by WHO. Compare results to understand your personal healthy weight range.",
+        benefits: [
+          "Four medical formulas",
+          "WHO BMI range included",
+          "Gender-adjusted calculations",
+          "Frame-size consideration"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Health Calculators", url: "/#health" },
+        { name: "Ideal Weight Calculator", url: "/ideal-weight-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

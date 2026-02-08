@@ -43,6 +43,21 @@ export default function TipCalculator() {
     <CalculatorLayout 
       title="Tip Calculator" 
       description="Calculate tips and split bills easily"
+      introContent={{
+        description: "Tipping etiquette varies by country and service type, but calculating the right amount shouldn't be complicated. Our tip calculator instantly computes tips for any bill amount with preset percentages (15%, 18%, 20%) or custom rates. Perfect for dining out, salon visits, or any tipped service. Split bills among groups effortlessly - everyone pays their fair share without awkward math at the table.",
+        benefits: [
+          "Preset & custom tip rates",
+          "Bill splitting feature",
+          "Per-person breakdowns",
+          "Works offline"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Finance Calculators", url: "/#finance" },
+        { name: "Tip Calculator", url: "/tip-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

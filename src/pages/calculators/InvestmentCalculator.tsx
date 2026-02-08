@@ -56,6 +56,21 @@ export default function InvestmentCalculator() {
     <CalculatorLayout 
       title="Investment Calculator" 
       description="Calculate your investment returns with regular contributions"
+      introContent={{
+        description: "Building wealth through investing requires understanding how your money grows over time. Our investment calculator projects future portfolio values using compound interest mathematics, accounting for both initial investments and regular monthly contributions. See exactly how much your investments could be worth in 10, 20, or 30 years - a powerful tool for retirement planning and long-term financial goals.",
+        benefits: [
+          "Compound growth modeling",
+          "Monthly contributions",
+          "Long-term projections",
+          "Return breakdown"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Finance Calculators", url: "/#finance" },
+        { name: "Investment Calculator", url: "/investment-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

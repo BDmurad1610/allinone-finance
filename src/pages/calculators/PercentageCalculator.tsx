@@ -41,6 +41,21 @@ export default function PercentageCalculator() {
     <CalculatorLayout 
       title="Percentage Calculator" 
       description="Calculate percentages, percentage changes, and more"
+      introContent={{
+        description: "Percentages are fundamental to everyday math - from calculating discounts and tips to analyzing data and financial reports. Our comprehensive percentage calculator handles all common scenarios: finding X% of a number, determining what percent one value is of another, and calculating percentage increases or decreases. Used by students, professionals, and shoppers worldwide for quick, accurate calculations.",
+        benefits: [
+          "Multiple calculation modes",
+          "Instant accurate results",
+          "Works for any numbers",
+          "Educational examples"
+        ],
+        lastUpdated: "2026-02-05"
+      }}
+      breadcrumbItems={[
+        { name: "Home", url: "/" },
+        { name: "Math Calculators", url: "/#math" },
+        { name: "Percentage Calculator", url: "/percentage-calculator" }
+      ]}
     >
       <SEOHead
         title={seo.title}

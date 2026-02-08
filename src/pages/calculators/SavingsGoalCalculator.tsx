@@ -73,6 +73,21 @@ const SavingsGoalCalculator = () => {
       <CalculatorLayout
         title="Savings Goal Calculator"
         description="Calculate how much you need to save monthly to reach your financial goals"
+        introContent={{
+          description: "Whether saving for a vacation, emergency fund, down payment, or any financial milestone, our savings goal calculator tells you exactly how much to set aside each month. The tool factors in your current savings, target amount, timeline, and potential interest earnings to create a personalized savings plan. Trusted by financial coaches and budgeting experts for accurate, actionable results.",
+          benefits: [
+            "Personalized savings plan",
+            "Interest earnings included",
+            "Adjustable timelines",
+            "Goal tracking support"
+          ],
+          lastUpdated: "2026-02-05"
+        }}
+        breadcrumbItems={[
+          { name: "Home", url: "/" },
+          { name: "Finance Calculators", url: "/#finance" },
+          { name: "Savings Goal Calculator", url: "/savings-goal-calculator" }
+        ]}
       >
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
