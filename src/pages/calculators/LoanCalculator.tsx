@@ -18,6 +18,10 @@ export default function LoanCalculator() {
     monthlyPayment: number;
     totalPayment: number;
     totalInterest: number;
+    principal: number;
+    monthlyRate: number;
+    numberOfPayments: number;
+    rate: number;
   } | null>(null);
 
   const calculate = () => {
@@ -41,6 +45,10 @@ export default function LoanCalculator() {
       monthlyPayment: Math.round(monthlyPayment * 100) / 100,
       totalPayment: Math.round(totalPayment * 100) / 100,
       totalInterest: Math.round(totalInterest * 100) / 100,
+      principal,
+      monthlyRate,
+      numberOfPayments,
+      rate,
     });
   };
 
@@ -53,12 +61,12 @@ export default function LoanCalculator() {
   const introContent = {
     description: "Our Loan Calculator uses the standard amortization formula trusted by banks and financial institutions worldwide. Simply enter your loan amount, term, and interest rate to instantly see your monthly payment, total interest cost, and total amount you'll pay over the life of the loan. Whether you're financing a car, consolidating debt, or planning any major purchase, this calculator helps you make informed borrowing decisions.",
     benefits: [
-      "Standard banking amortization formula",
+      "Standard amortization formula",
       "Instant monthly payment calculation",
-      "See total interest cost upfront",
+      "Step-by-step calculation breakdown",
       "Compare different loan scenarios"
     ],
-    lastUpdated: "2026-02-01"
+    lastUpdated: "2026-03-01"
   };
 
   return (
@@ -138,6 +146,58 @@ export default function LoanCalculator() {
                         <p className="text-xs text-muted-foreground mb-1">Total Payment</p>
                         <p className="text-xl font-bold">${result.totalPayment.toLocaleString()}</p>
                       </div>
+                    </div>
+
+                    {/* Step-by-step calculation breakdown */}
+                    <div className="mt-6 p-4 bg-background rounded-lg border">
+                      <h4 className="font-semibold text-foreground mb-3 text-sm">📐 How This Was Calculated (Step-by-Step)</h4>
+                      <div className="space-y-2 text-sm text-muted-foreground">
+                        <div className="flex justify-between py-1 border-b border-border">
+                          <span>1. Loan Principal (P)</span>
+                          <span className="font-medium text-foreground">${result.principal.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-border">
+                          <span>2. Annual Interest Rate</span>
+                          <span className="font-medium text-foreground">{result.rate}%</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-border">
+                          <span>3. Monthly Interest Rate (r = {result.rate}% ÷ 12)</span>
+                          <span className="font-medium text-foreground">{(result.monthlyRate * 100).toFixed(4)}%</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-border">
+                          <span>4. Total Payments (n = {result.numberOfPayments / 12} years × 12)</span>
+                          <span className="font-medium text-foreground">{result.numberOfPayments} months</span>
+                        </div>
+                        <div className="p-3 bg-muted/50 rounded-lg mt-2">
+                          <p className="text-xs font-medium text-foreground mb-1">5. Formula Applied:</p>
+                          <p className="text-xs font-mono">EMI = P × r × (1+r)^n ÷ ((1+r)^n - 1)</p>
+                          <p className="text-xs font-mono mt-1">
+                            = {result.principal.toLocaleString()} × {(result.monthlyRate).toFixed(6)} × (1+{(result.monthlyRate).toFixed(6)})^{result.numberOfPayments} ÷ ((1+{(result.monthlyRate).toFixed(6)})^{result.numberOfPayments} - 1)
+                          </p>
+                          <p className="text-xs font-mono mt-1 text-primary font-semibold">
+                            = ${result.monthlyPayment.toLocaleString()} per month
+                          </p>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-border">
+                          <span>6. Total Payment = ${result.monthlyPayment.toLocaleString()} × {result.numberOfPayments}</span>
+                          <span className="font-medium text-foreground">${result.totalPayment.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>7. Total Interest = ${result.totalPayment.toLocaleString()} − ${result.principal.toLocaleString()}</span>
+                          <span className="font-medium text-foreground">${result.totalInterest.toLocaleString()}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Result interpretation */}
+                    <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">💡 What This Means</h4>
+                      <p className="text-sm text-muted-foreground">
+                        For a <strong className="text-foreground">${result.principal.toLocaleString()}</strong> loan at <strong className="text-foreground">{result.rate}% annual interest</strong> over <strong className="text-foreground">{result.numberOfPayments / 12} years</strong>, 
+                        you'll pay <strong className="text-foreground">${result.monthlyPayment.toLocaleString()}</strong> every month. 
+                        Over the life of the loan, you'll pay <strong className="text-foreground">${result.totalInterest.toLocaleString()}</strong> in interest, 
+                        which is <strong className="text-foreground">{((result.totalInterest / result.principal) * 100).toFixed(1)}%</strong> of the original loan amount.
+                      </p>
                     </div>
                   </div>
                 </CardContent>

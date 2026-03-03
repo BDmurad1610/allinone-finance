@@ -8,14 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import UniqueValueProposition from "@/components/UniqueValueProposition";
 import MethodologySection from "@/components/MethodologySection";
 import ExpertCredentials from "@/components/ExpertCredentials";
-import TrustBadges from "@/components/TrustBadges";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import { calculators, categories } from "@/data/calculators";
 import { getBlogPostsWithImages } from "@/data/blogPosts";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, ArrowRight, Sparkles, Calculator, TrendingUp, Heart, Calendar, Clock, User, BookOpen } from "lucide-react";
+import { ArrowRight, Sparkles, Calculator, TrendingUp, Heart, Calendar, Clock, User, BookOpen } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { seoData } from "@/lib/seoData";
 import { Button } from "@/components/ui/button";
@@ -95,14 +94,14 @@ export default function Index() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 border border-primary/20">
                 <Sparkles className="w-4 h-4" />
-                <span>20+ Free Professional Calculators</span>
+                <span>20+ Free Online Calculators</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
                 Free Online Calculators for Every Need
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto">
-                From <strong className="text-foreground">BMI calculators</strong> to <strong className="text-foreground">mortgage calculators</strong>, trusted by thousands of Americans daily.
+                Health, finance, math, and date calculators using <strong className="text-foreground">standard formulas</strong> — with step-by-step explanations. 100% free, no signup, runs in your browser.
               </p>
               
               {/* CTA Buttons */}
@@ -120,35 +119,17 @@ export default function Index() {
                 </Button>
               </div>
               
-              {/* Reviews Section */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-0.5" role="img" aria-label="4.8 out of 5 stars rating">
-                    {[1, 2, 3, 4].map((star) => (
-                      <Star
-                        key={star}
-                        className="w-6 h-6 fill-yellow-400 text-yellow-400"
-                        aria-hidden="true"
-                      />
-                    ))}
-                    <div className="relative w-6 h-6">
-                      <Star className="w-6 h-6 fill-muted text-muted" aria-hidden="true" />
-                      <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
-                        <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" aria-hidden="true" />
-                      </div>
-                    </div>
-                  </div>
-                  <span className="text-2xl font-bold text-foreground">4.8</span>
-                </div>
-                <div className="h-6 w-px bg-border hidden sm:block" aria-hidden="true"></div>
-                <p className="text-muted-foreground">
-                  Trusted by <span className="font-semibold text-foreground">9,875+</span> happy users
-                </p>
-              </div>
-              
-              {/* Trust Badges */}
-              <div className="mt-8">
-                <TrustBadges variant="compact" />
+              {/* Feature highlights */}
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-full">
+                  <Sparkles className="w-3.5 h-3.5 text-primary" /> Instant Results
+                </span>
+                <span className="flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-full">
+                  🔒 Privacy First
+                </span>
+                <span className="flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-full">
+                  📱 Works on All Devices
+                </span>
               </div>
             </div>
           </div>
@@ -261,7 +242,7 @@ export default function Index() {
 
         {/* Why Choose Us Section */}
         <section className="container mx-auto px-4 py-16" aria-label="Why Choose MultiCalculator">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Why 10,000+ Users Trust MultiCalculator</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Why Choose MultiCalculator</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <Card className="text-center p-6">
               <CardContent className="pt-4">
@@ -491,9 +472,9 @@ export default function Index() {
                 <li><strong className="text-foreground">Mobile Optimized:</strong> All calculators work perfectly on smartphones, tablets, and desktop computers.</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-foreground">Trusted by Thousands</h3>
+              <h3 className="text-xl font-semibold text-foreground">Built for Everyone</h3>
               <p className="text-muted-foreground">
-                Since our launch, over 10,000 users have relied on MultiCalculator for their daily calculation needs. From students completing homework to professionals making financial decisions, our calculators provide the accuracy and reliability you need.
+                MultiCalculator is used by students, professionals, and anyone who needs quick, accurate calculations. From homework help to financial planning, our tools provide reliable results backed by standard formulas you can verify.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground">Our Calculator Categories</h3>

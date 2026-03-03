@@ -1,4 +1,4 @@
-import { Shield, Award, Users, Clock, CheckCircle, Star } from "lucide-react";
+import { Clock, Smartphone, Lock, Zap } from "lucide-react";
 
 interface TrustBadgesProps {
   variant?: "compact" | "full";
@@ -8,28 +8,28 @@ interface TrustBadgesProps {
 export default function TrustBadges({ variant = "compact", className = "" }: TrustBadgesProps) {
   const badges = [
     { 
-      icon: Shield, 
-      title: "Verified Formulas", 
-      description: "Industry-standard calculations",
-      color: "text-green-600 dark:text-green-400"
+      icon: Zap, 
+      title: "Instant Results", 
+      description: "No waiting or loading",
+      color: "text-primary"
     },
     { 
-      icon: Award, 
-      title: "Expert Reviewed", 
-      description: "Checked by professionals",
-      color: "text-blue-600 dark:text-blue-400"
+      icon: Lock, 
+      title: "Privacy First", 
+      description: "No data collected",
+      color: "text-primary"
     },
     { 
-      icon: Users, 
-      title: "50,000+ Users", 
-      description: "Trusted monthly",
-      color: "text-purple-600 dark:text-purple-400"
+      icon: Smartphone, 
+      title: "Works on All Devices", 
+      description: "Mobile, tablet & desktop",
+      color: "text-primary"
     },
     { 
       icon: Clock, 
-      title: "Updated 2025", 
-      description: "Latest formulas",
-      color: "text-orange-600 dark:text-orange-400"
+      title: "Updated 2026", 
+      description: "Current formulas",
+      color: "text-primary"
     }
   ];
 
@@ -56,7 +56,7 @@ export default function TrustBadges({ variant = "compact", className = "" }: Tru
           key={idx} 
           className="flex flex-col items-center text-center p-4 bg-muted/30 rounded-xl border border-border"
         >
-          <div className={`p-2 rounded-lg bg-background mb-2`}>
+          <div className="p-2 rounded-lg bg-background mb-2">
             <badge.icon className={`w-5 h-5 ${badge.color}`} aria-hidden="true" />
           </div>
           <p className="font-semibold text-sm text-foreground">{badge.title}</p>
