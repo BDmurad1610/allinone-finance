@@ -1,4 +1,4 @@
-import { FlaskConical, BookOpen, RefreshCw, UserCheck } from "lucide-react";
+import { FlaskConical, BookOpen, RefreshCw, Code } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function MethodologySection() {
@@ -6,26 +6,26 @@ export default function MethodologySection() {
     {
       icon: FlaskConical,
       step: "1",
-      title: "Research & Source",
-      description: "We study peer-reviewed journals, official guidelines (WHO, CDC, financial regulators), and consult industry experts to identify the most accurate formulas for each calculator."
+      title: "Source Standard Formulas",
+      description: "We use publicly documented formulas from established sources: WHO for BMI, Mifflin-St Jeor for calories, U.S. Navy method for body fat, and standard amortization for finance calculations."
+    },
+    {
+      icon: Code,
+      step: "2", 
+      title: "Implement & Test",
+      description: "Each formula is implemented and tested against known example values to ensure correctness. We show the formula on every calculator page so you can verify our work."
     },
     {
       icon: BookOpen,
-      step: "2", 
-      title: "Implementation & Testing",
-      description: "Our engineering team implements each formula with extensive unit tests. We cross-reference results with official calculators and academic sources to ensure precision."
-    },
-    {
-      icon: UserCheck,
       step: "3",
-      title: "Expert Review",
-      description: "Before publishing, each calculator is reviewed by domain experts – certified financial planners for finance tools, healthcare professionals for health calculators."
+      title: "Document & Explain",
+      description: "Every calculator includes a step-by-step guide, the exact formula used, worked examples, practical tips, and frequently asked questions to help you understand your results."
     },
     {
       icon: RefreshCw,
       step: "4",
-      title: "Continuous Updates",
-      description: "We monitor for formula updates, new research, and user feedback. When standards change (like new dietary guidelines), we update our calculators immediately."
+      title: "Keep Current",
+      description: "We periodically review our formulas and content to make sure everything stays accurate and up-to-date. Each page shows its last update date."
     }
   ];
 
@@ -34,10 +34,10 @@ export default function MethodologySection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 id="methodology-heading" className="text-3xl font-bold text-foreground mb-4">
-            Our Methodology: How We Ensure Accuracy
+            How We Build Our Calculators
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Every calculator goes through a rigorous development process to ensure you get reliable, trustworthy results.
+            Every calculator follows the same process to ensure you get accurate, well-documented results.
           </p>
         </div>
 
@@ -45,7 +45,6 @@ export default function MethodologySection() {
           {steps.map((item, idx) => (
             <Card key={idx} className="relative overflow-hidden group hover:shadow-lg transition-all">
               <CardContent className="p-6 pt-8">
-                {/* Step Number Badge */}
                 <div className="absolute top-0 right-0 w-16 h-16 bg-primary/10 rounded-bl-[3rem] flex items-start justify-end p-2">
                   <span className="text-2xl font-bold text-primary">{item.step}</span>
                 </div>
@@ -66,7 +65,7 @@ export default function MethodologySection() {
             <CardContent className="p-6">
               <h3 className="font-bold text-lg text-foreground mb-4 flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-primary" />
-                Our Trusted Sources
+                Formula Sources We Use
               </h3>
               <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
                 <div>
@@ -75,16 +74,16 @@ export default function MethodologySection() {
                     <li>• World Health Organization (WHO) BMI Guidelines</li>
                     <li>• Mifflin-St Jeor Equation (American Dietetic Association)</li>
                     <li>• U.S. Navy Body Fat Calculation Method</li>
-                    <li>• CDC Growth Charts & Standards</li>
+                    <li>• Devine, Robinson, Miller & Hamwi weight formulas</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Finance Calculators:</h4>
                   <ul className="space-y-1">
-                    <li>• Standard Amortization Formulas</li>
-                    <li>• Compound Interest (Annual & Monthly)</li>
-                    <li>• Federal Reserve Economic Data</li>
-                    <li>• IRS Publication Guidelines</li>
+                    <li>• Standard Amortization Formula</li>
+                    <li>• Compound Interest Formula (A = P(1 + r/n)^nt)</li>
+                    <li>• EMI Formula (P × r × (1+r)^n / ((1+r)^n - 1))</li>
+                    <li>• Standard ROI & savings calculations</li>
                   </ul>
                 </div>
               </div>
