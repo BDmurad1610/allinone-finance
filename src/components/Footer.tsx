@@ -153,7 +153,7 @@ export default function Footer() {
             </Link>
             
             <p className="text-sm text-muted-foreground mb-4 max-w-sm">
-              Your trusted source for free online calculators. Accurate, fast, and easy to use tools for health, finance, math, and more. No registration required. Expert-reviewed and scientifically validated.
+              Free online calculators using standard, publicly documented formulas. Tools for health, finance, math, and more. No registration required. All calculations run in your browser.
             </p>
 
             {/* Key Stats */}
